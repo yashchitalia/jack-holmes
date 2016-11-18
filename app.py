@@ -39,8 +39,13 @@ def processRequest(req):
 def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
+    print "Dissection:"
     course_number= parameters.get('course_number')
     course_name= parameters.get('course_name')
+    print "COURSE NAME:"
+    print course_name
+    print "COURSE NUMBER:"
+    print course_number
     if (course_number is None) and (course_number is None):
         speech = "No Course Number Specified. What course were you asking about?"
         return {
@@ -49,12 +54,7 @@ def makeWebhookResult(req):
             "source": "apiai-jack-holmes"
         }
 
-    condition = item.get('condition')
-    if condition is None:
-        return {}
-
     speech = 'Great Questions! No prerequisites for this class!' \
-
     print("Response:")
     print(speech)
 
