@@ -31,8 +31,10 @@ def webhook():
 
 def processRequest(req):
     if req.get("result").get("action") != "prereq_query":
+        print "The prereq query was not recognized"
         return {}
-    res = makeWebhookResult(data)
+    print "Yes. Request Caught Correctly"
+    res = makeWebhookResult(req)
     return res
 
 
