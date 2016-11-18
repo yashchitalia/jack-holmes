@@ -54,7 +54,7 @@ def makeWebhookResult(req):
             "source": "apiai-jack-holmes"
         }
 
-    speech = 'Great Questions! No prerequisites for this class!' \
+    speech = 'Great Questions! No prerequisites for this class!'
     print("Response:")
     print(speech)
 
