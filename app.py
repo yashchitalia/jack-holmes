@@ -28,38 +28,60 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
+DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
+                             "instructor_query":"Instructor",
+                             "overview_query":"Overview"}
 
 def processRequest(req):
-    if req.get("result").get("action") != "prereq_query":
-        print "The prereq query was not recognized"
-        return {}
-    print "Yes. Request Caught Correctly"
-    res = makeWebhookResult(req)
+    course_number_list = extractCourseNumber(req)
+    if course_number_list is None:
+        speech = "No Course Number Specified. What course were you asking about?"
+    else:
+        if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
+            speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
+        else:
+            speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
+    res = makeWebhookResult(speech)
     return res
 
 
-def makeWebhookResult(req):
+def answerObjectiveQueries(course_number_list, query_name):
+    omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
+    #Answer all the objective queries
+    for course_number in course_number_list:
+        if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
+            listOfResponseStrings = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
+            speech = DICT_OF_OBJECTIVE_QUERIES[query_name] + ' of ' + course_number + ':'
+            for responseString in listOfResponseStrings:
+                speech = speech + ' ' + responseString
+    return speech
+                        
+
+def mapCourseNameToCourseNumber(course_name):
+    omscs_dat = pkl.load(open('../data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
+    for course_number in omscs_dat.keys():
+        if omscs_dat[course_number]['Name'] == course_name:
+            return course_number
+    return None
+
+def extractCourseNumber(req):
+    #Get course number from the users query
     result = req.get("result")
     parameters = result.get("parameters")
-    print "Dissection:"
     course_number= parameters.get('course_number')
     course_name= parameters.get('course_name')
-    print "COURSE NAME:"
-    print course_name
-    print "COURSE NUMBER:"
-    print course_number
-    if (course_number is None) and (course_number is None):
-        speech = "No Course Number Specified. What course were you asking about?"
-        return {
-            "speech": speech,
-            "displayText": speech,
-            "source": "apiai-jack-holmes"
-        }
+    if (course_name is None) and (course_number is None):
+        return None
+    elif course_name is not None:
+        candidate_course_number = mapCourseNameToCourseNumber(course_name)
+        if course_number is not None and course_number != candidate_course_number:
+            course_number_list = [course_number, candidate_course_number]
+    course_number_list = [course_number]
+    return course_number_list
 
-    speech = 'Great Questions! No prerequisites for this class!'
+def makeWebhookResult(speech):
     print("Response:")
     print(speech)
-
     return {
         "speech": speech,
         "displayText": speech,
