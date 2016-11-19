@@ -33,6 +33,7 @@ DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
                              "overview_query":"Overview"}
 
 def processRequest(req):
+    print "Trying to load data"
     course_number_list = extractCourseNumber(req)
     if course_number_list is None:
         speech = "No Course Number Specified. What course were you asking about?"
