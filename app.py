@@ -41,7 +41,6 @@ def processRequest(req):
         print speech
     else:
         if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
-            print "Your query is valid"
             speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
             print speech
         else:
@@ -54,9 +53,11 @@ def processRequest(req):
 def answerObjectiveQueries(course_number_list, query_name):
     omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
     print "Loaded data correctly"
+    print course_number_list
     #Answer all the objective queries
     for course_number in course_number_list:
         if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
+            print "Your query is valid"
             listOfResponseStrings = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
             print listOfResponseStrings
             speech = DICT_OF_OBJECTIVE_QUERIES[query_name] + ' of ' + course_number + ':'
@@ -74,6 +75,7 @@ def mapCourseNameToCourseNumber(course_name):
     for course_number in omscs_dat.keys():
         if omscs_dat[course_number]['Name'] == course_name:
             return course_number
+    print "You're talking about" + course_number
     return None
 
 def extractCourseNumber(req):
