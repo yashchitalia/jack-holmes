@@ -36,11 +36,14 @@ def processRequest(req):
     course_number_list = extractCourseNumber(req)
     if course_number_list is None:
         speech = "No Course Number Specified. What course were you asking about?"
+        print speech
     else:
         if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
             speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
+            print speech
         else:
             speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
+            print speech
     res = makeWebhookResult(speech)
     return res
 
