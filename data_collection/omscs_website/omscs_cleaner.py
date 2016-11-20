@@ -14,26 +14,28 @@ for course_number in unclean_dat.keys():
                 clean_list = str(curr_unclean_dat[attribute][0])
             except:
                 continue
-        else:
+        elif attribute in ['Overview', 'Prerequisites', 'Grading', 'Technical', 'Reading']:
+            final_string= ''
             unclean_list = curr_unclean_dat[attribute]
-            clean_list = []
-            if not isinstance(unclean_list, basestring):
-                for item in unclean_list:
-                    if isinstance(item, unicode):
-                        if item == '\n':
-                            unclean_list.remove(item) 
-                    elif str(type(item)) == "<class 'bs4.element.Tag'>":
-                        try:
-                            if item.next == '\n':
-                                unclean_list.remove(item) 
-                            else:
-                                clean_list.append(str(item.next))
-                        except UnicodeEncodeError:
+            unclean_list.pop(0)
+            for item in unclean_list:
+                try:
+                    if str(type(item)) == "<class 'bs4.element.NavigableString'>":
+                        item = item.encode('ascii', errors='backslashreplace')
+                        if str(item) == '\n':
                             continue
-                #clean_list.pop(0)
-            else:
-                clean_list = str(unclean_list)
-        curr_clean_dat[attribute] = clean_list
+                        final_string = final_string+ ' ' + str(item)
+                    elif str(type(item)) == "<class 'bs4.element.Tag'>":
+                        if item.next == '\n':
+                            continue 
+                        final_string = final_string+ ' '+ str(item.next)
+                except UnicodeEncodeError:
+                    item = item.encode('ascii', errors='backslashreplace')
+                    if str(item) == '\n':
+                        continue
+                    final_string = final_string+ ' ' + str(item)
+            curr_clean_dat[attribute] = final_string 
+            continue
     clean_dat[course_number] = curr_clean_dat
 
 

@@ -31,7 +31,10 @@ def webhook():
 
 DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
                              "instructor_query":"Instructor",
-                             "overview_query":"Overview"}
+                             "overview_query":"Overview",
+                             "technical_query": "Technical",
+                             "reading_query": "Reading",
+                             "grading_query": "Grading"}
 
 def processRequest(req):
     print "Trying to load data"
@@ -60,15 +63,11 @@ def answerObjectiveQueries(course_number_list, query_name):
             print "Your query is valid"
             print DICT_OF_OBJECTIVE_QUERIES[query_name]
             print omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
-            listOfResponseStrings = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
-            print type(listOfResponseStrings)
-            speech = DICT_OF_OBJECTIVE_QUERIES[query_name] + ' of ' + course_number + ':'
-            print speech
-            for responseString in listOfResponseStrings:
-                speech = speech + ' ' + responseString
+            speech = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
             print speech
         else:
             print "Your Query is not in my dict"
+            speech = "I'm afraid, I don't know the answer to that question. But maybe you can find the answer on the OMSCS website."
     return speech
                         
 
