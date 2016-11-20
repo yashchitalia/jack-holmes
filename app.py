@@ -61,7 +61,7 @@ def answerObjectiveQueries(course_number_list, query_name):
             print DICT_OF_OBJECTIVE_QUERIES[query_name]
             print omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
             listOfResponseStrings = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
-            print listOfResponseStrings
+            print type(listOfResponseStrings)
             speech = DICT_OF_OBJECTIVE_QUERIES[query_name] + ' of ' + course_number + ':'
             print speech
             for responseString in listOfResponseStrings:
