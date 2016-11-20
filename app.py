@@ -77,7 +77,6 @@ def mapCourseNameToCourseNumber(course_name):
     for course_number in omscs_dat.keys():
         if omscs_dat[course_number]['Name'] == course_name:
             return course_number
-    print "You're talking about" + course_number
     return None
 
 def extractCourseNumber(req):
@@ -86,6 +85,8 @@ def extractCourseNumber(req):
     parameters = result.get("parameters")
     course_number= parameters.get('course_number')
     course_name= parameters.get('course_name')
+    print "COURSE NAME:" + course_name
+    print "COURSE NUMBER:" + course_number
     if (course_name is None) and (course_number is None):
         return None
     elif course_name is not None:
