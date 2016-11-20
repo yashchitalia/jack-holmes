@@ -10,7 +10,10 @@ for course_number in unclean_dat.keys():
     curr_clean_dat = {}
     for attribute in curr_unclean_dat.keys():
         if attribute == 'Instructor':
-            clean_list = str(curr_unclean_dat[attribute])
+            try:
+                clean_list = str(curr_unclean_dat[attribute][0])
+            except:
+                continue
         else:
             unclean_list = curr_unclean_dat[attribute]
             clean_list = []
