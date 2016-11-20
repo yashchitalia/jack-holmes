@@ -58,6 +58,8 @@ def answerObjectiveQueries(course_number_list, query_name):
     for course_number in course_number_list:
         if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
             print "Your query is valid"
+            print DICT_OF_OBJECTIVE_QUERIES[query_name]
+            print omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
             listOfResponseStrings = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
             print listOfResponseStrings
             speech = DICT_OF_OBJECTIVE_QUERIES[query_name] + ' of ' + course_number + ':'
