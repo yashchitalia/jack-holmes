@@ -73,9 +73,8 @@ def answerObjectiveQueries(course_number_list, query_name):
 
 def mapCourseNameToCourseNumber(course_name):
     omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
-    print "Loaded Data"
     for course_number in omscs_dat.keys():
-        print omscs_dat[course_number]['Name'], course_name
+        print omscs_dat[course_number]
         if omscs_dat[course_number]['Name'] == course_name:
             print 'Winner:' + course_name
             return course_number
