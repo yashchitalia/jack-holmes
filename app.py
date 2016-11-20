@@ -76,8 +76,6 @@ def mapCourseNameToCourseNumber(course_name):
     omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
     for course_number in omscs_dat.keys():
         if omscs_dat[course_number]['Name'] == course_name:
-            print omscs_dat[course_number]['Name'], course_name
-            print "Right Course Number:", course_number
             return course_number
     return None
 
@@ -91,14 +89,14 @@ def extractCourseNumber(req):
         course_name = None
     if len(course_number) == 0:
         course_number = None
-    print "COURSE NAME:" + str(course_name)
-    print "COURSE NUMBER:" + str(course_number)
     if (course_name is None) and (course_number is None):
         return None
     elif course_name is not None:
         candidate_course_number = mapCourseNameToCourseNumber(course_name)
         if course_number is not None and course_number != candidate_course_number:
             course_number_list = [course_number, candidate_course_number]
+        else:
+            course_number = candidate_course_number
     course_number_list = [course_number]
     return course_number_list
 
