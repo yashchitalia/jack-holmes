@@ -15,6 +15,13 @@ for course_number in unclean_dat.keys():
             except:
                 continue
             curr_clean_dat[attribute] = instructor_name
+        elif attribute == 'Name':
+            try:
+                class_name = str(curr_unclean_dat[attribute])
+            except:
+                continue
+            curr_clean_dat[attribute] = class_name 
+
         elif attribute in ['Overview', 'Prerequisites', 'Grading', 'Technical', 'Reading']:
             final_string= ''
             unclean_list = curr_unclean_dat[attribute]
