@@ -97,6 +97,7 @@ def extractCourseNumber(req):
         else:
             course_number = candidate_course_number
     course_number_list = [course_number]
+    print course_number_list
     return course_number_list
 
 def makeWebhookResult(speech):
