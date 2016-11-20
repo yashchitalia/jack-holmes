@@ -84,6 +84,7 @@ def extractCourseNumber(req):
     parameters = result.get("parameters")
     course_number= parameters.get('course_number')
     course_name= parameters.get('course_name')
+    print course_name, course_number
     if len(course_name) == 0:
         course_name = None
     if len(course_number) == 0:
@@ -95,9 +96,9 @@ def extractCourseNumber(req):
         if course_number is not None and course_number != candidate_course_number:
             course_number_list = [course_number, candidate_course_number]
         else:
+            print candidate_course_number
             course_number = candidate_course_number
     course_number_list = [course_number]
-    print course_number_list
     return course_number_list
 
 def makeWebhookResult(speech):
