@@ -90,13 +90,14 @@ def extractCourseNumber(req):
         course_number = None
     if (course_name is None) and (course_number is None):
         return None
+    print course_name, course_number
     elif course_name is not None:
         candidate_course_number = mapCourseNameToCourseNumber(course_name)
         if course_number is not None and course_number != candidate_course_number:
             course_number_list = [course_number, candidate_course_number]
         else:
-            print candidate_course_number
             course_number = candidate_course_number
+    print course_number
     course_number_list = [course_number]
     return course_number_list
 
