@@ -10,6 +10,7 @@ from flask import make_response
 
 import random
 import pickle as pkl
+import numpy as np
 # Flask app should start in global layout
 app = Flask(__name__)
 
