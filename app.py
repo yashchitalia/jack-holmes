@@ -57,10 +57,10 @@ def processRequest(req):
 
 def answerObjectiveQueries(course_number_list, query_name):
     omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
+    print query_name
     #Answer all the objective queries
     for course_number in course_number_list:
         if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
-            print query_name
             if query_name == "course_number_query":
                 print "Query correctly recognized"
                 speech = course_number 
