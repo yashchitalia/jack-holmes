@@ -1,44 +1,12 @@
 (dp0
 VCS 6250
 p1
-cnumpy.core.multiarray
-_reconstruct
-p2
-(cnumpy
-ndarray
-p3
-(I0
-tp4
-S'b'
-p5
-tp6
-Rp7
-(I1
-(I9
-I9
-tp8
-cnumpy
-dtype
-p9
-(S'O8'
-p10
-I0
-I1
-tp11
-Rp12
-(I3
-S'|'
-p13
-NNNI-1
-I-1
-I63
-tp14
-bI01
-(lp15
+(lp2
+(lp3
 VAmmar, Mostafa H
-p16
+p4
 aVVery Large (50 Students or More)
-p17
+p5
 aF3.96
 aI95
 aI3
@@ -46,10 +14,11 @@ aI0
 aI0
 aI0
 aI1
-aVClark, Russell J
-p18
+aa(lp6
+VClark, Russell J
+p7
 aVVery Small (Fewer than 10 Students)
-p19
+p8
 aF3.67
 aI67
 aI33
@@ -57,10 +26,11 @@ aI0
 aI0
 aI0
 aI0
-aVDovrolis, Konstantinos
-p20
+aa(lp9
+VDovrolis, Konstantinos
+p10
 aVLarge (31-49 Students)
-p21
+p11
 aF3.62
 aI64
 aI24
@@ -68,9 +38,10 @@ aI5
 aI1
 aI0
 aI6
-aVFeamster, Nicholas G
-p22
-ag17
+aa(lp12
+VFeamster, Nicholas G
+p13
+ag5
 aF3.74
 aI71
 aI13
@@ -78,10 +49,11 @@ aI4
 aI0
 aI1
 aI10
-aVHutchins, Ronald R
-p23
+aa(lp14
+VHutchins, Ronald R
+p15
 aVSmall (10-20 students)
-p24
+p16
 aF3.9
 aI92
 aI6
@@ -89,10 +61,11 @@ aI1
 aI0
 aI1
 aI1
-aVLillethun, David J
-p25
+aa(lp17
+VLillethun, David J
+p18
 aVVery Large (50 students or more)
-p26
+p19
 aF3.68
 aI73
 aI8
@@ -100,9 +73,10 @@ aI1
 aI1
 aI3
 aI13
-aVMckinnon, Martin W
-p27
-ag21
+aa(lp20
+VMckinnon, Martin W
+p21
+ag11
 aF3.44
 aI41
 aI45
@@ -110,9 +84,10 @@ aI2
 aI0
 aI0
 aI5
-aVXu, Jun
-p28
-ag17
+aa(lp22
+VXu, Jun
+p23
+ag5
 aF3.43
 aI52
 aI33
@@ -120,9 +95,10 @@ aI9
 aI1
 aI1
 aI3
-aVZegura, Ellen
-p29
-ag17
+aa(lp24
+VZegura, Ellen
+p25
+ag5
 aF3.46
 aI48
 aI50
@@ -130,27 +106,14 @@ aI2
 aI0
 aI0
 aI0
-atp30
-bsVCS 6505
-p31
-g2
-(g3
-(I0
-tp32
-g5
-tp33
-Rp34
-(I1
-(I9
-I9
-tp35
-g12
-I01
-(lp36
+aasVCS 6505
+p26
+(lp27
+(lp28
 VApostolico, Alberto
-p37
+p29
 aVMid-Size (21-30 Students)
-p38
+p30
 aF2.24
 aI17
 aI24
@@ -158,10 +121,11 @@ aI41
 aI0
 aI17
 aI0
-aVBader, David Albert
-p39
+aa(lp31
+VBader, David Albert
+p32
 aVLarge (31-49 Students)
-p40
+p33
 aF3.2
 aI41
 aI31
@@ -169,9 +133,10 @@ aI15
 aI0
 aI3
 aI8
-aVBasu, Saugata
-p41
-ag40
+aa(lp34
+VBasu, Saugata
+p35
+ag33
 aF3.63
 aI56
 aI33
@@ -179,10 +144,11 @@ aI0
 aI0
 aI0
 aI8
-aVBrubaker, Spencer C
-p42
+aa(lp36
+VBrubaker, Spencer C
+p37
 aVVery Large (50 students or more)
-p43
+p38
 aF2.94
 aI24
 aI16
@@ -190,9 +156,10 @@ aI6
 aI4
 aI4
 aI45
-aVDing, Yan
-p44
-ag40
+aa(lp39
+VDing, Yan
+p40
+ag33
 aF3.35
 aI50
 aI33
@@ -200,10 +167,11 @@ aI13
 aI0
 aI2
 aI3
-aVLipton, Richard
-p45
+aa(lp41
+VLipton, Richard
+p42
 aVVery Large (50 Students or More)
-p46
+p43
 aF3.82
 aI80
 aI15
@@ -211,9 +179,10 @@ aI2
 aI0
 aI0
 aI3
-aVMihail, Kalomire-Eleni
-p47
-ag43
+aa(lp44
+VMihail, Kalomire-Eleni
+p45
+ag38
 aF3.71
 aI72
 aI23
@@ -221,9 +190,10 @@ aI2
 aI0
 aI0
 aI2
-aVVempala, Santosh Srinivas
-p48
-ag46
+aa(lp46
+VVempala, Santosh Srinivas
+p47
+ag43
 aF3.48
 aI48
 aI30
@@ -231,9 +201,10 @@ aI5
 aI1
 aI1
 aI13
-aVVenkateswaran, H
+aa(lp48
+VVenkateswaran, H
 p49
-ag46
+ag43
 aF3.37
 aI45
 aI36
@@ -241,27 +212,14 @@ aI9
 aI1
 aI0
 aI6
-atp50
-bsVCS 6601
-p51
-g2
-(g3
-(I0
-tp52
-g5
-tp53
-Rp54
-(I1
-(I4
-I9
-tp55
-g12
-I01
-(lp56
+aasVCS 6601
+p50
+(lp51
+(lp52
 VDellaert, Frank
-p57
+p53
 aVLarge (31-49 Students)
-p58
+p54
 aF3.56
 aI64
 aI17
@@ -269,9 +227,10 @@ aI12
 aI0
 aI0
 aI2
-aVGoel, Ashok K
-p59
-ag58
+aa(lp55
+VGoel, Ashok K
+p56
+ag54
 aF3.52
 aI54
 aI26
@@ -279,9 +238,10 @@ aI6
 aI1
 aI1
 aI7
-aVStarner, Thad E
-p60
-ag58
+aa(lp57
+VStarner, Thad E
+p58
+ag54
 aF3.46
 aI54
 aI28
@@ -289,10 +249,11 @@ aI6
 aI1
 aI1
 aI7
-aVZha, Hongyuan
-p61
+aa(lp59
+VZha, Hongyuan
+p60
 aVVery Small (Fewer than 10 Students)
-p62
+p61
 aF3.96
 aI96
 aI4
@@ -300,27 +261,14 @@ aI0
 aI0
 aI0
 aI0
-atp63
-bsVCS 6460
-p64
-g2
-(g3
-(I0
-tp65
-g5
-tp66
-Rp67
-(I1
-(I4
-I9
-tp68
-g12
-I01
-(lp69
+aasVCS 6460
+p62
+(lp63
+(lp64
 VDesportes, Kayla Surry
-p70
+p65
 aVVery Small (Fewer than 10 students)
-p71
+p66
 aF4.0
 aI100
 aI0
@@ -328,10 +276,11 @@ aI0
 aI0
 aI0
 aI0
-aVDisalvo, Elizabeth Nora
-p72
+aa(lp67
+VDisalvo, Elizabeth Nora
+p68
 aVSmall (10-20 students)
-p73
+p69
 aF3.95
 aI94
 aI5
@@ -339,10 +288,11 @@ aI0
 aI0
 aI0
 aI0
-aVGuzdial, Mark
-p74
+aa(lp70
+VGuzdial, Mark
+p71
 aVSmall (10-20 Students)
-p75
+p72
 aF4.0
 aI72
 aI0
@@ -350,9 +300,10 @@ aI0
 aI0
 aI0
 aI4
-aVKolodner, Janet L
-p76
-ag75
+aa(lp73
+VKolodner, Janet L
+p74
+ag72
 aF3.7
 aI66
 aI22
@@ -360,27 +311,14 @@ aI3
 aI0
 aI0
 aI6
-atp77
-bsVCS 8803
-p78
-g2
-(g3
-(I0
-tp79
-g5
-tp80
-Rp81
-(I1
-(I141
-I9
-tp82
-g12
-I01
-(lp83
+aasVCS 8803
+p75
+(lp76
+(lp77
 VAbowd, Gregory D
-p84
+p78
 aVVery Small (Fewer than 10 Students)
-p85
+p79
 aF3.44
 aI54
 aI20
@@ -388,10 +326,11 @@ aI5
 aI5
 aI0
 aI7
-aVAhamad, Mustaque
-p86
+aa(lp80
+VAhamad, Mustaque
+p81
 aVSmall (10-20 Students)
-p87
+p82
 aF3.72
 aI69
 aI21
@@ -399,10 +338,11 @@ aI3
 aI0
 aI0
 aI6
-aVAmmar, Mostafa H
-p88
+aa(lp83
+VAmmar, Mostafa H
+p84
 aVMid-Size (21-30 Students)
-p89
+p85
 aF3.94
 aI80
 aI6
@@ -410,9 +350,10 @@ aI0
 aI0
 aI0
 aI0
-aVAnderson, Carl
-p90
-ag85
+aa(lp86
+VAnderson, Carl
+p87
+ag79
 aF3.5
 aI33
 aI33
@@ -420,10 +361,11 @@ aI0
 aI0
 aI0
 aI0
-aVAnton, Ana I
-p91
+aa(lp88
+VAnton, Ana I
+p89
 aVVery Small (Fewer than 10 students)
-p92
+p90
 aF3.95
 aI95
 aI5
@@ -431,9 +373,10 @@ aI0
 aI0
 aI0
 aI0
-aVApostolico, Alberto
-p93
-ag87
+aa(lp91
+VApostolico, Alberto
+p92
+ag82
 aF3.15
 aI25
 aI35
@@ -441,7 +384,8 @@ aI0
 aI0
 aI5
 aI15
-aVBader, David Albert
+aa(lp93
+VBader, David Albert
 p94
 aVVery Large (50 Students or More)
 p95
@@ -452,9 +396,10 @@ aI2
 aI0
 aI3
 aI2
-aVBadre, Albert N
-p96
-ag87
+aa(lp96
+VBadre, Albert N
+p97
+ag82
 aF3.93
 aI92
 aI2
@@ -462,9 +407,10 @@ aI0
 aI0
 aI1
 aI5
-aVBalcan, Maria-Florina
-p97
-ag89
+aa(lp98
+VBalcan, Maria-Florina
+p99
+ag85
 aF3.89
 aI67
 aI8
@@ -472,9 +418,10 @@ aI0
 aI0
 aI0
 aI2
-aVBalch, Tucker R
-p98
-ag85
+aa(lp100
+VBalch, Tucker R
+p101
+ag79
 aF3.88
 aI90
 aI5
@@ -482,10 +429,11 @@ aI0
 aI1
 aI1
 aI1
-aVBarlow, David A
-p99
+aa(lp102
+VBarlow, David A
+p103
 aVSmall (10-20 students)
-p100
+p104
 aF4.0
 aI100
 aI0
@@ -493,9 +441,10 @@ aI0
 aI0
 aI0
 aI0
-aVBasole, Rahul
-p101
-ag85
+aa(lp105
+VBasole, Rahul
+p106
+ag79
 aF4.0
 aI100
 aI0
@@ -503,9 +452,10 @@ aI0
 aI0
 aI0
 aI0
-aVBasole, Rahul C
-p102
-ag92
+aa(lp107
+VBasole, Rahul C
+p108
+ag90
 aF4.0
 aI88
 aI0
@@ -513,9 +463,10 @@ aI0
 aI0
 aI0
 aI0
-aVBest, Michael L
-p103
-ag87
+aa(lp109
+VBest, Michael L
+p110
+ag82
 aF3.76
 aI69
 aI24
@@ -523,10 +474,11 @@ aI0
 aI0
 aI0
 aI7
-aVBiggers, Maureen S
-p104
+aa(lp111
+VBiggers, Maureen S
+p112
 aVLarge (31-49 Students)
-p105
+p113
 aF3.66
 aI64
 aI33
@@ -534,9 +486,10 @@ aI0
 aI0
 aI0
 aI0
-aVBobick, Aaron
-p106
-ag87
+aa(lp114
+VBobick, Aaron
+p115
+ag82
 aF3.44
 aI44
 aI19
@@ -544,9 +497,10 @@ aI0
 aI0
 aI4
 aI3
-aVBogost, Ian S
-p107
-ag85
+aa(lp116
+VBogost, Ian S
+p117
+ag79
 aF4.0
 aI100
 aI0
@@ -554,9 +508,10 @@ aI0
 aI0
 aI0
 aI0
-aVBolter, Jay D
-p108
-ag87
+aa(lp118
+VBolter, Jay D
+p119
+ag82
 aF4.0
 aI95
 aI0
@@ -564,10 +519,11 @@ aI0
 aI0
 aI0
 aI5
-aVBoots, Byron Emereth
-p109
+aa(lp120
+VBoots, Byron Emereth
+p121
 aVMid-size (21-30 students)
-p110
+p122
 aF3.78
 aI65
 aI9
@@ -575,9 +531,10 @@ aI4
 aI0
 aI0
 aI13
-aVBraunstein, Mark L
-p111
-ag87
+aa(lp123
+VBraunstein, Mark L
+p124
+ag82
 aF3.98
 aI87
 aI2
@@ -585,9 +542,10 @@ aI0
 aI0
 aI0
 aI3
-aVBurnham, Blaine Windsor
-p112
-ag85
+aa(lp125
+VBurnham, Blaine Windsor
+p126
+ag79
 aF4.0
 aI56
 aI0
@@ -595,9 +553,10 @@ aI0
 aI0
 aI0
 aI0
-aVChoi, Myung C
-p113
-ag87
+aa(lp127
+VChoi, Myung C
+p128
+ag82
 aF3.76
 aI68
 aI22
@@ -605,9 +564,10 @@ aI0
 aI0
 aI0
 aI3
-aVChristensen, Henrik Iskov
-p114
-ag87
+aa(lp129
+VChristensen, Henrik Iskov
+p130
+ag82
 aF3.86
 aI76
 aI11
@@ -615,9 +575,10 @@ aI1
 aI0
 aI0
 aI6
-aVClark, Nathan Thomas
-p115
-ag89
+aa(lp131
+VClark, Nathan Thomas
+p132
+ag85
 aF3.84
 aI73
 aI11
@@ -625,9 +586,10 @@ aI2
 aI0
 aI0
 aI0
-aVClark, Russell J
-p116
-ag105
+aa(lp133
+VClark, Russell J
+p134
+ag113
 aF3.86
 aI81
 aI11
@@ -635,9 +597,10 @@ aI1
 aI0
 aI0
 aI3
-aVClark,Russell J
-p117
-ag87
+aa(lp135
+VClark,Russell J
+p136
+ag82
 aF3.92
 aI86
 aI7
@@ -645,9 +608,10 @@ aI0
 aI0
 aI0
 aI7
-aVColeman, Maribeth Gandy
-p118
-ag85
+aa(lp137
+VColeman, Maribeth Gandy
+p138
+ag79
 aF3.8
 aI72
 aI6
@@ -655,8 +619,9 @@ aI2
 aI2
 aI0
 aI3
-aVConte, Thomas Martin
-p119
+aa(lp139
+VConte, Thomas Martin
+p140
 ag95
 aF3.52
 aI42
@@ -665,9 +630,10 @@ aI3
 aI0
 aI0
 aI2
-aVCooper, Brian Frank
-p120
-ag87
+aa(lp141
+VCooper, Brian Frank
+p142
+ag82
 aF3.93
 aI70
 aI5
@@ -675,9 +641,10 @@ aI0
 aI0
 aI0
 aI5
-aVCopeland, John A
-p121
-ag87
+aa(lp143
+VCopeland, John A
+p144
+ag82
 aF3.8
 aI75
 aI19
@@ -685,9 +652,10 @@ aI0
 aI0
 aI0
 aI6
-aVDellaert, Frank
-p122
-ag87
+aa(lp145
+VDellaert, Frank
+p146
+ag82
 aF3.53
 aI50
 aI32
@@ -695,9 +663,10 @@ aI3
 aI0
 aI0
 aI3
-aVDeMillo, Richard A
-p123
-ag87
+aa(lp147
+VDeMillo, Richard A
+p148
+ag82
 aF3.6
 aI55
 aI36
@@ -705,9 +674,10 @@ aI0
 aI0
 aI0
 aI9
-aVDing, Yan
-p124
-ag87
+aa(lp149
+VDing, Yan
+p150
+ag82
 aF3.64
 aI60
 aI22
@@ -715,9 +685,10 @@ aI4
 aI0
 aI0
 aI7
-aVDo, Yi-Luen Ellen
-p125
-ag85
+aa(lp151
+VDo, Yi-Luen Ellen
+p152
+ag79
 aF4.0
 aI94
 aI0
@@ -725,9 +696,10 @@ aI0
 aI0
 aI0
 aI2
-aVDos Santos, Andre L
-p126
-ag89
+aa(lp153
+VDos Santos, Andre L
+p154
+ag85
 aF3.78
 aI78
 aI4
@@ -735,9 +707,10 @@ aI0
 aI4
 aI0
 aI8
-aVDovrolis, Konstantinos
-p127
-ag89
+aa(lp155
+VDovrolis, Konstantinos
+p156
+ag85
 aF3.93
 aI81
 aI6
@@ -745,9 +718,10 @@ aI0
 aI0
 aI0
 aI0
-aVEason, William Thomas
-p128
-ag100
+aa(lp157
+VEason, William Thomas
+p158
+ag104
 aF3.92
 aI73
 aI7
@@ -755,9 +729,10 @@ aI0
 aI0
 aI0
 aI7
-aVEisenstein, Jacob R
-p129
-ag100
+aa(lp159
+VEisenstein, Jacob R
+p160
+ag104
 aF3.66
 aI59
 aI30
@@ -765,9 +740,10 @@ aI0
 aI0
 aI0
 aI7
-aVEndert, Alexander
-p130
-ag100
+aa(lp161
+VEndert, Alexander
+p162
+ag104
 aF3.86
 aI71
 aI12
@@ -775,9 +751,10 @@ aI0
 aI0
 aI0
 aI6
-aVEnslow Jr, Philip H
-p131
-ag85
+aa(lp163
+VEnslow Jr, Philip H
+p164
+ag79
 aF3.9
 aI85
 aI10
@@ -785,9 +762,10 @@ aI0
 aI0
 aI0
 aI0
-aVEsmaeilzadeh, Hadi
-p132
-ag110
+aa(lp165
+VEsmaeilzadeh, Hadi
+p166
+ag122
 aF3.81
 aI68
 aI16
@@ -795,9 +773,10 @@ aI0
 aI0
 aI0
 aI0
-aVEssa, Irfan A
-p133
-ag85
+aa(lp167
+VEssa, Irfan A
+p168
+ag79
 aF3.92
 aI81
 aI5
@@ -805,9 +784,10 @@ aI1
 aI0
 aI0
 aI8
-aVFeamster, Nicholas G
-p134
-ag105
+aa(lp169
+VFeamster, Nicholas G
+p170
+ag113
 aF4.0
 aI94
 aI0
@@ -815,9 +795,10 @@ aI0
 aI0
 aI0
 aI3
-aVFortnow, Lance Jeremy
-p135
-ag92
+aa(lp171
+VFortnow, Lance Jeremy
+p172
+ag90
 aF3.89
 aI80
 aI10
@@ -825,9 +806,10 @@ aI0
 aI0
 aI0
 aI10
-aVFujimoto, Richard M
-p136
-ag85
+aa(lp173
+VFujimoto, Richard M
+p174
+ag79
 aF3.81
 aI80
 aI11
@@ -835,9 +817,10 @@ aI2
 aI0
 aI0
 aI4
-aVGavrilovska Habl, Ada
-p137
-ag85
+aa(lp175
+VGavrilovska Habl, Ada
+p176
+ag79
 aF3.61
 aI51
 aI19
@@ -845,9 +828,10 @@ aI2
 aI0
 aI1
 aI17
-aVGiffin, Jonathon Thomas
-p138
-ag87
+aa(lp177
+VGiffin, Jonathon Thomas
+p178
+ag82
 aF3.66
 aI68
 aI15
@@ -855,9 +839,10 @@ aI2
 aI4
 aI0
 aI1
-aVGilbert, Eric E
-p139
-ag89
+aa(lp179
+VGilbert, Eric E
+p180
+ag85
 aF3.77
 aI76
 aI16
@@ -865,9 +850,10 @@ aI0
 aI0
 aI2
 aI1
-aVGoel, Ashok K
-p140
-ag89
+aa(lp181
+VGoel, Ashok K
+p182
+ag85
 aF3.77
 aI75
 aI16
@@ -875,9 +861,10 @@ aI2
 aI0
 aI0
 aI3
-aVGray, Alexander G
-p141
-ag105
+aa(lp183
+VGray, Alexander G
+p184
+ag113
 aF3.98
 aI61
 aI1
@@ -885,9 +872,10 @@ aI0
 aI0
 aI0
 aI8
-aVGuzdial, Mark
-p142
-ag85
+aa(lp185
+VGuzdial, Mark
+p186
+ag79
 aF4.0
 aI75
 aI0
@@ -895,9 +883,10 @@ aI0
 aI0
 aI0
 aI0
-aVHarris, William R
-p143
-ag100
+aa(lp187
+VHarris, William R
+p188
+ag104
 aF4.0
 aI54
 aI0
@@ -905,9 +894,10 @@ aI0
 aI0
 aI0
 aI0
-aVHarrold, Mary Jean
-p144
-ag85
+aa(lp189
+VHarrold, Mary Jean
+p190
+ag79
 aF3.66
 aI67
 aI10
@@ -915,9 +905,10 @@ aI12
 aI0
 aI0
 aI7
-aVHunter, Michael T
-p145
-ag85
+aa(lp191
+VHunter, Michael T
+p192
+ag79
 aF4.0
 aI100
 aI0
@@ -925,9 +916,10 @@ aI0
 aI0
 aI0
 aI0
-aVHutchins, Ronald R
-p146
-ag100
+aa(lp193
+VHutchins, Ronald R
+p194
+ag104
 aF3.94
 aI94
 aI6
@@ -935,9 +927,10 @@ aI0
 aI0
 aI0
 aI0
-aVIsbell Jr, Charles Lee
-p147
-ag85
+aa(lp195
+VIsbell Jr, Charles Lee
+p196
+ag79
 aF3.83
 aI77
 aI14
@@ -945,9 +938,10 @@ aI0
 aI0
 aI0
 aI7
-aVIwanska, Lucja M
-p148
-ag87
+aa(lp197
+VIwanska, Lucja M
+p198
+ag82
 aF3.58
 aI67
 aI7
@@ -955,9 +949,10 @@ aI0
 aI0
 aI7
 aI20
-aVJackson, Melody Moore
-p149
-ag85
+aa(lp199
+VJackson, Melody Moore
+p200
+ag79
 aF4.0
 aI100
 aI0
@@ -965,9 +960,10 @@ aI0
 aI0
 aI0
 aI0
-aVJain, Ramesh C
-p150
-ag87
+aa(lp201
+VJain, Ramesh C
+p202
+ag82
 aF3.69
 aI65
 aI17
@@ -975,9 +971,10 @@ aI4
 aI0
 aI0
 aI0
-aVJayant, Nikil S
-p151
-ag87
+aa(lp203
+VJayant, Nikil S
+p204
+ag82
 aF3.83
 aI71
 aI14
@@ -985,9 +982,10 @@ aI0
 aI0
 aI0
 aI14
-aVKalai, Adam
-p152
-ag105
+aa(lp205
+VKalai, Adam
+p206
+ag113
 aF4.0
 aI70
 aI0
@@ -995,9 +993,10 @@ aI0
 aI0
 aI0
 aI9
-aVKalai, Yael T
-p153
-ag87
+aa(lp207
+VKalai, Yael T
+p208
+ag82
 aF3.6
 aI40
 aI27
@@ -1005,9 +1004,10 @@ aI0
 aI0
 aI0
 aI13
-aVKim, Hyesoon
-p154
-ag105
+aa(lp209
+VKim, Hyesoon
+p210
+ag113
 aF3.76
 aI62
 aI18
@@ -1015,10 +1015,11 @@ aI1
 aI0
 aI0
 aI0
-aVKira, Zsolt
-p155
+aa(lp211
+VKira, Zsolt
+p212
 aVLarge (31-49 students)
-p156
+p213
 aF3.59
 aI55
 aI28
@@ -1026,9 +1027,10 @@ aI4
 aI0
 aI0
 aI4
-aVKoenig, Sven
-p157
-ag87
+aa(lp214
+VKoenig, Sven
+p215
+ag82
 aF4.0
 aI57
 aI0
@@ -1036,9 +1038,10 @@ aI0
 aI0
 aI0
 aI7
-aVKolodner, Janet L
-p158
-ag87
+aa(lp216
+VKolodner, Janet L
+p217
+ag82
 aF3.74
 aI46
 aI14
@@ -1046,9 +1049,10 @@ aI0
 aI0
 aI0
 aI14
-aVKumar, Rajnish
-p159
-ag89
+aa(lp218
+VKumar, Rajnish
+p219
+ag85
 aF3.64
 aI68
 aI28
@@ -1056,9 +1060,10 @@ aI4
 aI0
 aI0
 aI0
-aVLanterman, Aaron D
-p160
-ag92
+aa(lp220
+VLanterman, Aaron D
+p221
+ag90
 aF3.88
 aI80
 aI10
@@ -1066,9 +1071,10 @@ aI0
 aI0
 aI0
 aI0
-aVLee, Wenke
-p161
-ag87
+aa(lp222
+VLee, Wenke
+p223
+ag82
 aF3.78
 aI80
 aI10
@@ -1076,9 +1082,10 @@ aI0
 aI0
 aI3
 aI0
-aVLim, Sung-Kyu
-p162
-ag87
+aa(lp224
+VLim, Sung-Kyu
+p225
+ag82
 aF3.75
 aI76
 aI22
@@ -1086,9 +1093,10 @@ aI1
 aI0
 aI0
 aI0
-aVLipkin, Harvey
-p163
-ag87
+aa(lp226
+VLipkin, Harvey
+p227
+ag82
 aF3.46
 aI40
 aI37
@@ -1096,9 +1104,10 @@ aI0
 aI0
 aI0
 aI23
-aVLipton, Richard
-p164
-ag87
+aa(lp228
+VLipton, Richard
+p229
+ag82
 aF4.0
 aI82
 aI0
@@ -1106,9 +1115,10 @@ aI0
 aI0
 aI0
 aI0
-aVLiu, Cheng-Yun Karen
-p165
-ag87
+aa(lp230
+VLiu, Cheng-Yun Karen
+p231
+ag82
 aF3.96
 aI73
 aI4
@@ -1116,9 +1126,10 @@ aI0
 aI0
 aI0
 aI8
-aVLiu, Ling
-p166
-ag89
+aa(lp232
+VLiu, Ling
+p233
+ag85
 aF3.83
 aI74
 aI14
@@ -1126,9 +1137,10 @@ aI0
 aI0
 aI0
 aI3
-aVLoh, Gabriel H
-p167
-ag87
+aa(lp234
+VLoh, Gabriel H
+p235
+ag82
 aF3.36
 aI43
 aI17
@@ -1136,9 +1148,10 @@ aI7
 aI5
 aI0
 aI9
-aVMacIntyre, Blair
-p168
-ag85
+aa(lp236
+VMacIntyre, Blair
+p237
+ag79
 aF3.94
 aI91
 aI5
@@ -1146,9 +1159,10 @@ aI0
 aI0
 aI0
 aI1
-aVMackenzie, Kenneth M
-p169
-ag85
+aa(lp238
+VMackenzie, Kenneth M
+p239
+ag79
 aF4.0
 aI78
 aI0
@@ -1156,9 +1170,10 @@ aI0
 aI0
 aI0
 aI11
-aVMagerko, Brian S
-p170
-ag85
+aa(lp240
+VMagerko, Brian S
+p241
+ag79
 aF3.55
 aI56
 aI42
@@ -1166,9 +1181,10 @@ aI2
 aI0
 aI0
 aI0
-aVManolios, Panagiotis
-p171
-ag85
+aa(lp242
+VManolios, Panagiotis
+p243
+ag79
 aF3.34
 aI36
 aI21
@@ -1176,9 +1192,10 @@ aI5
 aI3
 aI0
 aI1
-aVMark, Leo
-p172
-ag89
+aa(lp244
+VMark, Leo
+p245
+ag85
 aF3.64
 aI64
 aI36
@@ -1186,9 +1203,10 @@ aI0
 aI0
 aI0
 aI0
-aVMcCracken, W Michael
-p173
-ag85
+aa(lp246
+VMcCracken, W Michael
+p247
+ag79
 aF4.0
 aI100
 aI0
@@ -1196,9 +1214,10 @@ aI0
 aI0
 aI0
 aI0
-aVMihail, Kalomire-Eleni
-p174
-ag85
+aa(lp248
+VMihail, Kalomire-Eleni
+p249
+ag79
 aF4.0
 aI82
 aI0
@@ -1206,9 +1225,10 @@ aI0
 aI0
 aI0
 aI13
-aVMorton Jr, David Lindsay
-p175
-ag92
+aa(lp250
+VMorton Jr, David Lindsay
+p251
+ag90
 aF4.0
 aI75
 aI0
@@ -1216,9 +1236,10 @@ aI0
 aI0
 aI0
 aI0
-aVNagaraj Raghavendra, Prasad
-p176
-ag85
+aa(lp252
+VNagaraj Raghavendra, Prasad
+p253
+ag79
 aF3.5
 aI44
 aI44
@@ -1226,9 +1247,10 @@ aI0
 aI0
 aI0
 aI0
-aVNaik, Mayur Hiru
-p177
-ag89
+aa(lp254
+VNaik, Mayur Hiru
+p255
+ag85
 aF3.91
 aI78
 aI6
@@ -1236,9 +1258,10 @@ aI0
 aI0
 aI0
 aI2
-aVNelson-Palmer, Michael K
-p178
-ag87
+aa(lp256
+VNelson-Palmer, Michael K
+p257
+ag82
 aF3.74
 aI71
 aI15
@@ -1246,9 +1269,10 @@ aI3
 aI0
 aI0
 aI8
-aVNovick, David Graham
-p179
-ag85
+aa(lp258
+VNovick, David Graham
+p259
+ag79
 aF3.0
 aI60
 aI20
@@ -1256,9 +1280,10 @@ aI0
 aI0
 aI20
 aI0
-aVO'Neill, Brian C
-p180
-ag85
+aa(lp260
+VO'Neill, Brian C
+p261
+ag79
 aF3.0
 aI0
 aI100
@@ -1266,9 +1291,10 @@ aI0
 aI0
 aI0
 aI0
-aVOmiecinski, Edward R
-p181
-ag87
+aa(lp262
+VOmiecinski, Edward R
+p263
+ag82
 aF3.68
 aI68
 aI24
@@ -1276,9 +1302,10 @@ aI3
 aI0
 aI0
 aI2
-aVOrso, Alessandro
-p182
-ag89
+aa(lp264
+VOrso, Alessandro
+p265
+ag85
 aF3.5
 aI48
 aI34
@@ -1286,9 +1313,10 @@ aI4
 aI0
 aI0
 aI0
-aVPalem, Krishna
-p183
-ag85
+aa(lp266
+VPalem, Krishna
+p267
+ag79
 aF3.5
 aI46
 aI38
@@ -1296,9 +1324,10 @@ aI0
 aI0
 aI0
 aI0
-aVPande, Santosh
-p184
-ag85
+aa(lp268
+VPande, Santosh
+p269
+ag79
 aF3.16
 aI42
 aI20
@@ -1306,9 +1335,10 @@ aI6
 aI4
 aI6
 aI13
-aVPark, Haesun
-p185
-ag89
+aa(lp270
+VPark, Haesun
+p271
+ag85
 aF3.38
 aI31
 aI51
@@ -1316,9 +1346,10 @@ aI0
 aI1
 aI0
 aI8
-aVPeikert, Christopher Jason
-p186
-ag87
+aa(lp272
+VPeikert, Christopher Jason
+p273
+ag82
 aF3.72
 aI68
 aI13
@@ -1326,9 +1357,10 @@ aI3
 aI2
 aI0
 aI2
-aVPerkins, William F
-p187
-ag85
+aa(lp274
+VPerkins, William F
+p275
+ag79
 aF4.0
 aI100
 aI0
@@ -1336,9 +1368,10 @@ aI0
 aI0
 aI0
 aI0
-aVPierce, Jeffrey S
-p188
-ag87
+aa(lp276
+VPierce, Jeffrey S
+p277
+ag82
 aF3.89
 aI89
 aI11
@@ -1346,9 +1379,10 @@ aI0
 aI0
 aI0
 aI0
-aVPiliouras, Georgios
-p189
-ag92
+aa(lp278
+VPiliouras, Georgios
+p279
+ag90
 aF4.0
 aI100
 aI0
@@ -1356,9 +1390,10 @@ aI0
 aI0
 aI0
 aI0
-aVPippin, Charles Everett
-p190
-ag100
+aa(lp280
+VPippin, Charles Everett
+p281
+ag104
 aF3.67
 aI36
 aI18
@@ -1366,9 +1401,10 @@ aI0
 aI0
 aI0
 aI18
-aVPrvulovic, Milos
-p191
-ag87
+aa(lp282
+VPrvulovic, Milos
+p283
+ag82
 aF3.94
 aI73
 aI4
@@ -1376,9 +1412,10 @@ aI0
 aI0
 aI0
 aI0
-aVPu, Calton
-p192
-ag85
+aa(lp284
+VPu, Calton
+p285
+ag79
 aF3.84
 aI76
 aI3
@@ -1386,9 +1423,10 @@ aI1
 aI0
 aI1
 aI1
-aVRam, Ashwin
-p193
-ag87
+aa(lp286
+VRam, Ashwin
+p287
+ag82
 aF3.8
 aI75
 aI7
@@ -1396,9 +1434,10 @@ aI4
 aI0
 aI0
 aI7
-aVRamachandran, Umakishore
-p194
-ag87
+aa(lp288
+VRamachandran, Umakishore
+p289
+ag82
 aF3.82
 aI66
 aI13
@@ -1406,9 +1445,10 @@ aI0
 aI0
 aI0
 aI0
-aVRandall, Dana
-p195
-ag87
+aa(lp290
+VRandall, Dana
+p291
+ag82
 aF3.91
 aI81
 aI8
@@ -1416,9 +1456,10 @@ aI0
 aI0
 aI0
 aI0
-aVRehg, James Matthew
-p196
-ag105
+aa(lp292
+VRehg, James Matthew
+p293
+ag113
 aF3.92
 aI82
 aI6
@@ -1426,9 +1467,10 @@ aI1
 aI0
 aI0
 aI4
-aVRiedl, Mark O
-p197
-ag87
+aa(lp294
+VRiedl, Mark O
+p295
+ag82
 aF3.68
 aI71
 aI15
@@ -1436,9 +1478,10 @@ aI8
 aI0
 aI0
 aI1
-aVRossignac, Jaroslaw R
-p198
-ag85
+aa(lp296
+VRossignac, Jaroslaw R
+p297
+ag79
 aF3.67
 aI57
 aI29
@@ -1446,9 +1489,10 @@ aI0
 aI0
 aI0
 aI0
-aVRouse, William
-p199
-ag87
+aa(lp298
+VRouse, William
+p299
+ag82
 aF3.42
 aI31
 aI44
@@ -1456,9 +1500,10 @@ aI0
 aI0
 aI0
 aI0
-aVSalomone, Michael D
-p200
-ag85
+aa(lp300
+VSalomone, Michael D
+p301
+ag79
 aF4.0
 aI100
 aI0
@@ -1466,9 +1511,10 @@ aI0
 aI0
 aI0
 aI0
-aVSaltz, Joel H
-p201
-ag87
+aa(lp302
+VSaltz, Joel H
+p303
+ag82
 aF4.0
 aI77
 aI0
@@ -1476,9 +1522,10 @@ aI0
 aI0
 aI0
 aI0
-aVSanders, Matthew J
-p202
-ag100
+aa(lp304
+VSanders, Matthew J
+p305
+ag104
 aF3.63
 aI50
 aI30
@@ -1486,9 +1533,10 @@ aI0
 aI0
 aI0
 aI0
-aVSchindler, Grant Evan
-p203
-ag85
+aa(lp306
+VSchindler, Grant Evan
+p307
+ag79
 aF4.0
 aI100
 aI0
@@ -1496,9 +1544,10 @@ aI0
 aI0
 aI0
 aI0
-aVShivers, Olin
-p204
-ag87
+aa(lp308
+VShivers, Olin
+p309
+ag82
 aF3.55
 aI54
 aI25
@@ -1506,9 +1555,10 @@ aI7
 aI0
 aI0
 aI0
-aVSmaragdakis, Ioannis
-p205
-ag85
+aa(lp310
+VSmaragdakis, Ioannis
+p311
+ag79
 aF3.78
 aI64
 aI10
@@ -1516,9 +1566,10 @@ aI1
 aI1
 aI0
 aI0
-aVStarner, Thad E
-p206
-ag87
+aa(lp312
+VStarner, Thad E
+p313
+ag82
 aF3.43
 aI55
 aI0
@@ -1526,9 +1577,10 @@ aI0
 aI0
 aI9
 aI27
-aVStilman, Michael
-p207
-ag87
+aa(lp314
+VStilman, Michael
+p315
+ag82
 aF3.83
 aI80
 aI17
@@ -1536,9 +1588,10 @@ aI0
 aI0
 aI0
 aI2
-aVSubramanian, Mani M
-p208
-ag87
+aa(lp316
+VSubramanian, Mani M
+p317
+ag82
 aF3.37
 aI44
 aI40
@@ -1546,9 +1599,10 @@ aI7
 aI2
 aI0
 aI5
-aVSzymczak, Andrzej
-p209
-ag87
+aa(lp318
+VSzymczak, Andrzej
+p319
+ag82
 aF4.0
 aI87
 aI0
@@ -1556,9 +1610,10 @@ aI0
 aI0
 aI0
 aI4
-aVTetali, Prasad
-p210
-ag85
+aa(lp320
+VTetali, Prasad
+p321
+ag79
 aF4.0
 aI67
 aI0
@@ -1566,9 +1621,10 @@ aI0
 aI0
 aI0
 aI11
-aVThomaz, Andrea Lockerd
-p211
-ag87
+aa(lp322
+VThomaz, Andrea Lockerd
+p323
+ag82
 aF3.93
 aI82
 aI6
@@ -1576,10 +1632,11 @@ aI0
 aI0
 aI0
 aI2
-aVThrun, Sebastian
-p212
+aa(lp324
+VThrun, Sebastian
+p325
 aVVery Large (50 students or more)
-p213
+p326
 aF3.52
 aI67
 aI16
@@ -1587,9 +1644,10 @@ aI5
 aI2
 aI4
 aI7
-aVTodd, Robert Lynch
-p214
-ag85
+aa(lp327
+VTodd, Robert Lynch
+p328
+ag79
 aF3.88
 aI84
 aI12
@@ -1597,9 +1655,10 @@ aI0
 aI0
 aI0
 aI0
-aVTraynor, Patrick Gerard
-p215
-ag87
+aa(lp329
+VTraynor, Patrick Gerard
+p330
+ag82
 aF3.43
 aI50
 aI28
@@ -1607,9 +1666,10 @@ aI0
 aI7
 aI0
 aI2
-aVTurk, Gregory
-p216
-ag85
+aa(lp331
+VTurk, Gregory
+p332
+ag79
 aF3.89
 aI84
 aI9
@@ -1617,9 +1677,10 @@ aI0
 aI0
 aI0
 aI1
-aVUrban, Stephen Montgomery
-p217
-ag92
+aa(lp333
+VUrban, Stephen Montgomery
+p334
+ag90
 aF4.0
 aI100
 aI0
@@ -1627,9 +1688,10 @@ aI0
 aI0
 aI0
 aI0
-aVUrban,Stephen Montgomery
-p218
-ag92
+aa(lp335
+VUrban,Stephen Montgomery
+p336
+ag90
 aF4.0
 aI100
 aI0
@@ -1637,9 +1699,10 @@ aI0
 aI0
 aI0
 aI0
-aVVazirani, Vijay V
-p219
-ag87
+aa(lp337
+VVazirani, Vijay V
+p338
+ag82
 aF4.0
 aI89
 aI0
@@ -1647,9 +1710,10 @@ aI0
 aI0
 aI0
 aI3
-aVVegh, Laszlo
-p220
-ag85
+aa(lp339
+VVegh, Laszlo
+p340
+ag79
 aF4.0
 aI67
 aI0
@@ -1657,9 +1721,10 @@ aI0
 aI0
 aI0
 aI0
-aVVempala, Santosh Srinivas
-p221
-ag105
+aa(lp341
+VVempala, Santosh Srinivas
+p342
+ag113
 aF3.62
 aI54
 aI15
@@ -1667,9 +1732,10 @@ aI3
 aI0
 aI1
 aI7
-aVVenkateswaran, H
-p222
-ag105
+aa(lp343
+VVenkateswaran, H
+p344
+ag113
 aF3.61
 aI60
 aI23
@@ -1677,9 +1743,10 @@ aI7
 aI0
 aI0
 aI10
-aVVigoda, Eric Joseph
-p223
-ag87
+aa(lp345
+VVigoda, Eric Joseph
+p346
+ag82
 aF4.0
 aI58
 aI0
@@ -1687,9 +1754,10 @@ aI0
 aI0
 aI0
 aI5
-aVVuduc, Richard Wilson
-p224
-ag87
+aa(lp347
+VVuduc, Richard Wilson
+p348
+ag82
 aF3.89
 aI73
 aI10
@@ -1697,9 +1765,10 @@ aI0
 aI0
 aI0
 aI5
-aVWagner, Alan Richard
-p225
-ag92
+aa(lp349
+VWagner, Alan Richard
+p350
+ag90
 aF4.0
 aI67
 aI0
@@ -1707,9 +1776,10 @@ aI0
 aI0
 aI0
 aI0
-aVWalker, Bruce N
-p226
-ag85
+aa(lp351
+VWalker, Bruce N
+p352
+ag79
 aF4.0
 aI100
 aI0
@@ -1717,9 +1787,10 @@ aI0
 aI0
 aI0
 aI0
-aVWhite, David Randall
-p227
-ag85
+aa(lp353
+VWhite, David Randall
+p354
+ag79
 aF3.92
 aI92
 aI9
@@ -1727,9 +1798,10 @@ aI0
 aI0
 aI0
 aI0
-aVWilson, Jeffrey B
-p228
-ag87
+aa(lp355
+VWilson, Jeffrey B
+p356
+ag82
 aF3.7
 aI69
 aI27
@@ -1737,9 +1809,10 @@ aI0
 aI0
 aI0
 aI3
-aVXu, Jun
-p229
-ag85
+aa(lp357
+VXu, Jun
+p358
+ag79
 aF4.0
 aI73
 aI0
@@ -1747,9 +1820,10 @@ aI0
 aI0
 aI0
 aI10
-aVZajic, Alenka
-p230
-ag85
+aa(lp359
+VZajic, Alenka
+p360
+ag79
 aF3.83
 aI71
 aI14
@@ -1757,9 +1831,10 @@ aI0
 aI0
 aI0
 aI0
-aVZegura, Ellen
-p231
-ag89
+aa(lp361
+VZegura, Ellen
+p362
+ag85
 aF3.87
 aI60
 aI8
@@ -1767,9 +1842,10 @@ aI0
 aI0
 aI0
 aI4
-aVZha, Hongyuan
-p232
-ag89
+aa(lp363
+VZha, Hongyuan
+p364
+ag85
 aF3.58
 aI51
 aI37
@@ -1777,9 +1853,10 @@ aI0
 aI0
 aI0
 aI2
-aVZiegler, Andrew Moore
-p233
-ag92
+aa(lp365
+VZiegler, Andrew Moore
+p366
+ag90
 aF4.0
 aI100
 aI0
@@ -1787,9 +1864,10 @@ aI0
 aI0
 aI0
 aI0
-aVZiegler,Andrew Moore
-p234
-ag92
+aa(lp367
+VZiegler,Andrew Moore
+p368
+ag90
 aF4.0
 aI100
 aI0
@@ -1797,27 +1875,14 @@ aI0
 aI0
 aI0
 aI0
-atp235
-bsVCS 6310
-p236
-g2
-(g3
-(I0
-tp237
-g5
-tp238
-Rp239
-(I1
-(I3
-I9
-tp240
-g12
-I01
-(lp241
+aasVCS 6310
+p369
+(lp370
+(lp371
 VFeron, Eric Marie J
-p242
+p372
 aVVery Large (50 students or more)
-p243
+p373
 aF3.49
 aI43
 aI21
@@ -1825,9 +1890,10 @@ aI3
 aI0
 aI2
 aI31
-aVMoss, Mark Bomi
-p244
-ag243
+aa(lp374
+VMoss, Mark Bomi
+p375
+ag373
 aF3.5
 aI33
 aI22
@@ -1835,10 +1901,11 @@ aI3
 aI0
 aI0
 aI41
-aVRugaber, Jon Spencer
-p245
+aa(lp376
+VRugaber, Jon Spencer
+p377
 aVSmall (10-20 Students)
-p246
+p378
 aF3.45
 aI46
 aI36
@@ -1846,27 +1913,14 @@ aI4
 aI0
 aI0
 aI11
-atp247
-bsVCS 6210
-p248
-g2
-(g3
-(I0
-tp249
-g5
-tp250
-Rp251
-(I1
-(I5
-I9
-tp252
-g12
-I01
-(lp253
+aasVCS 6210
+p379
+(lp380
+(lp381
 VAhamad, Mustaque
-p254
+p382
 aVVery Small (Fewer than 10 students)
-p255
+p383
 aF3.64
 aI39
 aI28
@@ -1874,10 +1928,11 @@ aI2
 aI0
 aI0
 aI31
-aVGiffin, Jonathon Thomas
-p256
+aa(lp384
+VGiffin, Jonathon Thomas
+p385
 aVVery Small (Fewer than 10 Students)
-p257
+p386
 aF3.43
 aI47
 aI29
@@ -1885,10 +1940,11 @@ aI5
 aI0
 aI3
 aI8
-aVLee, Wenke
-p258
+aa(lp387
+VLee, Wenke
+p388
 aVVery Large (50 students or more)
-p259
+p389
 aF3.69
 aI68
 aI22
@@ -1896,9 +1952,10 @@ aI3
 aI0
 aI0
 aI7
-aVOdom, Joel Van
-p260
-ag255
+aa(lp390
+VOdom, Joel Van
+p391
+ag383
 aF3.93
 aI89
 aI6
@@ -1906,9 +1963,10 @@ aI0
 aI0
 aI0
 aI3
-aVPhillips JR, Charles Edward
-p261
-ag257
+aa(lp392
+VPhillips JR, Charles Edward
+p393
+ag386
 aF4.0
 aI93
 aI0
@@ -1916,27 +1974,14 @@ aI0
 aI0
 aI0
 aI0
-atp262
-bsVCS 7637
-p263
-g2
-(g3
-(I0
-tp264
-g5
-tp265
-Rp266
-(I1
-(I2
-I9
-tp267
-g12
-I01
-(lp268
+aasVCS 7637
+p394
+(lp395
+(lp396
 VGoel, Ashok K
-p269
+p397
 aVSmall (10-20 Students)
-p270
+p398
 aF3.75
 aI70
 aI9
@@ -1944,10 +1989,11 @@ aI4
 aI0
 aI1
 aI12
-aVJoyner, David Andrew
-p271
+aa(lp399
+VJoyner, David Andrew
+p400
 aVVery Large (50 students or more)
-p272
+p401
 aF3.57
 aI56
 aI18
@@ -1955,25 +2001,12 @@ aI2
 aI1
 aI3
 aI21
-atp273
-bsVCSE 6242
-p274
-g2
-(g3
-(I0
-tp275
-g5
-tp276
-Rp277
-(I1
-(I5
-I9
-tp278
-g12
-I01
-(lp279
-g254
-ag255
+aasVCSE 6242
+p402
+(lp403
+(lp404
+g382
+ag383
 aF3.64
 aI39
 aI28
@@ -1981,8 +2014,9 @@ aI2
 aI0
 aI0
 aI31
-ag256
-ag257
+aa(lp405
+g385
+ag386
 aF3.43
 aI47
 aI29
@@ -1990,8 +2024,9 @@ aI5
 aI0
 aI3
 aI8
-ag258
-ag259
+aa(lp406
+g388
+ag389
 aF3.69
 aI68
 aI22
@@ -1999,8 +2034,9 @@ aI3
 aI0
 aI0
 aI7
-ag260
-ag255
+aa(lp407
+g391
+ag383
 aF3.93
 aI89
 aI6
@@ -2008,8 +2044,9 @@ aI0
 aI0
 aI0
 aI3
-ag261
-ag257
+aa(lp408
+g393
+ag386
 aF4.0
 aI93
 aI0
@@ -2017,25 +2054,12 @@ aI0
 aI0
 aI0
 aI0
-atp280
-bsVCSE 6220
-p281
-g2
-(g3
-(I0
-tp282
-g5
-tp283
-Rp284
-(I1
-(I5
-I9
-tp285
-g12
-I01
-(lp286
-g254
-ag255
+aasVCSE 6220
+p409
+(lp410
+(lp411
+g382
+ag383
 aF3.64
 aI39
 aI28
@@ -2043,8 +2067,9 @@ aI2
 aI0
 aI0
 aI31
-ag256
-ag257
+aa(lp412
+g385
+ag386
 aF3.43
 aI47
 aI29
@@ -2052,8 +2077,9 @@ aI5
 aI0
 aI3
 aI8
-ag258
-ag259
+aa(lp413
+g388
+ag389
 aF3.69
 aI68
 aI22
@@ -2061,8 +2087,9 @@ aI3
 aI0
 aI0
 aI7
-ag260
-ag255
+aa(lp414
+g391
+ag383
 aF3.93
 aI89
 aI6
@@ -2070,8 +2097,9 @@ aI0
 aI0
 aI0
 aI3
-ag261
-ag257
+aa(lp415
+g393
+ag386
 aF4.0
 aI93
 aI0
@@ -2079,27 +2107,14 @@ aI0
 aI0
 aI0
 aI0
-atp287
-bsVCS 6440
-p288
-g2
-(g3
-(I0
-tp289
-g5
-tp290
-Rp291
-(I1
-(I1
-I9
-tp292
-g12
-I01
-(lp293
+aasVCS 6440
+p416
+(lp417
+(lp418
 VBraunstein, Mark L
-p294
+p419
 aVSmall (10-20 Students)
-p295
+p420
 aF3.94
 aI86
 aI6
@@ -2107,27 +2122,14 @@ aI0
 aI0
 aI0
 aI4
-atp296
-bsVCSE 8803 Special Topics
-p297
-g2
-(g3
-(I0
-tp298
-g5
-tp299
-Rp300
-(I1
-(I2
-I9
-tp301
-g12
-I01
-(lp302
+aasVCSE 8803 Special Topics
+p421
+(lp422
+(lp423
 VBalch, Tucker R
-p303
+p424
 aVVery Large (50 Students or More)
-p304
+p425
 aF3.88
 aI83
 aI6
@@ -2135,10 +2137,11 @@ aI2
 aI0
 aI0
 aI1
-aVByrd, Charles David
-p305
+aa(lp426
+VByrd, Charles David
+p427
 aVLarge (31-49 students)
-p306
+p428
 aF3.81
 aI70
 aI7
@@ -2146,27 +2149,14 @@ aI4
 aI0
 aI0
 aI7
-atp307
-bsVCS 4495
-p308
-g2
-(g3
-(I0
-tp309
-g5
-tp310
-Rp311
-(I1
-(I2
-I9
-tp312
-g12
-I01
-(lp313
+aasVCS 4495
+p429
+(lp430
+(lp431
 VEssa, Irfan A
-p314
+p432
 aVMid-size (21-30 students)
-p315
+p433
 aF3.61
 aI64
 aI19
@@ -2174,10 +2164,11 @@ aI5
 aI1
 aI1
 aI12
-aVHybinette, Ingrid E M
-p316
+aa(lp434
+VHybinette, Ingrid E M
+p435
 aVSmall (10-20 students)
-p317
+p436
 aF3.91
 aI83
 aI8
@@ -2185,25 +2176,12 @@ aI0
 aI0
 aI0
 aI0
-atp318
-bsVCS 6035
-p319
-g2
-(g3
-(I0
-tp320
-g5
-tp321
-Rp322
-(I1
-(I5
-I9
-tp323
-g12
-I01
-(lp324
-g254
-ag255
+aasVCS 6035
+p437
+(lp438
+(lp439
+g382
+ag383
 aF3.64
 aI39
 aI28
@@ -2211,8 +2189,9 @@ aI2
 aI0
 aI0
 aI31
-ag256
-ag257
+aa(lp440
+g385
+ag386
 aF3.43
 aI47
 aI29
@@ -2220,8 +2199,9 @@ aI5
 aI0
 aI3
 aI8
-ag258
-ag259
+aa(lp441
+g388
+ag389
 aF3.69
 aI68
 aI22
@@ -2229,8 +2209,9 @@ aI3
 aI0
 aI0
 aI7
-ag260
-ag255
+aa(lp442
+g391
+ag383
 aF3.93
 aI89
 aI6
@@ -2238,8 +2219,9 @@ aI0
 aI0
 aI0
 aI3
-ag261
-ag257
+aa(lp443
+g393
+ag386
 aF4.0
 aI93
 aI0
@@ -2247,27 +2229,14 @@ aI0
 aI0
 aI0
 aI0
-atp325
-bsVCS 7641
-p326
-g2
-(g3
-(I0
-tp327
-g5
-tp328
-Rp329
-(I1
-(I6
-I9
-tp330
-g12
-I01
-(lp331
+aasVCS 7641
+p444
+(lp445
+(lp446
 VDellaert, Frank
-p332
+p447
 aVMid-Size (21-30 Students)
-p333
+p448
 aF3.71
 aI48
 aI20
@@ -2275,10 +2244,11 @@ aI0
 aI0
 aI0
 aI20
-aVIsbell Jr, Charles Lee
-p334
+aa(lp449
+VIsbell Jr, Charles Lee
+p450
 aVLarge (31-49 Students)
-p335
+p451
 aF3.6
 aI52
 aI26
@@ -2286,10 +2256,11 @@ aI2
 aI1
 aI0
 aI15
-aVLevanon, Guy
-p336
+aa(lp452
+VLevanon, Guy
+p453
 aVVery Large (50 Students or More)
-p337
+p454
 aF2.96
 aI41
 aI17
@@ -2297,9 +2268,10 @@ aI17
 aI9
 aI3
 aI7
-aVMappus, Rudolph L
-p338
-ag333
+aa(lp455
+VMappus, Rudolph L
+p456
+ag448
 aF3.65
 aI48
 aI26
@@ -2307,9 +2279,10 @@ aI0
 aI0
 aI0
 aI13
-aVSong, Le
-p339
-ag333
+aa(lp457
+VSong, Le
+p458
+ag448
 aF3.62
 aI58
 aI25
@@ -2317,10 +2290,11 @@ aI5
 aI0
 aI0
 aI6
-aVZha, Hongyuan
-p340
+aa(lp459
+VZha, Hongyuan
+p460
 aVSmall (10-20 Students)
-p341
+p461
 aF3.48
 aI51
 aI46
@@ -2328,25 +2302,12 @@ aI3
 aI0
 aI0
 aI0
-atp342
-bsVCS 7646
-p343
-g2
-(g3
-(I0
-tp344
-g5
-tp345
-Rp346
-(I1
-(I2
-I9
-tp347
-g12
-I01
-(lp348
-g303
-ag304
+aasVCS 7646
+p462
+(lp463
+(lp464
+g424
+ag425
 aF3.88
 aI83
 aI6
@@ -2354,8 +2315,9 @@ aI2
 aI0
 aI0
 aI1
-ag305
-ag306
+aa(lp465
+g427
+ag428
 aF3.81
 aI70
 aI7
@@ -2363,25 +2325,12 @@ aI4
 aI0
 aI0
 aI7
-atp349
-bsVCS 6475
-p350
-g2
-(g3
-(I0
-tp351
-g5
-tp352
-Rp353
-(I1
-(I2
-I9
-tp354
-g12
-I01
-(lp355
-g314
-ag315
+aasVCS 6475
+p466
+(lp467
+(lp468
+g432
+ag433
 aF3.61
 aI64
 aI19
@@ -2389,8 +2338,9 @@ aI5
 aI1
 aI1
 aI12
-ag316
-ag317
+aa(lp469
+g435
+ag436
 aF3.91
 aI83
 aI8
@@ -2398,27 +2348,14 @@ aI0
 aI0
 aI0
 aI0
-atp356
-bsVCS 6300
-p357
-g2
-(g3
-(I0
-tp358
-g5
-tp359
-Rp360
-(I1
-(I5
-I9
-tp361
-g12
-I01
-(lp362
+aasVCS 6300
+p470
+(lp471
+(lp472
 VHarrold, Mary Jean
-p363
+p473
 aVLarge (31-49 Students)
-p364
+p474
 aF3.6
 aI55
 aI33
@@ -2426,10 +2363,11 @@ aI2
 aI0
 aI0
 aI4
-aVMcCracken, W Michael
-p365
+aa(lp475
+VMcCracken, W Michael
+p476
 aVSmall (10-20 Students)
-p366
+p477
 aF3.83
 aI83
 aI17
@@ -2437,10 +2375,11 @@ aI0
 aI0
 aI0
 aI0
-aVOrso, Alessandro
-p367
+aa(lp478
+VOrso, Alessandro
+p479
 aVVery Large (50 Students or More)
-p368
+p480
 aF3.57
 aI65
 aI22
@@ -2448,9 +2387,10 @@ aI6
 aI1
 aI1
 aI5
-aVPotts, Colin
-p369
-ag364
+aa(lp481
+VPotts, Colin
+p482
+ag474
 aF3.87
 aI85
 aI13
@@ -2458,10 +2398,11 @@ aI0
 aI0
 aI0
 aI2
-aVRugaber, Jon Spencer
-p370
+aa(lp483
+VRugaber, Jon Spencer
+p484
 aVMid-Size (21-30 Students)
-p371
+p485
 aF3.4
 aI43
 aI41
@@ -2469,27 +2410,14 @@ aI4
 aI0
 aI1
 aI8
-atp372
-bsVCS 6262
-p373
-g2
-(g3
-(I0
-tp374
-g5
-tp375
-Rp376
-(I1
-(I7
-I9
-tp377
-g12
-I01
-(lp378
+aasVCS 6262
+p486
+(lp487
+(lp488
 VBarlow, David A
-p379
+p489
 aVSmall (10-20 students)
-p380
+p490
 aF3.72
 aI72
 aI28
@@ -2497,10 +2425,11 @@ aI0
 aI0
 aI0
 aI0
-aVFeamster, Nicholas G
-p381
+aa(lp491
+VFeamster, Nicholas G
+p492
 aVLarge (31-49 Students)
-p382
+p493
 aF3.4
 aI53
 aI22
@@ -2508,10 +2437,11 @@ aI11
 aI0
 aI2
 aI4
-aVGiffin, Jonathon Thomas
-p383
+aa(lp494
+VGiffin, Jonathon Thomas
+p495
 aVVery Large (50 Students or More)
-p384
+p496
 aF3.57
 aI63
 aI27
@@ -2519,10 +2449,11 @@ aI6
 aI1
 aI0
 aI2
-aVLee, Wenke
-p385
+aa(lp497
+VLee, Wenke
+p498
 aVMid-Size (21-30 Students)
-p386
+p499
 aF3.77
 aI70
 aI20
@@ -2530,10 +2461,11 @@ aI0
 aI0
 aI0
 aI5
-aVOwen III, Henry L
-p387
+aa(lp500
+VOwen III, Henry L
+p501
 aVSmall (10-20 Students)
-p388
+p502
 aF3.41
 aI44
 aI51
@@ -2541,9 +2473,10 @@ aI4
 aI0
 aI0
 aI2
-aVTraynor, Patrick Gerard
-p389
-ag384
+aa(lp503
+VTraynor, Patrick Gerard
+p504
+ag496
 aF3.37
 aI45
 aI26
@@ -2551,9 +2484,10 @@ aI10
 aI1
 aI1
 aI14
-aVXu, Jun
-p390
-ag388
+aa(lp505
+VXu, Jun
+p506
+ag502
 aF3.57
 aI53
 aI40
@@ -2561,27 +2495,14 @@ aI0
 aI0
 aI0
 aI7
-atp391
-bsVCS 6400
-p392
-g2
-(g3
-(I0
-tp393
-g5
-tp394
-Rp395
-(I1
-(I2
-I9
-tp396
-g12
-I01
-(lp397
+aasVCS 6400
+p507
+(lp508
+(lp509
 VNavathe, Shamkant B
-p398
+p510
 aVLarge (31-49 Students)
-p399
+p511
 aF3.51
 aI48
 aI41
@@ -2589,9 +2510,10 @@ aI1
 aI0
 aI0
 aI5
-aVOmiecinski, Edward R
-p400
-ag399
+aa(lp512
+VOmiecinski, Edward R
+p513
+ag511
 aF3.28
 aI44
 aI36
@@ -2599,27 +2521,14 @@ aI10
 aI2
 aI1
 aI4
-atp401
-bsVCS 6290
-p402
-g2
-(g3
-(I0
-tp403
-g5
-tp404
-Rp405
-(I1
-(I12
-I9
-tp406
-g12
-I01
-(lp407
+aasVCS 6290
+p514
+(lp515
+(lp516
 VConte, Thomas M.
-p408
+p517
 aVLarge (31-49 Students)
-p409
+p518
 aF3.62
 aI60
 aI27
@@ -2627,10 +2536,11 @@ aI1
 aI0
 aI1
 aI4
-aVConte, Thomas Martin
-p410
+aa(lp519
+VConte, Thomas Martin
+p520
 aVVery Large (50 Students or More)
-p411
+p521
 aF3.35
 aI51
 aI27
@@ -2638,10 +2548,11 @@ aI13
 aI0
 aI2
 aI6
-aVEsmaeilzadeh, Hadi
-p412
+aa(lp522
+VEsmaeilzadeh, Hadi
+p523
 aVMid-size (21-30 students)
-p413
+p524
 aF3.69
 aI41
 aI18
@@ -2649,9 +2560,10 @@ aI0
 aI0
 aI0
 aI14
-aVKim, Hyesoon
-p414
-ag411
+aa(lp525
+VKim, Hyesoon
+p526
+ag521
 aF3.34
 aI47
 aI32
@@ -2659,10 +2571,11 @@ aI14
 aI0
 aI1
 aI4
-aVKim, Jongman
-p415
+aa(lp527
+VKim, Jongman
+p528
 aVVery Small (Fewer than 10 Students)
-p416
+p529
 aF4.0
 aI50
 aI0
@@ -2670,9 +2583,10 @@ aI0
 aI0
 aI0
 aI50
-aVLoh, Gabriel H
-p417
-ag409
+aa(lp530
+VLoh, Gabriel H
+p531
+ag518
 aF3.2
 aI42
 aI43
@@ -2680,10 +2594,11 @@ aI4
 aI0
 aI7
 aI2
-aVMackenzie, Kenneth M
-p418
+aa(lp532
+VMackenzie, Kenneth M
+p533
 aVSmall (10-20 Students)
-p419
+p534
 aF3.63
 aI67
 aI25
@@ -2691,9 +2606,10 @@ aI5
 aI0
 aI0
 aI2
-aVNiemier, Michael Thaddeus
-p420
-ag409
+aa(lp535
+VNiemier, Michael Thaddeus
+p536
+ag518
 aF3.31
 aI45
 aI39
@@ -2701,9 +2617,10 @@ aI9
 aI0
 aI2
 aI2
-aVPrvulovic, Milos
-p421
-ag409
+aa(lp537
+VPrvulovic, Milos
+p538
+ag518
 aF3.06
 aI39
 aI28
@@ -2711,9 +2628,10 @@ aI12
 aI4
 aI4
 aI12
-aVQureshi, Moinuddin K
-p422
-ag416
+aa(lp539
+VQureshi, Moinuddin K
+p540
+ag529
 aF3.13
 aI38
 aI31
@@ -2721,10 +2639,11 @@ aI29
 aI0
 aI0
 aI3
-aVRailing, Brian Paul
-p423
+aa(lp541
+VRailing, Brian Paul
+p542
 aVVery Small (Fewer than 10 students)
-p424
+p543
 aF3.58
 aI31
 aI22
@@ -2732,9 +2651,10 @@ aI0
 aI0
 aI0
 aI28
-aVRailing,Brian Paul
-p425
-ag424
+aa(lp544
+VRailing,Brian Paul
+p545
+ag543
 aF3.5
 aI25
 aI25
@@ -2742,27 +2662,14 @@ aI0
 aI0
 aI0
 aI38
-atp426
-bsVCS 6340
-p427
-g2
-(g3
-(I0
-tp428
-g5
-tp429
-Rp430
-(I1
-(I2
-I9
-tp431
-g12
-I01
-(lp432
+aasVCS 6340
+p546
+(lp547
+(lp548
 VHarrold, Mary Jean
-p433
+p549
 aVMid-Size (21-30 Students)
-p434
+p550
 aF3.66
 aI65
 aI27
@@ -2770,10 +2677,11 @@ aI3
 aI0
 aI0
 aI4
-aVNaik, Mayur Hiru
-p435
+aa(lp551
+VNaik, Mayur Hiru
+p552
 aVLarge (31-49 Students)
-p436
+p553
 aF3.24
 aI40
 aI31
@@ -2781,5 +2689,4 @@ aI9
 aI3
 aI2
 aI17
-atp437
-bs.
+aas.

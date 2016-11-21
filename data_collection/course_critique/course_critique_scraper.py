@@ -12,6 +12,6 @@ for classname in list_of_classes:
         course_grades_dict[classname] = None 
         pass
     class_matrix = class_data.as_matrix()
-    course_grades_dict[classname] = class_matrix
+    course_grades_dict[classname] = class_matrix.tolist()
     
     pkl.dump(course_grades_dict, open( "course_critique_data.p", "wb" ) )
