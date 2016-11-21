@@ -34,7 +34,7 @@ DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
                              "overview_query":"Overview",
                              "technical_query": "Technical",
                              "reading_query": "Reading",
-                             "grading_query": "Grading"}
+                             "grading_policy_query": "Grading"}
 
 def processRequest(req):
     print "Trying to load data"
