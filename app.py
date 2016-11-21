@@ -75,7 +75,7 @@ def answerNumericQueries(course_number_list, req):
     #Answer all quantitative queries
     query_name = req.get("result").get("action")
     course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
-    print course_critique_dat
+    print type(course_critique_dat)
     for course_number in course_number_list:
         print course_number
         course_matrix = course_critique_dat[course_number]
