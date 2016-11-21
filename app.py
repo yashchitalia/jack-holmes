@@ -88,9 +88,9 @@ def extractCourseNumber(req):
         course_name = None
     if len(course_number) == 0:
         course_number = None
+    print course_name, course_number
     if (course_name is None) and (course_number is None):
         return None
-    print course_name, course_number
     elif course_name is not None:
         candidate_course_number = mapCourseNameToCourseNumber(course_name)
         if course_number is not None and course_number != candidate_course_number:
