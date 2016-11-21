@@ -78,17 +78,23 @@ def answerNumericQueries(course_number_list, req):
     for course_number in course_number_list:
         course_matrix = course_critique_dat[course_number]
         if query_name == "grade_likelihood":
+            print "Identified Query correctly"
             grade_req = req.get("result").get("parameters").get("grade")
+            print grade_req
             grade_dict = {'A':3, 'B':4, 'C':5, 'D':6}
             percentage = []
             if grade_req in grade_dict.keys():
+                print "Grade found in dict"
                 for row in course_matrix:
                     sum_row = 0.0
                     for num in grade_dict.keys():
                         sum_row = sum_row + row[grade_dict[num]]
                     percentage.append(row[grade_dict[grade_req]]*100.0/sum_row)
+                print percentage
                 avg_percentage = (1.0*sum(percentage))/len(percentage)
-                return "Average percentage of "+grade_req+"'s in "+course_number+" is "+ str(avg_percentage)
+                speech = "Average percentage of "+grade_req+"'s in "+course_number+" is "+ str(avg_percentage)
+                print speech
+                return speech
             elif grade_req == 'pass' or grade_req == 'fail':
                 fail_percentage = []
                 for row in course_matrix:
