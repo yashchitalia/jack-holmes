@@ -34,7 +34,10 @@ DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
                              "overview_query":"Overview",
                              "technical_query": "Technical",
                              "reading_query": "Reading",
-                             "grading_policy_query": "Grading"}
+                             "grading_policy_query": "Grading",
+                             "course_number_query":"Number",
+                             "course_name_query": "Name"}
+LIST_OF_NUMERIC_QUERIES = ["grade_likelihood", "avg_gpa"]
 
 def processRequest(req):
     print "Trying to load data"
@@ -60,13 +63,11 @@ def answerObjectiveQueries(course_number_list, query_name):
     #Answer all the objective queries
     for course_number in course_number_list:
         if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
-            print "Your query is valid"
-            print DICT_OF_OBJECTIVE_QUERIES[query_name]
-            print omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
-            speech = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
-            print speech
+            if query_name == "course_number_query":
+                speech = course_number 
+            else:
+                speech = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
         else:
-            print "Your Query is not in my dict"
             speech = "I'm afraid, I don't know the answer to that question. But maybe you can find the answer on the OMSCS website."
     return speech
                         
