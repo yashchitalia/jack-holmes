@@ -48,6 +48,9 @@ def processRequest(req):
         if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
             speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
             print speech
+        elif req.get("result").get("action") in LIST_OF_NUMERIC_QUERIES:
+            speech = answerNumericQueries(course_number_list, req)  
+            print speech
         else:
             speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
             print speech
@@ -56,21 +59,38 @@ def processRequest(req):
 
 
 def answerObjectiveQueries(course_number_list, query_name):
-    omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
-    print query_name
     #Answer all the objective queries
     for course_number in course_number_list:
         if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
             if query_name == "course_number_query":
-                print "Query correctly recognized"
                 speech = course_number 
             else:
+                omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
                 speech = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
         else:
             speech = "I'm afraid, I don't know the answer to that question. But maybe you can find the answer on the OMSCS website."
     return speech
                         
-
+def answerNumericQueries(course_number_list, req):
+    #Answer all quantitative queries
+    print "Recognized Numeric Query"
+    query_name = req.get("result").get("action")
+    print query_name
+    course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
+    for course_number in course_number_list:
+        course_matrix = course_critique_dat[course_number]
+        if query_name == "grade_likelihood":
+            grade_dict = {'A':3, 'B':4, 'C':5, 'D':6}
+        elif query_name == "avg_gpa":
+            print "Starting computation..."
+            gpa_arr = []
+            for row in course_matrix:
+                print row
+                gpa_arr.append(row[2])
+            avg_gpa = np.mean(np.array(gpa_arr))
+            print avg_gpa
+            return str(avg_gpa)
+            
 def mapCourseNameToCourseNumber(course_name):
     omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
     for course_number in omscs_dat.keys():
