@@ -75,13 +75,46 @@ def answerNumericQueries(course_number_list, req):
     #Answer all quantitative queries
     query_name = req.get("result").get("action")
     course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
-    print type(course_critique_dat)
     for course_number in course_number_list:
-        print course_number
         course_matrix = course_critique_dat[course_number]
-        print course_matrix
         if query_name == "grade_likelihood":
+            grade_req = req.get("result").get("parameters").get("grade")
             grade_dict = {'A':3, 'B':4, 'C':5, 'D':6}
+            percentage = []
+            if grade_req in grade_dict.keys():
+                for row in course_matrix:
+                    sum_row = 0.0
+                    for num in grade_dict.keys():
+                        sum_row = sum_row + row[grade_dict[num]]
+                    percentage.append(row[grade_dict[grade_req]]*100.0/sum_row)
+                avg_percentage = (1.0*sum(percentage))/len(percentage)
+                return "Average percentage of "+grade_req+"'s in "+course_number+" is "+ str(avg_percentage)
+            elif grade_req == 'pass' or grade_req == 'fail':
+                fail_percentage = []
+                for row in course_matrix:
+                    sum_row = 0.0
+                    for num in grade_dict.keys():
+                        sum_row = sum_row + row[grade_dict[num]]
+                    percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
+                    fail_percentage.append((row[grade_dict['D']])*100.0/sum_row)
+                avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
+                avg_fail_percentage = (1.0*sum(fail_percentage))/len(fail_percentage)
+                if avg_pass_percentage >= 90.0:
+                    speech = "Average passing percentage is "+ str(avg_pass_percentage) + " and averge failing percentage is "+ str(avg_fail_percentage) + ". Yay. Lot's of people seem to pass this one. Go for it!"
+                else:
+                    speech = "Average passing percentage is "+ str(avg_pass_percentage) + " and averge failing percentage is "+ str(avg_fail_percentage) + ". Oh, notice, that lot's of people seem to flunk this one. Tread carefully..."
+                return speech
+            else:
+                speech = ''
+                for grade in grade_dict.keys():
+                    for row in course_matrix:
+                        sum_row = 0.0
+                        for num in grade_dict.keys():
+                            sum_row = sum_row + row[grade_dict[num]]
+                        percentage.append(row[grade_dict[grade]]*100.0/sum_row)
+                    avg_percentage = (1.0*sum(percentage))/len(percentage)
+                    speech = speech + "Average percentage of "+grade+"'s is "+ str(avg_percentage) +"."
+                return speech
         elif query_name == "avg_gpa":
             print "Starting computation..."
             gpa_arr = []
@@ -104,7 +137,6 @@ def extractCourseNumber(req):
     parameters = result.get("parameters")
     course_number= parameters.get('course_number')
     course_name= parameters.get('course_name')
-    
     try:
         if len(course_name) == 0:
             course_name = None
