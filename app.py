@@ -74,7 +74,9 @@ def answerObjectiveQueries(course_number_list, query_name):
 def answerNumericQueries(course_number_list, req):
     #Answer all quantitative queries
     print "Recognized Numeric Query"
+    print req.get("result").get("action") 
     query_name = req.get("result").get("action")
+    print "HERE"
     print query_name
     course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
     for course_number in course_number_list:
