@@ -84,6 +84,7 @@ def extractCourseNumber(req):
     parameters = result.get("parameters")
     course_number= parameters.get('course_number')
     course_name= parameters.get('course_name')
+    print course_name
     if len(course_name) == 0:
         course_name = None
     if len(course_number) == 0:
