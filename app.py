@@ -88,10 +88,10 @@ def extractCourseNumber(req):
     print course_name
     print "Course Number"
     print course_number
-    if len(course_name) == 0:
+    if len(course_name) == 0 or (course_name is None):
         print "Here"
         course_name = None
-    if len(course_number) == 0:
+    if len(course_number) == 0 or (course_number is None):
         print "here2"
         course_number = None
     print course_name, course_number
