@@ -10,7 +10,6 @@ from flask import make_response
 
 import random
 import pickle as pkl
-import numpy as np
 # Flask app should start in global layout
 app = Flask(__name__)
 
@@ -89,8 +88,7 @@ def answerNumericQueries(course_number_list, req):
             for row in course_matrix:
                 print row
                 gpa_arr.append(row[2])
-            avg_gpa = np.mean(np.array(gpa_arr))
-            print avg_gpa
+            avg_gpa = (1.0*sum(gpa_arr))/len(gpa_arr)
             return str(avg_gpa)
             
 def mapCourseNameToCourseNumber(course_name):
