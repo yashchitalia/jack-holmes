@@ -40,7 +40,6 @@ DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
 LIST_OF_NUMERIC_QUERIES = ["grade_likelihood", "avg_gpa"]
 
 def processRequest(req):
-    print "Trying to load data"
     course_number_list = extractCourseNumber(req)
     if course_number_list is None:
         speech = "No Course Number Specified. What course were you asking about?"
@@ -61,6 +60,7 @@ def answerObjectiveQueries(course_number_list, query_name):
     #Answer all the objective queries
     for course_number in course_number_list:
         if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
+            print query_name
             if query_name == "course_number_query":
                 print "Query correctly recognized"
                 speech = course_number 
