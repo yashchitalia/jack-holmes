@@ -87,11 +87,11 @@ def extractCourseNumber(req):
     print "Course Name"
     print course_name
     print "Course Number"
-    print course_number
-    if len(course_name) == 0 or (course_name == 'None'):
+    print type(course_number)
+    if len(course_name) == 0:
         print "Here"
         course_name = None
-    if len(course_number) == 0 or (course_number == 'None'):
+    if len(course_number) == 0:
         print "here2"
         course_number = None
     print course_name, course_number
