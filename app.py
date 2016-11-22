@@ -42,7 +42,7 @@ LIST_OF_NUMERIC_QUERIES = ["grade_likelihood", "avg_gpa"]
 def processRequest(req):
     course_number_list = extractCourseNumber(req)
     if course_number_list is None:
-        speech = "No Course Number Specified. What course were you asking about?"
+        speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
         print speech
     else:
         if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
@@ -158,11 +158,12 @@ def extractCourseNumber(req):
         return None
     elif course_name is not None:
         candidate_course_number = mapCourseNameToCourseNumber(course_name)
+        if candidate_course_number is None:
+            return None
         if course_number is not None and course_number != candidate_course_number:
             course_number_list = [course_number, candidate_course_number]
         else:
             course_number = candidate_course_number
-    print course_number
     course_number_list = [course_number]
     return course_number_list
 

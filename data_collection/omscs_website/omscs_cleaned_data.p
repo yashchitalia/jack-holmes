@@ -2,9 +2,9 @@
 VCS 6250
 p1
 (dp2
-S'Reading'
+S'Instructor'
 p3
-S' There is no required textbook for this course. You may, but are not required to read the papers listed in the "Instructor Notes" section under selected videos, and compiled in the  Web Resources wiki page .'
+S'Nick Feamster'
 p4
 sS'Name'
 p5
@@ -26,39 +26,39 @@ sS'Prerequisites'
 p13
 S" This class is appropriate for students with previous background in networking. Some familiarity with both network programming, scripting languages (e.g., Python) and using virtual machines will be helpful. If you can confidently answer 'yes' to these questions, you should be fine:\n 1.Can you explain the main distinction between TCP and UDP? 2.Can you comfortably complete the  Python tutorial 3. Do you understand the three way handshake of TCP? 4. Can you get files off of a virtual machine without a mapped directory?"
 p14
-sS'Instructor'
+sS'Reading'
 p15
-S'Nick Feamster'
+S' There is no required textbook for this course. You may, but are not required to read the papers listed in the "Instructor Notes" section under selected videos, and compiled in the  Web Resources wiki page .'
 p16
-ssVCS 6505
+ssVCS 6440
 p17
 (dp18
 g3
-S' All course material will be covered in lecture. Homework will not reference specific problems from textbooks. It is recommended, however, that students obtain their own copies of: Michael Sipser,  Introduction to the Theory of Computation , T. H. Cormen, C.E. Leiserson, R. L. Rivest, and C. Stein,  Introduction to Algorithms'
+S'Mark Braunstein'
 p19
 sg5
-S'Computability, Complexity & Algorithms'
+S'Intro to Health Informatics'
 p20
 sg7
-S' Grades will be based on written assignments and two proctored exams.'
+S' Students will have the option to complete and submit Udacity quiz questions as they proceed through the course. Each student must successfully complete and submit all course exercises. There will be short, bi-weekly graded quizzes. Each student must join and actively participate in the assigned team project as a programmer, designer or project manager.'
 p21
 sg9
-S' Browser and connection speed: An up-to-date version of Chrome or Firefox is strongly recommended. We also support Internet Explorer 9 and the desktop versions of Internet Explorer 10 and above (not the metro versions). 2+ Mbps recommended; at minimum 0.768 Mbps download speed Operating system: - PC: Windows XP or higher with latest updates installed - Mac: OS X 10.6 or higher with latest updates installed - Linux: Any recent distribution that has the supported browsers installed'
+S' Individual students should have C++/C# or Java / Javascript proficiency. At least one team member must have proficiency in web programming languages such as PHP, Ruby, Java or .NET (C#), or any web development languages. Browser and connection speed: An up-to-date version of Chrome or Firefox is strongly recommended. We also support Internet Explorer 9 and the desktop versions of Internet Explorer 10 and above (not the metro versions). 2+ Mbps recommended; at minimum 0.768 Mbps download speed Operating system: - PC: Windows 7 or higher with latest updates installed - Mac: OS X 10.6 or higher with latest updates installed - Linux: Any recent distribution that has the supported browsers installed'
 p22
 sg11
-S' This course will cover important concepts from computability theory; techniques for designing efficient algorithms for combinatorial, algebraic, and number-theoretic problems; and basic concepts such as NP-Completeness from computational complexity theory. To view an outline of the course, you may download the  Syllabus . A sample lesson on the  Maximum Flow'
+S' Introduction to Health Informatics (CS 6440) is designed so that students with a variety of backgrounds can gain basic proficiency in health informatics. Health informatics encompasses the application of computing to healthcare delivery; population and public health; community-based clinical research; and the potential for big data and analytics to transform the field. This is distinct from the related field of bioinformatics, which explores the role of computing in understanding the genomic and proteomic processes within cells. During CS 6440 students will follow a make-believe patient, Marla Dixon, whose digital record they will use to complete a variety of exercises and projects designed to provide a hands-on experience with state-of-the-art health informatics tools and systems. They will apply the knowledge and skills they learn to work with a team of their classmates on a real world clinical challenge.  For more information about elements learned in this course, please download the basic CS 6440 Intro to Health Informatics Course Syllabus. CS 6440 Intro to Health Informatics Course Syllabus .'
 p23
 sg13
-S' Students are expected to be familiar with: (a) mathematical proof techniques such as induction (b) basic models of computation such as finite automata or Turing machines, and (b) basic algorithms and data structures for sorting, graph traversal (breadth-first and depth-first search), minimum spanning trees (Kruskal\'s algorithm, Prim\'s algorithm), and shortest path (Dijkstra\'s algorithm). The main prerequisite is an abiding interest in learning theoretical computer science. If you answer  no  to any of the following questions, it may be beneficial to acquire background knowledge concurrently or prior to taking CS 6505. Can you show that the sum of the first n numbers is n(n+1)/2? Can you give the proof as an induction on n? Can you give an O(n log n) algorithm for sorting n numbers? Can you describe the difference between breadth-first and depth-first search? Given an nxn matrix A and an n-dimensional vector b, can you give a polynomial-time algorithm to find a vector x such that Ax=b?   "Discrete Mathematics and Its Applications" by Ken Rosen provides an excellent background for this course if you had trouble with these questions. "Discrete Mathematics and Its Applications"  by Ken Rosen provides an excellent background for this course if you had trouble with these questions.'
+S' Students must have a basic computer science background. No previous knowledge of health informatics required. Any student qualified enough to be admitted to OMS CS and willing to put in the necessary time for course work should be prepared for this course, though students should refer to Technical Requirements below for the relatively limited technical proficiencies necessary for success.'
 p24
 sg15
-S'Charlie Brubaker'
+S' There are no required readings for this course. Students will have the option to purchase (at a discount) and to read the corresponding chapters of the professor\\ text,  Contemporary Health Informatics'
 p25
 ssVCS 8803 O07 Special Topics
 p26
 (dp27
 g3
-S' There is no required textbook. Several papers will be given as reading assignments throughout the course. More details will be provided during the semester.   Suggested readings include  Reinforcement Learning  by Sutton and Barto. You can find this reading available for free,  here'
+S'Raheem Beyah'
 p28
 sg5
 S'Cyber-Physical Systems Security'
@@ -76,13 +76,13 @@ sg13
 S' It is recommended that students who take this course have previously taken at least an undergraduate-level course in computer architecture. In addition, the students must have a strong background in C and/or C++.'
 p33
 sg15
-S'Raheem Beyah'
+S' There is no required textbook. Several papers will be given as reading assignments throughout the course. More details will be provided during the semester.   Suggested readings include  Reinforcement Learning  by Sutton and Barto. You can find this reading available for free,  here'
 p34
 ssVCS 8803-002
 p35
 (dp36
 g3
-S" There is no required textbook for this course. However, it is recommended that students have access to a solid, foundational operating systems book. Here are our recommendations: Operating System Concepts Operating System Concepts Operating System Concepts: Essentials Operating System Concepts: Essentials Modern Operating Systems Modern Operating Systems Operating Systems: Three Easy Pieces Operating Systems: Three Easy Pieces \\u200b Minimum Technical Requirements Browser and connection speed: An up-to-date version of Chrome or Firefox is strongly recommended. We also support Internet Explorer 9 and the desktop versions of Internet Explorer 10 and above (not the metro versions). 2+ Mbps recommended; at minimum 0.768 Mbps download speed Operating system - 64-bit OS for compatibility with 64-bit VM's: - PC: Windows XP or higher with latest updates installed - Mac: OS X 10.6 or higher with latest updates installed - Linux: Any recent distribution that has the supported browsers installed Virtual Machine -You will be provided a virtual machine (VM) useful for performing class assignments and projects -For the projects, the supplied resources are identical to those used to test your submissions -Details for downloading and installing the VM can be found on the Class Resources Page"
+S'Ada Gavrilovska'
 p37
 sg5
 S'Introduction to Operating Systems'
@@ -100,13 +100,13 @@ sg13
 S' To undertake this course, you should have taken an undergraduate level course on, or be otherwise familiar with, basic hardware and software aspects of computer systems organization. Prior programming experience with C is recommended, as C is required for the practical component of this course. Also, any experience using command line interfaces in Linux will be useful when creating and building projects for this course. Course Readiness Survey Course Readiness Survey'
 p42
 sg15
-S'Ada Gavrilovska'
+S" There is no required textbook for this course. However, it is recommended that students have access to a solid, foundational operating systems book. Here are our recommendations: Operating System Concepts Operating System Concepts Operating System Concepts: Essentials Operating System Concepts: Essentials Modern Operating Systems Modern Operating Systems Operating Systems: Three Easy Pieces Operating Systems: Three Easy Pieces \\u200b Minimum Technical Requirements Browser and connection speed: An up-to-date version of Chrome or Firefox is strongly recommended. We also support Internet Explorer 9 and the desktop versions of Internet Explorer 10 and above (not the metro versions). 2+ Mbps recommended; at minimum 0.768 Mbps download speed Operating system - 64-bit OS for compatibility with 64-bit VM's: - PC: Windows XP or higher with latest updates installed - Mac: OS X 10.6 or higher with latest updates installed - Linux: Any recent distribution that has the supported browsers installed Virtual Machine -You will be provided a virtual machine (VM) useful for performing class assignments and projects -For the projects, the supplied resources are identical to those used to test your submissions -Details for downloading and installing the VM can be found on the Class Resources Page"
 p43
 ssVCS 6601
 p44
 (dp45
 g3
-S' The textbook we will be using is  Artificial Intelligence: A Modern Approach CourseSmart edition  for  rent .'
+S'Thad Starner'
 p46
 sg5
 S'Artificial Intelligence'
@@ -124,13 +124,13 @@ sg13
 S' Undergraduate computer algorithm and data structures courses that cover O notation, time and space constraints; working knowledge of college level mathematics such as calculus, probability, and linear algebra. You will also need to be familiar with Python and be comfortable making modifications to large programs. Please review the following questions, if you answer  no  to any of them you may want to refresh your knowledge or practice the required skills prior to taking the class:   Are you comfortable programming in Python, including IPython notebooks? If not, are you comfortable in learning a language within the first week of class? Have you taken several classes that required intensive programming? Have you taken algorithms and data structures courses? Are you prepared to spend at least 9 hours a week on this class?'
 p51
 sg15
-S'Thad Starner'
+S' The textbook we will be using is  Artificial Intelligence: A Modern Approach CourseSmart edition  for  rent .'
 p52
 ssVCS 6460
 p53
 (dp54
 g3
-S' There are no required readings for this course. Students will have the option to purchase (at a discount) and to read the corresponding chapters of the professor\\ text,  Contemporary Health Informatics'
+S'David Joyner'
 p55
 sg5
 S'Educational Technology'
@@ -148,13 +148,13 @@ sg13
 S" To be ready for the class, students should have completed their program foundational requirement in order to have experience on the receiving end of educational technology. Students should also be comfortable with writing a handful of essays, participating in group activities and discussions, and tackling a large-scale individual or group project. To succeed in this course, you should be able to answer 'Yes' to the following questions:   Have you completed the program's foundational requirement? Are you comfortable with a class where participation is assessed directly? Are you comfortable with a class that involves a significant amount of essay writing? Are you comfortable either in a group on a project, or taking on a significantly-sized project individually? Are you passionate about education or educational technology? Do you already have some vague ideas of the kinds of things you'd like to research or build? Are you comfortable with a very open-ended class, where learning is largely student-driven?"
 p60
 sg15
-S'David Joyner'
+S' There are no required readings for this course. Students will have the option to purchase (at a discount) and to read the corresponding chapters of the professor\\ text,  Contemporary Health Informatics'
 p61
 ssVCS 8803-003 Special Topics
 p62
 (dp63
 g3
-S' There is no required textbook. Several papers will be given as reading assignments throughout the course. More details will be provided during the semester.   Suggested readings include  Reinforcement Learning  by Sutton and Barto. You can find this reading available for free,  here'
+S'Charles Isbell'
 p64
 sg5
 S'Reinforcement Learning'
@@ -172,7 +172,7 @@ sg13
 S' Successful completion of CS 7641: Machine Learning is strongly recommended. Students should be familiar with object-oriented programming, preferably Java.'
 p69
 sg15
-S'Charles Isbell'
+S' There is no required textbook. Several papers will be given as reading assignments throughout the course. More details will be provided during the semester.   Suggested readings include  Reinforcement Learning  by Sutton and Barto. You can find this reading available for free,  here'
 p70
 ssVCS 8803
 p71
@@ -192,14 +192,14 @@ p76
 sg13
 S' Students should know Python or have enough experience with other languages to pick up what they need on their own. Check out  Udacity\'s Introductory CS class  Prof. Thrun\'s free Udacity course on statistics ). For prospective students who are unsure if their computer science experience provides sufficient background for this course, the questions below will help gauge preparedness. If you answer "no" to any of the following questions, it may be beneficial to refresh your knowledge of this material prior to taking CS 8803: Do you have programming experience, preferably in Python? Do you have a strong understanding of linear algebra (undergraduate-level)? Do you have a strong understanding of probability (undergraduate-level)? Have you taken any courses (either from your undergraduate studies or MOOCs) in machine learning, computer vision or robotics?'
 p77
-sg3
+sg15
 S' Website readings with an optional textbook supplement listed below: Optional enhancement text - Probabilistic Robotics. Sebastian Thrun, Wolfram Burgard &amp; Dieter Fox. MIT Press. 2005. Probabilistic Robotics . Sebastian Thrun, Wolfram Burgard & Dieter Fox. MIT Press. 2005. Minimum Technical Requirements Browser and connection speed: An up-to-date version of Chrome or Firefox is strongly recommended. We also support Internet Explorer 9 and the desktop versions of Internet Explorer 10 and above (not the metro versions). 2+ Mbps recommended; at minimum 0.768 Mbps download speed Operating system: -PC: Windows XP or higher with latest updates installed -Mac: OS X 10.6 or higher with latest updates installed -Linux: Any recent distribution that has the supported browsers installed'
 p78
 ssVCS 6310
 p79
 (dp80
 g3
-S' There are no required readings. When appropriate, additional class materials will be available as instructor notes that are associated with the video lectures.'
+S'Spencer Rugaber'
 p81
 sg5
 S'Software Architecture and Design'
@@ -217,13 +217,13 @@ sg13
 S' Students should be familiar with at least one programming language (Java strongly preferred) and with basic software engineering concepts. Students are also expected to have taken an undergraduate software engineering course or have some experience in industry. If you answer "no" to any of the following questions, it may be beneficial to refresh your knowledge of this material prior to taking CS 6300: Have you taken a software engineering course before or have you had some experience working as a software engineer in a company? Are you familiar with basic software engineering concepts, such as requirements, software design, and software testing? Are you familiar with the Java language? (Knowing another object-oriented language, such as C++ or C#, may be enough, but please keep in mind that all assignments and projects are Java based.) Are you comfortable, or even excited about, learning new technologies and working with software tools? Do you have enough flexibility to work with a team that meets (remotely) on a regular basis? To gain an understanding of a typical CS 6300 project, please read the description of our  Mobile Android App for Managing TODO Lists assignment'
 p86
 sg15
-S'Spencer Rugaber'
+S' There are no required readings. When appropriate, additional class materials will be available as instructor notes that are associated with the video lectures.'
 p87
 ssVCS 6210
 p88
 (dp89
 g3
-S' The midterm and final will be based on the instructional lecture videos and the readings. There is no textbook for this course. Rather, students will read a number of important research papers.   Papers to read.'
+S'Kishore Ramachandran'
 p90
 sg5
 S'Advanced Operating Systems'
@@ -241,13 +241,13 @@ sg13
 S' Students are expected to have completed an undergraduate OS course, or have industry experience. General knowledge of operating systems content will be assumed.   To gain a better understanding of the prerequisite concepts necessary for success in this course, please take  this brief diagnostic preparedness test CS 6210 Prerequisites and Concepts list . Please take the time to review the concepts in this document. If a student does not feel comfortable with the listed tasks, it may be beneficial to review this subject matter prior to registering for the course.'
 p95
 sg15
-S'Kishore Ramachandran'
+S' The midterm and final will be based on the instructional lecture videos and the readings. There is no textbook for this course. Rather, students will read a number of important research papers.   Papers to read.'
 p96
 ssVCS 7637
 p97
 (dp98
 g3
-S' There are no required course readings. However, there will be recommended supplemental readings for each lesson in this course. Here are a few general-purpose readings in knowledge-based artificial intelligence: Artificial Intelligence: Structures and Strategies for Complex Problem Solving. George Luger. Sixth Edition. Pearson Education, 2009. Introduction to Knowledge Systems. Mark Stefik. Morgan Kauffman 1995. Artificial Intelligence. Patrick Winston. Third Edition. MIT Press 1993. Available online. Available online .'
+S'Ashok Goel'
 p99
 sg5
 S'Knowledge-Based Artificial Intelligence'
@@ -265,13 +265,13 @@ sg13
 S" A good course on computer programming such as CS 1332 or Udacity\\ CS 101 is beneficial for students. An introductory course on Artificial Intelligence, such as Georgia Tech's CS 3600 or CS 6601, is recommended but not required. To succeed in this course, you should be able to answer 'Yes' to the following four questions:   Are you comfortable with computer programming? Are you familiar with concepts of data structures and object-oriented programming, such as inheritance and polymorphism? Are you familiar with concepts of algorithms, such as sorting and searching algorithms? Are you confident with either Java or Python?"
 p104
 sg15
-S'Ashok Goel'
+S' There are no required course readings. However, there will be recommended supplemental readings for each lesson in this course. Here are a few general-purpose readings in knowledge-based artificial intelligence: Artificial Intelligence: Structures and Strategies for Complex Problem Solving. George Luger. Sixth Edition. Pearson Education, 2009. Introduction to Knowledge Systems. Mark Stefik. Morgan Kauffman 1995. Artificial Intelligence. Patrick Winston. Third Edition. MIT Press 1993. Available online. Available online .'
 p105
 ssVCSE 6242
 p106
 (dp107
 g3
-S' There will be a mix of readings from published papers, instructor\\ notes, and material from the course textbook (see below). All of this material will be available electronically via Georgia Tech\\ Library Proxy, including the course textbook. Course textbook: Grama et. al., Introduction to Parallel Computing Introduction to Parallel Computing'
+S'Guy Lebanon'
 p108
 sg5
 S'Data and Visual Analytics'
@@ -289,13 +289,13 @@ sg13
 S' Programming experience Mathematics: basic linear algebra, calculus, introductory probability  No background in machine learning is required'
 p113
 sg15
-S'Georgia Tech Academic Honor Code'
+S' There will be a mix of readings from published papers, instructor\\ notes, and material from the course textbook (see below). All of this material will be available electronically via Georgia Tech\\ Library Proxy, including the course textbook. Course textbook: Grama et. al., Introduction to Parallel Computing Introduction to Parallel Computing'
 p114
 ssVCSE 6220
 p115
 (dp116
 g3
-S' There will be a mix of readings from published papers, instructor\\ notes, and material from the course textbook (see below). All of this material will be available electronically via Georgia Tech\\ Library Proxy, including the course textbook. Course textbook: Grama et. al., Introduction to Parallel Computing Introduction to Parallel Computing'
+S'Rich Vuduc'
 p117
 sg5
 S'Intro to High-Performance Computing'
@@ -313,37 +313,37 @@ sg13
 S' Please review the  course readiness survey A  second course  in algorithms and data structures, a la Georgia Tech\\ CS 3510-B or Udacity\\ Intro to Algorithms For the programming assignments, programming experience in a  low- level   high-level  language like C or C++ Experience using command line interfaces in *nix environments (e.g., Unix, Linux)'
 p122
 sg15
-S'<img alt="Rich Vuduc" src="http://omscs.gatech.edu/sites/default/files/images/rich-vuduc-150x150.jpg"/>'
+S' There will be a mix of readings from published papers, instructor\\ notes, and material from the course textbook (see below). All of this material will be available electronically via Georgia Tech\\ Library Proxy, including the course textbook. Course textbook: Grama et. al., Introduction to Parallel Computing Introduction to Parallel Computing'
 p123
-ssVCS 6440
+ssVCS 6505
 p124
 (dp125
 g3
-S' There are no required readings for this course. Students will have the option to purchase (at a discount) and to read the corresponding chapters of the professor\\ text,  Contemporary Health Informatics'
+S'Charlie Brubaker'
 p126
 sg5
-S'Intro to Health Informatics'
+S'Computability, Complexity & Algorithms'
 p127
 sg7
-S' Students will have the option to complete and submit Udacity quiz questions as they proceed through the course. Each student must successfully complete and submit all course exercises. There will be short, bi-weekly graded quizzes. Each student must join and actively participate in the assigned team project as a programmer, designer or project manager.'
+S' Grades will be based on written assignments and two proctored exams.'
 p128
 sg9
-S' Individual students should have C++/C# or Java / Javascript proficiency. At least one team member must have proficiency in web programming languages such as PHP, Ruby, Java or .NET (C#), or any web development languages. Browser and connection speed: An up-to-date version of Chrome or Firefox is strongly recommended. We also support Internet Explorer 9 and the desktop versions of Internet Explorer 10 and above (not the metro versions). 2+ Mbps recommended; at minimum 0.768 Mbps download speed Operating system: - PC: Windows 7 or higher with latest updates installed - Mac: OS X 10.6 or higher with latest updates installed - Linux: Any recent distribution that has the supported browsers installed'
+S' Browser and connection speed: An up-to-date version of Chrome or Firefox is strongly recommended. We also support Internet Explorer 9 and the desktop versions of Internet Explorer 10 and above (not the metro versions). 2+ Mbps recommended; at minimum 0.768 Mbps download speed Operating system: - PC: Windows XP or higher with latest updates installed - Mac: OS X 10.6 or higher with latest updates installed - Linux: Any recent distribution that has the supported browsers installed'
 p129
 sg11
-S' Introduction to Health Informatics (CS 6440) is designed so that students with a variety of backgrounds can gain basic proficiency in health informatics. Health informatics encompasses the application of computing to healthcare delivery; population and public health; community-based clinical research; and the potential for big data and analytics to transform the field. This is distinct from the related field of bioinformatics, which explores the role of computing in understanding the genomic and proteomic processes within cells. During CS 6440 students will follow a make-believe patient, Marla Dixon, whose digital record they will use to complete a variety of exercises and projects designed to provide a hands-on experience with state-of-the-art health informatics tools and systems. They will apply the knowledge and skills they learn to work with a team of their classmates on a real world clinical challenge.  For more information about elements learned in this course, please download the basic CS 6440 Intro to Health Informatics Course Syllabus. CS 6440 Intro to Health Informatics Course Syllabus .'
+S' This course will cover important concepts from computability theory; techniques for designing efficient algorithms for combinatorial, algebraic, and number-theoretic problems; and basic concepts such as NP-Completeness from computational complexity theory. To view an outline of the course, you may download the  Syllabus . A sample lesson on the  Maximum Flow'
 p130
 sg13
-S' Students must have a basic computer science background. No previous knowledge of health informatics required. Any student qualified enough to be admitted to OMS CS and willing to put in the necessary time for course work should be prepared for this course, though students should refer to Technical Requirements below for the relatively limited technical proficiencies necessary for success.'
+S' Students are expected to be familiar with: (a) mathematical proof techniques such as induction (b) basic models of computation such as finite automata or Turing machines, and (b) basic algorithms and data structures for sorting, graph traversal (breadth-first and depth-first search), minimum spanning trees (Kruskal\'s algorithm, Prim\'s algorithm), and shortest path (Dijkstra\'s algorithm). The main prerequisite is an abiding interest in learning theoretical computer science. If you answer  no  to any of the following questions, it may be beneficial to acquire background knowledge concurrently or prior to taking CS 6505. Can you show that the sum of the first n numbers is n(n+1)/2? Can you give the proof as an induction on n? Can you give an O(n log n) algorithm for sorting n numbers? Can you describe the difference between breadth-first and depth-first search? Given an nxn matrix A and an n-dimensional vector b, can you give a polynomial-time algorithm to find a vector x such that Ax=b?   "Discrete Mathematics and Its Applications" by Ken Rosen provides an excellent background for this course if you had trouble with these questions. "Discrete Mathematics and Its Applications"  by Ken Rosen provides an excellent background for this course if you had trouble with these questions.'
 p131
 sg15
-S'Mark Braunstein'
+S' All course material will be covered in lecture. Homework will not reference specific problems from textbooks. It is recommended, however, that students obtain their own copies of: Michael Sipser,  Introduction to the Theory of Computation , T. H. Cormen, C.E. Leiserson, R. L. Rivest, and C. Stein,  Introduction to Algorithms'
 p132
 ssVCSE 8803 Special Topics
 p133
 (dp134
 g3
-S" We will use the following textbooks: For Mini-course 1: Python for Finance by Yves Hilpisch For Mini-course 2: What Hedge Funds Really Do by Romero and Balch For Mini-course 3: Machine Learning by Tom Mitchell(see note) *Note: The Mitchell book is expensive (as of this writing, $212) but it is also required for the OMS ML course. Also, we're working with the publisher to offer a less expensive paperback version."
+S'Jimeng Sun'
 p135
 sg5
 S'Big Data for Health Informatics'
@@ -361,13 +361,13 @@ sg13
 S' To succeed in this class, please ensure that you can answer "yes" to each of the following questions: Have you acquired basic machine learning and data mining concepts like classification and clustering (such as you would find in the OMS Machine Learning class)? Are you proficient in programming in Python, Java, C++, and/or Scala? Are you proficient with dealing with data in SQL and NoSQL?'
 p140
 sg15
-S'Jimeng Sun'
+S" We will use the following textbooks: For Mini-course 1: Python for Finance by Yves Hilpisch For Mini-course 2: What Hedge Funds Really Do by Romero and Balch For Mini-course 3: Machine Learning by Tom Mitchell(see note) *Note: The Mitchell book is expensive (as of this writing, $212) but it is also required for the OMS ML course. Also, we're working with the publisher to offer a less expensive paperback version."
 p141
 ssVCS 8803 Special Topics
 p142
 (dp143
 g3
-S' Suggested readings include  Reinforcement Learning  by Sutton and Barto. You can find this reading available for free,  here'
+S'Santosh Pande'
 p144
 sg5
 S'Embedded Software'
@@ -385,13 +385,13 @@ sg13
 S' It is recommended that students who take this course have previously taken at least an undergraduate-level course in computer architecture. In addition, the students must have a strong background in C and/or C++.'
 p149
 sg15
-S'Santosh Pande'
+S' Suggested readings include  Reinforcement Learning  by Sutton and Barto. You can find this reading available for free,  here'
 p150
 ssVCS 4495
 p151
 (dp152
 g3
-S' The occasional text for this course is  Computer Vision: A Modern Approach (2nd edition)  by Forsythe and Ponce. I say occasional because the lectures (and the slides that drive them) are a pretty good set of source material. Occasionally you may need to look at the text to help you decipher the occasional unintelligible lecture.'
+S'Aaron Bobick'
 p153
 sg5
 S'Computer Vision'
@@ -409,13 +409,13 @@ sg13
 S' Students should have a good, working knowledge of Matlab (or an open source equivalent) or doing mathematical programming in Python or C++. The course will use Matlab in lecture demonstrations and Matlab (or equivalent) will be better for the problem sets. This course has more math than many CS courses: Linear algebra, vector calculus, and linear algebra, probability, and linear algebra. (Get the hint?) No prior knowledge of vision is assumed. Some experience with programming with images is helpful. Experience with any image/signal processing will also be informative. If you answer "no" to any of the following questions, it may be beneficial to refresh your knowledge of some material prior to taking CS 4495: 1. Do you remember what a Gaussian distribution is and what its parametric form looks like? 2. If you had a 2D array of numbers and you wanted to compute the derivative in the x direction, could you do that? How about the magnitude of the  gradient ? 3. If you had to draw a line on an image with your own code, could you do that (ie no libraries)? 4. If you wanted to convert a color image into a monochrome version (gray scale), would you know how to compute it? 5. Are you comfortable with code that works in theory but in practice the results are poorer than you expect? And do you enjoy fiddling (that\\ the technical term) with parameters of your algorithm to get it to work on real images?'
 p158
 sg15
-S'Aaron Bobick'
+S' The occasional text for this course is  Computer Vision: A Modern Approach (2nd edition)  by Forsythe and Ponce. I say occasional because the lectures (and the slides that drive them) are a pretty good set of source material. Occasionally you may need to look at the text to help you decipher the occasional unintelligible lecture.'
 p159
 ssVCS 6035
 p160
 (dp161
 g3
-S' The required textbook is  Computer Security: Principle and Practice, 3/E by William Stallings and Lawrie Brown A recommended supplementary textbook is  Applied Information Security: A Hands-on Approach Other reading materials, including papers, will be distributed via T-Square.'
+S'Wenke Lee'
 p162
 sg5
 S'Introduction to Information Security'
@@ -433,13 +433,13 @@ sg13
 S' You should have taken an undergraduate level course on, or be otherwise familiar with, operating systems and networks. Prior programming experience with C or Java is recommended. Knowledge of algebra and discrete mathematics is also recommended. Please review the  CS 6035 Course Readiness Survey , to determine your readiness to take this course.'
 p167
 sg15
-S'Wenke Lee'
+S' The required textbook is  Computer Security: Principle and Practice, 3/E by William Stallings and Lawrie Brown A recommended supplementary textbook is  Applied Information Security: A Hands-on Approach Other reading materials, including papers, will be distributed via T-Square.'
 p168
 ssVCS 7641
 p169
 (dp170
 g3
-S' Required text:  Machine Learning , Tom Mitchell, 1997.  Optional Text:  Richard Sutton and Andrew Barto,  Reinforcement Learning: An Introduction , MIT Press, 1998. *Please see the course syllabus for supplemental reading list and coding resources.'
+S'Charles Isbell'
 p171
 sg5
 S'Machine Learning'
@@ -457,13 +457,13 @@ sg13
 S' An introductory course in artificial intelligence is recommended but not required.   To discover whether you are ready to take CS 7641: Machine Learning, please review our  Course Preparedness Questions'
 p176
 sg15
-S'Charles Isbell'
+S' Required text:  Machine Learning , Tom Mitchell, 1997.  Optional Text:  Richard Sutton and Andrew Barto,  Reinforcement Learning: An Introduction , MIT Press, 1998. *Please see the course syllabus for supplemental reading list and coding resources.'
 p177
 ssVCS 7646
 p178
 (dp179
 g3
-S" We will use the following textbooks: For Mini-course 1: Python for Finance by Yves Hilpisch For Mini-course 2: What Hedge Funds Really Do by Romero and Balch For Mini-course 3: Machine Learning by Tom Mitchell(see note) *Note: The Mitchell book is expensive (as of this writing, $212) but it is also required for the OMS ML course. Also, we're working with the publisher to offer a less expensive paperback version."
+S'Tucker Balch'
 p180
 sg5
 S'Machine Learning for Trading'
@@ -481,13 +481,13 @@ sg13
 S' All types of students are welcome! The ML topics might be "review" for CS students, while finance parts will be review for finance students. However, even if you have experience in these topics, you will find that we consider them in a different way than you might have seen before, in particular with an eye towards implementation for trading.'
 p185
 sg15
-S'Tucker Balch'
+S" We will use the following textbooks: For Mini-course 1: Python for Finance by Yves Hilpisch For Mini-course 2: What Hedge Funds Really Do by Romero and Balch For Mini-course 3: Machine Learning by Tom Mitchell(see note) *Note: The Mitchell book is expensive (as of this writing, $212) but it is also required for the OMS ML course. Also, we're working with the publisher to offer a less expensive paperback version."
 p186
 ssVCS 6475
 p187
 (dp188
 g3
-S' No textbook is required for this course; however, specific textbooks, readings, and resources are identified during the on-line lecture videos.'
+S'Irfan Essa'
 p189
 sg5
 S'Computational Photography'
@@ -505,13 +505,13 @@ sg13
 S' Please review the following questions, if you answer  no  to any of them you may want to refresh your knowledge of the area prior to taking CS 6475:   Have you taken a programming course in the past or had experience in computer programming (preferably Python)? Are you familiar with basic linear algebra concepts such as matrices, vectors, differentiation and integration? Do you have basic knowledge of the functioning of a camera and exposure (shutter speed, ISO, and aperture)? Are you comfortable with the representation of an image on a computer (a matrix of pixel values, generally in three dimensions (R, G, B))?'
 p194
 sg15
-S'Irfan Essa'
+S' No textbook is required for this course; however, specific textbooks, readings, and resources are identified during the on-line lecture videos.'
 p195
 ssVCS 6300
 p196
 (dp197
 g3
-S' There are no required readings. When appropriate, additional class materials will be available as instructor notes that are associated with the video lectures.'
+S'Alessandro Orso'
 p198
 sg5
 S'Software Development Process '
@@ -529,13 +529,13 @@ sg13
 S' Students should be familiar with at least one programming language (Java strongly preferred) and with basic software engineering concepts. Students are also expected to have taken an undergraduate software engineering course or have some experience in industry. If you answer "no" to any of the following questions, it may be beneficial to refresh your knowledge of this material prior to taking CS 6300: Have you taken a software engineering course before or have you had some experience working as a software engineer in a company? Are you familiar with basic software engineering concepts, such as requirements, software design, and software testing? Are you familiar with the Java language? (Knowing another object-oriented language, such as C++ or C#, may be enough, but please keep in mind that all assignments and projects are Java based.) Are you comfortable, or even excited about, learning new technologies and working with software tools? Do you have enough flexibility to work with a team that meets (remotely) on a regular basis? To gain an understanding of a typical CS 6300 project, please read the description of our  Mobile Android App for Managing TODO Lists assignment'
 p203
 sg15
-S'Alessandro Orso'
+S' There are no required readings. When appropriate, additional class materials will be available as instructor notes that are associated with the video lectures.'
 p204
 ssVCS 6262
 p205
 (dp206
 g3
-S' There is no required textbook for this course. You may, but are not required to read the papers listed in the "Instructor Notes" section under selected videos, and compiled in the  Web Resources wiki page .'
+S'Georgia Tech Academic Honor Code'
 p207
 sg5
 S'Network Security'
@@ -553,13 +553,13 @@ sg13
 S" This class is appropriate for students with previous background in networking. Some familiarity with both network programming, scripting languages (e.g., Python) and using virtual machines will be helpful. If you can confidently answer 'yes' to these questions, you should be fine:\n 1.Can you explain the main distinction between TCP and UDP? 2.Can you comfortably complete the  Python tutorial 3. Do you understand the three way handshake of TCP? 4. Can you get files off of a virtual machine without a mapped directory?"
 p212
 sg15
-S'Georgia Tech Academic Honor Code'
+S' There is no required textbook for this course. You may, but are not required to read the papers listed in the "Instructor Notes" section under selected videos, and compiled in the  Web Resources wiki page .'
 p213
 ssVCS 6400
 p214
 (dp215
 g3
-S' There is no required textbook for the course, but several supplemental readings will be provided for students who wish to explore the topic further.'
+S'Leo Mark'
 p216
 sg5
 S'Database Systems Concepts and Design'
@@ -577,13 +577,13 @@ sg13
 S' Learners should be familiar with at least one scripting or programming language, e.g. PHP, Python, Java. Some familiarity with software engineering concepts would be helpful. Flexibility to work remotely with team members.'
 p221
 sg15
-S'Leo Mark'
+S' There is no required textbook for the course, but several supplemental readings will be provided for students who wish to explore the topic further.'
 p222
 ssVCS 6290
 p223
 (dp224
 g3
-S' There are no required readings. When appropriate, additional class materials will be available as instructor notes associated with the video lectures. Although not required, a useful textbook for this course is  Computer Architecture: A Quantitative Approach'
+S'Milos Prvulovic'
 p225
 sg5
 S'High Performance Computer Architecture'
@@ -601,13 +601,13 @@ sg13
 S' Undergraduate computer architecture course that covers basic computer organization; working knowledge of topics such as instruction sets, pipelining, etc. For the course project, you will also need to be familiar with C/C++, Linux, and be comfortable making modifications to large programs. If you answer "no" to any of the following questions, it may be beneficial to refresh your knowledge of the prerequisite material prior to taking CS 6290: 1. Have you taken a computer organization course before? 2. Are you familiar with at least one RISC instruction set and would you feel comfortable reading and writing small assembler programs? 3. Are you familiar with basic computer architecture concepts, such as pipelines and caches? 4. Are you familiar with C/C++ and would you be comfortable writing and/or modifying 100+ lines of code in a program that has over 100,000 lines of code? 5. Are you comfortable with, or even excited about, learning how real processors work and using simulation to see how changes in processor design affect its performance?'
 p230
 sg15
-S'Milos Prvulovic'
+S' There are no required readings. When appropriate, additional class materials will be available as instructor notes associated with the video lectures. Although not required, a useful textbook for this course is  Computer Architecture: A Quantitative Approach'
 p231
 ssVCS 6340
 p232
 (dp233
 g3
-S' There is no required textbook for the course, but several supplemental readings will be provided for students who wish to explore the topic further.'
+S'Mayur Naik'
 p234
 sg5
 S'Software Analysis and Test'
@@ -625,6 +625,6 @@ sg13
 S' To be prepared for this course, you should be very comfortable with: Mathematical and logical reasoning (e.g. basics of set theory, graph theory, boolean algebra, and probability) Programming in a high-level language like Java Shell scripting on Linux-like operating systems'
 p239
 sg15
-S'Mayur Naik'
+S' There is no required textbook for the course, but several supplemental readings will be provided for students who wish to explore the topic further.'
 p240
 ss.
