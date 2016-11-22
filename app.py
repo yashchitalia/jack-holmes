@@ -76,7 +76,10 @@ def answerNumericQueries(course_number_list, req):
     query_name = req.get("result").get("action")
     course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
     for course_number in course_number_list:
-        course_matrix = course_critique_dat[course_number]
+        try:
+            course_matrix = course_critique_dat[course_number]
+        except:
+            return "I don't have that data for " + course_number +"."
         if query_name == "grade_likelihood":
             print "Identified Query correctly"
             grade_req = req.get("result").get("parameters").get("grade")
