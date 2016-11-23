@@ -105,15 +105,16 @@ def answerInstructorQueries(query_name):
                 if rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] > 4.0:
                     speech = "Very much!"
                 elif rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] < 4.0:
-                    speech = curr_instructor + "'s rating is medium on this one."
+                    speech = str(curr_instructor) + "'s rating is medium on this one."
                 else:
                     speech = "Not good at all. :("
             elif query_name == "hotness_query":
                 print "cod here"
                 if rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] == 'new-hot':
-                    speech = curr_instructor + " is very hot!"
+                    speech = str(curr_instructor) + " is very hot!"
                 else:
-                    speech = curr_instructor + " is as cold as Siberia in winter!"
+                    print "cod here"
+                    speech = str(curr_instructor) + " is as cold as Siberia in winter!"
             else:
                 speech = "I can't seem to understand that. Brain-Freeze!"
         else:
