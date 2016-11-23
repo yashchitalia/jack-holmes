@@ -41,11 +41,15 @@ LIST_OF_NUMERIC_QUERIES = ["grade_likelihood", "avg_gpa"]
 DICT_OF_INSTRUCTOR_QUERIES = {'university_query':1, 'quality_query':2,
                               'easiness_query':3, 'hotness_query':6,
                               'helpfulness_query':4, 'comment_query':8}
+LIST_OF_CONTEXTS = ["instructor_name"]
 
 def processRequest(req):
     course_number_list = extractCourseNumber(req)
-    print "CONTEXT DATA:"
-    print req.get("contexts").get("name")
+    try:
+        if req.get("contexts").get("name") in LIST_OF_CONTEXTS:
+            context_name = req.get("contexts").get("name")
+    except:
+        context_name = None
     if course_number_list is None:
         speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
         print speech
@@ -57,8 +61,9 @@ def processRequest(req):
             speech = answerNumericQueries(course_number_list, req)  
             print speech
         elif (req.get("result").get("action") in DICT_OF_INSTRUCTOR_QUERIES.keys() and 
-            req.get("contexts").get("name") == "instructor_name"):
+            context_name == "instructor_name"):
             speech = answerInstructorQueries(req.get("result").get("action"))
+            print speech
         else:
             speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
             print speech
