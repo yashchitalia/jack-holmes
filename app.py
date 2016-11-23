@@ -100,11 +100,11 @@ def answerInstructorQueries(query_name):
         if curr_instructor in instructor_names:
             print "Got here"
             if query_name in ["university_query", "comment_query"]:
-                speech = str(rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]])
+                speech = str(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]])
             elif query_name in ["quality_query", "easiness_query", "helpfulness_query"]:
-                if rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] > 4.0:
+                if rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]] > 4.0:
                     speech = "Very much!"
-                elif rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] < 4.0:
+                elif rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]] < 4.0:
                     speech = str(curr_instructor) + "'s rating is medium on this one."
                 else:
                     speech = "Not good at all. :("
@@ -113,7 +113,7 @@ def answerInstructorQueries(query_name):
                 print instructor_names.index(curr_instructor)
                 print DICT_OF_INSTRUCTOR_QUERIES[query_name]
                 if rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]] == 'new-hot':
-                    speech = str(curr_instructor) + " is very hot!"
+                    speech = str(curr_instructor) + " is flamin hot!"
                 else:
                     speech = str(curr_instructor) + " is as cold as Siberia in winter!"
             else:
