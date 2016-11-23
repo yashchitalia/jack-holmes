@@ -110,10 +110,11 @@ def answerInstructorQueries(query_name):
                     speech = "Not good at all. :("
             elif query_name == "hotness_query":
                 print "cod here"
-                if rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] == 'new-hot':
+                print instructor_names.index(curr_instructor)
+                print DICT_OF_INSTRUCTOR_QUERIES[query_name]
+                if rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]] == 'new-hot':
                     speech = str(curr_instructor) + " is very hot!"
                 else:
-                    print "cod here"
                     speech = str(curr_instructor) + " is as cold as Siberia in winter!"
             else:
                 speech = "I can't seem to understand that. Brain-Freeze!"
