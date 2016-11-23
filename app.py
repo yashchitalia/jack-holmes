@@ -93,10 +93,12 @@ def answerInstructorQueries(query_name):
     curr_instructor = pkl.load(open('./data_collection/curr_prof.p', 'rb'))
     rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
     instructor_names = [item[0] for item in rmp_data]
+    print "Got here"
     if query_name == "hotness_query" and curr_instructor == "Ashok Goel":
         speech = "Everyone else may disagree, but I think Dr. Goel is quite cute!" 
     else:
         if curr_instructor in instructor_names:
+            print "Got here"
             if query_name in ["university_query", "comment_query"]:
                 speech = str(rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]])
             elif query_name in ["quality_query", "easiness_query", "helpfulness_query"]:
@@ -107,10 +109,13 @@ def answerInstructorQueries(query_name):
                 else:
                     speech = "Not good at all. :("
             elif query_name == "hotness_query":
+                print "cod here"
                 if rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] == 'new-hot':
                     speech = curr_instructor + " is very hot!"
                 else:
                     speech = curr_instructor + " is as cold as Siberia in winter!"
+            else:
+                speech = "I can't seem to understand that. Brain-Freeze!"
         else:
             speech = "I don't have that data for " + rmp_data + "."
     return speech
@@ -130,6 +135,7 @@ def answerObjectiveQueries(course_number_list, query_name):
         else:
             speech = "I'm afraid, I don't know the answer to that question. But maybe you can find the answer on the OMSCS website."
     return speech
+
 def answerNumericQueries(course_number_list, req):
     #Answer all quantitative queries
     query_name = req.get("result").get("action")
