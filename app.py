@@ -54,8 +54,8 @@ def processRequest(req):
         elif req.get("result").get("action") in LIST_OF_NUMERIC_QUERIES:
             speech = answerNumericQueries(course_number_list, req)  
             print speech
-        elif req.get("result").get("action") in DICT_OF_INSTRUCTOR_QUERIES.keys() and 
-            req.get("contexts").get("name") == "instructor_name":
+        elif (req.get("result").get("action") in DICT_OF_INSTRUCTOR_QUERIES.keys() and 
+            req.get("contexts").get("name") == "instructor_name"):
             speech = answerInstructorQueries(req.get("result").get("action"))
         else:
             speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
