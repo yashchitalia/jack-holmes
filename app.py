@@ -97,7 +97,20 @@ def answerInstructorQueries(query_name):
         speech = "Everyone else may disagree, but I think Dr. Goel is quite cute!" 
     else:
         if curr_instructor in instructor_names:
-            speech = rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]]         
+            if query_name in ["university_query", "comment_query"]:
+                speech = str(rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]])
+            elif query_name in ["quality_query", "easiness_query", "helpfulness_query"]:
+                if rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] > 4.0:
+                    speech = "Very much!"
+                elif rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] < 4.0:
+                    speech = curr_instructor + "'s rating is medium on this one."
+                else:
+                    speech = "Not good at all. :("
+            elif query_name == "hotness_query":
+                if rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]] == 'new-hot':
+                    speech = curr_instructor + " is very hot!"
+                else:
+                    speech = curr_instructor + " is as cold as Siberia in winter!"
         else:
             speech = "I don't have that data for " + rmp_data + "."
     return speech
