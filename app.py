@@ -47,9 +47,9 @@ def processRequest(req):
     course_number_list = extractCourseNumber(req)
     try:
         print "Trying to get context"
-        if req.get("contexts").get("name") in LIST_OF_CONTEXTS:
+        if req.get("result").get("contexts").get("name") in LIST_OF_CONTEXTS:
             print "Context found"
-            context_name = req.get("contexts").get("name")
+            context_name = req.get("result").get("contexts").get("name")
             print context_name
     except:
         print "No context exists"
