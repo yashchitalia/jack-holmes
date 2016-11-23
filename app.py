@@ -99,8 +99,10 @@ def answerInstructorQueries(query_name):
     else:
         if curr_instructor in instructor_names:
             print "Got here"
-            if query_name in ["university_query", "comment_query"]:
+            if query_name == "university_query":
                 speech = str(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]])
+            elif query_name == "comment_query"]:
+                speech = "Here's what one student has to say:\n" + "'"+ str(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]]) + "'"
             elif query_name in ["quality_query", "easiness_query", "helpfulness_query"]:
                 if rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]] > 4.0:
                     speech = "Very much!"
