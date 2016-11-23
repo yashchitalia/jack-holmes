@@ -44,6 +44,8 @@ DICT_OF_INSTRUCTOR_QUERIES = {'university_query':1, 'quality_query':2,
 
 def processRequest(req):
     course_number_list = extractCourseNumber(req)
+    print "CONTEXT DATA:"
+    print req.get("contexts").get("name")
     if course_number_list is None:
         speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
         print speech
