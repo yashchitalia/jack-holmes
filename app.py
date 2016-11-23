@@ -38,6 +38,9 @@ DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
                              "course_number_query":"Number",
                              "course_name_query": "Name"}
 LIST_OF_NUMERIC_QUERIES = ["grade_likelihood", "avg_gpa"]
+DICT_OF_INSTRUCTOR_QUERIES = {'university_query':1, 'quality_query':2,
+                              'easiness_query':3, 'hotness_query':6,
+                              'helpfulness_query':4, 'comment_query':8}
 
 def processRequest(req):
     course_number_list = extractCourseNumber(req)
@@ -51,6 +54,9 @@ def processRequest(req):
         elif req.get("result").get("action") in LIST_OF_NUMERIC_QUERIES:
             speech = answerNumericQueries(course_number_list, req)  
             print speech
+        elif req.get("result").get("action") in DICT_OF_INSTRUCTOR_QUERIES.keys() and 
+            req.get("contexts").get("name") == "instructor_name":
+            speech = answerInstructorQueries(req.get("result").get("action"))
         else:
             speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
             print speech
@@ -67,10 +73,43 @@ def answerObjectiveQueries(course_number_list, query_name):
             else:
                 omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
                 speech = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
+                if query_name == "instructor_query":
+                    #Save the name of the latest instructor for context
+                    pkl.dump(speech, open('./data_collection/curr_prof.p', 'wb'))
         else:
             speech = "I'm afraid, I don't know the answer to that question. But maybe you can find the answer on the OMSCS website."
     return speech
                         
+
+def answerInstructorQueries(query_name):
+    #Answer all the instructor queries: Courtesy Rate My Professor
+    curr_instructor = pkl.load(open('./data_collection/curr_prof.p', 'rb'))
+    rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
+    instructor_names = [item[0] for item in rmp_data]
+    if query_name == "hotness_query" and curr_instructor == "Ashok Goel":
+        speech = "Everyone else may disagree, but I think Dr. Goel is quite cute!" 
+    else:
+        if curr_instructor in instructor_names:
+            speech = rmp_data[instructor_names.index(curr_instructor), DICT_OF_INSTRUCTOR_QUERIES[query_name]]         
+        else:
+            speech = "I don't have that data for " + rmp_data + "."
+    return speech
+
+def answerObjectiveQueries(course_number_list, query_name):
+    #Answer all the objective queries
+    for course_number in course_number_list:
+        if query_name in DICT_OF_OBJECTIVE_QUERIES.keys():
+            if query_name == "course_number_query":
+                speech = course_number 
+            else:
+                omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
+                speech = omscs_dat[course_number][DICT_OF_OBJECTIVE_QUERIES[query_name]]
+                if query_name == "instructor_query":
+                    #Save the name of the latest instructor for context
+                    pkl.dump(speech, open('./data_collection/curr_prof.p', 'wb'))
+        else:
+            speech = "I'm afraid, I don't know the answer to that question. But maybe you can find the answer on the OMSCS website."
+    return speech
 def answerNumericQueries(course_number_list, req):
     #Answer all quantitative queries
     query_name = req.get("result").get("action")
