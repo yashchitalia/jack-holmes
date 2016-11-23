@@ -50,7 +50,7 @@ def processRequest(req):
             context_name = req.get("contexts").get("name")
     except:
         context_name = None
-    if course_number_list is None:
+    if (course_number_list is None) and (context_name is None):
         speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
         print speech
     else:
