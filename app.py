@@ -46,14 +46,9 @@ LIST_OF_CONTEXTS = ['instructor_name']
 def processRequest(req):
     course_number_list = extractCourseNumber(req)
     try:
-        print "Trying to get context"
-        print req.get("result").get("contexts")[0].get("name")
-        if req.get("result").get("contexts").get("name") in LIST_OF_CONTEXTS:
-            print "Context found"
-            context_name = req.get("result").get("contexts").get("name")
-            print context_name
+        if req.get("result").get("contexts")[0].get("name") in LIST_OF_CONTEXTS:
+            context_name = req.get("result").get("contexts")[0].get("name")
     except:
-        print "No context exists"
         context_name = None
     if (course_number_list is None) and (context_name is None):
         speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
