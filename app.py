@@ -121,7 +121,7 @@ def answerInstructorQueries(query_name):
             else:
                 speech = "I can't seem to understand that. Brain-Freeze!"
         else:
-            speech = "I don't have that data for " + rmp_data + "."
+            speech = "I don't have that data for " + str(curr_instructor) + "."
     return speech
 
 def answerNumericQueries(course_number_list, req):
