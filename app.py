@@ -40,7 +40,8 @@ DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
 LIST_OF_NUMERIC_QUERIES = ["grade_likelihood", "avg_gpa"]
 DICT_OF_INSTRUCTOR_QUERIES = {'university_query':1, 'quality_query':2,
                               'easiness_query':3, 'hotness_query':6,
-                              'helpfulness_query':4, 'comment_query':8}
+                              'helpfulness_query':4, 'comment_query':8,
+                              'wealth_query':9, 'frog_query':10}
 LIST_OF_CONTEXTS = ['instructor_name']
 
 def processRequest(req):
@@ -96,9 +97,15 @@ def answerInstructorQueries(query_name):
     print "Got here"
     if query_name == "hotness_query" and curr_instructor == "Ashok Goel":
         speech = "Everyone else may disagree, but I think Dr. Goel is quite cute!" 
+    elif query_name == "frog_query":
+        if curr_instructor == "Ashok Goel":
+            speech = "Yep, I know for a fact that he likes to eat frogs. But the frogs aren't too happy about it."
+        else:
+            speech = "Maybe, why don't you ask " + curr_instructor + " yourself?"
+    elif query_name == "wealth_query" and curr_instructor == "Ashok Goel":
+        speech = "Well he makes "+ str(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]]) +"$ a year, so he's rich!\n But he wants to get richer. So he buys a gun..."
     else:
         if curr_instructor in instructor_names:
-            print "Got here"
             if query_name == "university_query":
                 speech = str(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]])
             elif query_name == "comment_query":
@@ -118,6 +125,12 @@ def answerInstructorQueries(query_name):
                     speech = str(curr_instructor) + " is flamin hot!"
                 else:
                     speech = str(curr_instructor) + " is as cold as Siberia in winter!"
+            elif query_name == "wealth_query":
+                wealth_dat = rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]]
+                if wealth_dat >= 200000:
+                    speech = "Uncle Scrooge rich!"
+                else:
+                    speech = "Making a "+wealth_dat+ " a year, "+curr_instructor+" better be rich!"
             else:
                 speech = "I can't seem to understand that. Brain-Freeze!"
         else:
