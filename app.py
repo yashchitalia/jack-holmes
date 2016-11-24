@@ -103,7 +103,7 @@ def answerInstructorQueries(query_name):
         else:
             speech = "Maybe, why don't you ask " + curr_instructor + " yourself?"
     elif query_name == "wealth_query" and curr_instructor == "Ashok Goel":
-        speech = "Well he makes "+ str(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]]) +"$ a year, so he's rich!\n But he wants to get richer. So he buys a gun..."
+        speech = "Well he's rich!\n But he wants to get richer. So he buys a gun..."
     else:
         if curr_instructor in instructor_names:
             if query_name == "university_query":
@@ -130,7 +130,7 @@ def answerInstructorQueries(query_name):
                 if wealth_dat >= 200000:
                     speech = "Uncle Scrooge rich!"
                 else:
-                    speech = "Making a "+wealth_dat+ " a year, "+curr_instructor+" better be rich!"
+                    speech = "Getting richer and richer!!"
             else:
                 speech = "I can't seem to understand that. Brain-Freeze!"
         else:
