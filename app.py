@@ -89,7 +89,7 @@ def processRequest(req):
     return res
 
 
-def registerEpisodicMemory():
+def registerEpisodicMemory(req):
     #Answer all the objective queries
     episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
     print "Got old data"
