@@ -76,7 +76,7 @@ def processRequest(req):
             context_name == "instructor_name"):
             speech = answerInstructorQueries(req.get("result").get("action"))
             print speech
-        elif (req.get("result").get("action") in LIST_OF_PREFERENCES:
+        elif req.get("result").get("action") in LIST_OF_PREFERENCES:
             speech = registerEpisodicMemory(req)
             print speech
         else:
