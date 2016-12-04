@@ -100,8 +100,8 @@ def registerEpisodicMemory(req):
     elif req.get("result").get("action") == "frogs_negation_callback":
         episodic_dict["register-frogs"] = False
     else:
-        print "Got here"
-        print req.get("result").get("parameters").get("number")
+        print episodic_dict
+        print float(req.get("result").get("parameters").get("number"))
         try:
             episodic_dict[req.get("result").get("action")] = float(req.get("result").get("parameters").get("number"))
         except:
