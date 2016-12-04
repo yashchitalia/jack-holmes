@@ -92,9 +92,7 @@ def processRequest(req):
 def registerEpisodicMemory(req):
     #Answer all the objective queries
     episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
-    print "Got old data"
     speech = PREFERENCES_SPEECH_DICT[req.get("result").get("action")]
-    print speech
     if req.get("result").get("action") == "register-specialization":
         episodic_dict["register-specialization"]= req.get("result").get("parameters").get("specializations") 
     elif req.get("result").get("action") == "frogs_affirmation_callback":
@@ -102,7 +100,10 @@ def registerEpisodicMemory(req):
     elif req.get("result").get("action") == "frogs_negation_callback":
         episodic_dict["register-frogs"] = False
     else:
-        episodic_dict[req.get("result").get("action")] = float(req.get("result").get("parameters").get("specializations"))
+        try:
+            episodic_dict[req.get("result").get("action")] = float(req.get("result").get("parameters").get("number"))
+        except:
+            speech = "Are you sure you entered a number? Please try again."
     pkl.dump(episodic_dict, open('./data_collection/episodic_memory.p', 'rb'))
     return speech
                         
