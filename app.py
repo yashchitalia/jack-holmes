@@ -77,6 +77,7 @@ def processRequest(req):
             speech = answerInstructorQueries(req.get("result").get("action"))
             print speech
         elif req.get("result").get("action") in LIST_OF_PREFERENCES:
+            print "Yep. Query is to add something to episodic mem"
             speech = registerEpisodicMemory(req)
             print speech
         else:
@@ -89,7 +90,9 @@ def processRequest(req):
 def registerEpisodicMemory():
     #Answer all the objective queries
     episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
+    print "Got old data"
     speech = PREFERENCES_SPEECH_DICT[req.get("result").get("action")]
+    print speech
     if req.get("result").get("action") == "register-specialization":
         episodic_dict["register-specialization"]= req.get("result").get("parameters").get("specializations") 
     elif req.get("result").get("action") == "frogs_affirmation_callback":
