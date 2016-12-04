@@ -46,7 +46,7 @@ LIST_OF_PREFERENCES = ["register-easiness", "register-gpa",
                        "register-helpfulness", "register-hotness",
                        "register-quality", "register-specialization",
                        "frogs_affirmation_callback", "frogs_negation_callback"]
-LIST_OF_CONTEXTS = ['instructor_name']
+LIST_OF_CONTEXTS = ['instructor_name', 'gpa-cue', 'easiness-cue', 'helpfulness-cue', 'hotness-cue', 'quality-cue', 'specialization-cue']
 PREFERENCES_SPEECH_DICT = {"register-gpa":"Thanks! I've registered your GPA successfully.\nNow, please tell me your specialization. Here are the 4 specializations the OMSCS program:\n1. Computational Perception & Robotics\n2. Computing Systems\n3. Interactive Intelligence\n4. Machine Learning",
                             "register-easiness":"Great! I registered that.\nNext, on a scale of 0-5, how much does the helpfulness of the professor matter to you?\n(0 being 'I won't interact with the professor at all, so I don't care', and 5 being 'I need my instructor to be very helpful all the time')",
                             "register-helpfulness": "Great! Next, how much, again on a scale of 0-5 does the quality of the class matter?\n(With 0 being 'I know all about these topics already, I just want it on my resume.' and 5 being 'Quality of the class is supreme!')",
@@ -60,6 +60,8 @@ def processRequest(req):
     try:
         if req.get("result").get("contexts")[0].get("name") in LIST_OF_CONTEXTS:
             context_name = req.get("result").get("contexts")[0].get("name")
+        else:
+            context_name = None
     except:
         context_name = None
     if (course_number_list is None) and (context_name is None):
