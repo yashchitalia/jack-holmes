@@ -64,27 +64,27 @@ def processRequest(req):
             context_name = None
     except:
         context_name = None
-    if (course_number_list is None) and (context_name is None):
-        speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
+    if req.get("result").get("action") in LIST_OF_PREFERENCES:
+        speech = registerEpisodicMemory(req)
         print speech
     else:
-        if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
-            speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
-            print speech
-        elif req.get("result").get("action") in LIST_OF_NUMERIC_QUERIES:
-            speech = answerNumericQueries(course_number_list, req)  
-            print speech
-        elif (req.get("result").get("action") in DICT_OF_INSTRUCTOR_QUERIES.keys() and 
-            context_name == "instructor_name"):
-            speech = answerInstructorQueries(req.get("result").get("action"))
-            print speech
-        elif req.get("result").get("action") in LIST_OF_PREFERENCES:
-            print "Yep. Query is to add something to episodic mem"
-            speech = registerEpisodicMemory(req)
+        if (course_number_list is None) and (context_name is None):
+            speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
             print speech
         else:
-            speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
-            print speech
+            if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
+                speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
+                print speech
+            elif req.get("result").get("action") in LIST_OF_NUMERIC_QUERIES:
+                speech = answerNumericQueries(course_number_list, req)  
+                print speech
+            elif (req.get("result").get("action") in DICT_OF_INSTRUCTOR_QUERIES.keys() and 
+                context_name == "instructor_name"):
+                speech = answerInstructorQueries(req.get("result").get("action"))
+                print speech
+            else:
+                speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
+                print speech
     res = makeWebhookResult(speech)
     return res
 
