@@ -1,0 +1,24 @@
+(dp0
+S'register-hotness'
+p1
+F5.0
+sS'register-easiness'
+p2
+F5.0
+sS'register-frogs'
+p3
+I01
+sS'register-specialization'
+p4
+S'Machine Learning'
+p5
+sS'register-helpfulness'
+p6
+F5.0
+sS'register-gpa'
+p7
+F5.0
+sS'register-quality'
+p8
+F4.9
+s.

@@ -42,7 +42,31 @@ DICT_OF_INSTRUCTOR_QUERIES = {'university_query':1, 'quality_query':2,
                               'easiness_query':3, 'hotness_query':6,
                               'helpfulness_query':4, 'comment_query':8,
                               'wealth_query':9, 'frog_query':10}
+LIST_OF_PREFERENCES = ["register-easiness", "register-gpa", 
+                       "register-helpfulness", "register-hotness",
+                       "register-quality", "register-specialization",
+                       "frogs_affirmation_callback", "frogs_negation_callback"]
 LIST_OF_CONTEXTS = ['instructor_name']
+PREFERENCES_SPEECH_DICT = {"register-gpa":"Thanks! I've registered your GPA successfully.
+                            Now, please tell me your specialization. Here are the 4 specializations the OMSCS program:
+                            1. Computational Perception & Robotics
+                            2. Computing Systems
+                            3. Interactive Intelligence
+                            4. Machine Learning","register-easiness":"Great! I registered that.
+                            Next, on a scale of 0-5, how much does the helpfulness of the professor matter to you?
+                            (0 being 'I won't interact with the professor at all, so I don't care', and 5 being 'I need my instructor to be very helpful all the time')",
+                            "register-helpfulness": "Great! Next, how much, again on a scale of 0-5 does the quality of the class matter? 
+                            (With 0 being 'I know all about these topics already, I just want it on my resume.' and 5 being 'Quality of the class is supreme!')",
+                            "register-hotness":"Awesome, I have almost all your details and preferences now. 
+                            Now for the last and final question:
+                            Do you like people that eat frogs?
+                            (Don't ask why this is relevant right now, it'll all make sense later.)",
+                            "register-quality":"Great! Thanks for that! 
+                            Now, on a scale of 0-5, how much does the hotness/cuteness of a professor matter to you?
+                            (With 0 being 'Doesn't matter.' to 5 being 'I want them to be very hot.')",
+                            "register-specialization":"Great! I saved your specialization.
+                            Now, please rate on a scale of 0-5, how much the easiness of the class matters to you (with 0 being an 'Doesn't matter' to 5 being 'I like easy classes only')?", "frogs_affirmation_callback":"Great! All your preferences have been recorded. From now on, all answers will be tuned to your liking!", 
+                            "frogs_negation_callback":"Great! All your preferences have been recorded. From now on, all answers will be tuned to your liking! But beware of KBAI, the professor likes eating frogs!"}
 
 def processRequest(req):
     course_number_list = extractCourseNumber(req)
@@ -65,11 +89,31 @@ def processRequest(req):
             context_name == "instructor_name"):
             speech = answerInstructorQueries(req.get("result").get("action"))
             print speech
+        elif (req.get("result").get("action") in LIST_OF_PREFERENCES:
+            speech = registerEpisodicMemory(req)
+            print speech
         else:
             speech = "I'm so sorry, but I don't understand your question. Can you reframe it please?" 
             print speech
     res = makeWebhookResult(speech)
     return res
+
+
+def registerEpisodicMemory():
+    #Answer all the objective queries
+    episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
+    speech = PREFERENCES_SPEECH_DICT[req.get("result").get("action")]
+    if req.get("result").get("action") == "register-specialization":
+        episodic_dict["register-specialization"]= req.get("result").get("parameters").get("specializations") 
+    elif req.get("result").get("action") == "frogs_affirmation_callback":
+        episodic_dict["register-frogs"] = True
+    elif req.get("result").get("action") == "frogs_negation_callback":
+        episodic_dict["register-frogs"] = False
+    else:
+        episodic_dict[req.get("result").get("action")] = float(req.get("result").get("parameters").get("specializations"))
+    pkl.dump(episodic_dict, open('./data_collection/episodic_memory.p', 'rb'))
+    return speech
+                        
 
 
 def answerObjectiveQueries(course_number_list, query_name):
