@@ -100,13 +100,12 @@ def registerEpisodicMemory(req):
     elif req.get("result").get("action") == "frogs_negation_callback":
         episodic_dict["register-frogs"] = False
     else:
-        print episodic_dict
-        print float(req.get("result").get("parameters").get("number"))
         try:
             episodic_dict[req.get("result").get("action")] = float(req.get("result").get("parameters").get("number"))
         except:
             speech = "Are you sure you entered a number? Please try again."
-    pkl.dump(episodic_dict, open('./data_collection/episodic_memory.p', 'rb'))
+    print episodic_dict
+    pkl.dump(episodic_dict, open('./data_collection/episodic_memory.p', 'wb'))
     return speech
                         
 
