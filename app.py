@@ -47,25 +47,12 @@ LIST_OF_PREFERENCES = ["register-easiness", "register-gpa",
                        "register-quality", "register-specialization",
                        "frogs_affirmation_callback", "frogs_negation_callback"]
 LIST_OF_CONTEXTS = ['instructor_name']
-PREFERENCES_SPEECH_DICT = {"register-gpa":"Thanks! I've registered your GPA successfully.
-                            Now, please tell me your specialization. Here are the 4 specializations the OMSCS program:
-                            1. Computational Perception & Robotics
-                            2. Computing Systems
-                            3. Interactive Intelligence
-                            4. Machine Learning","register-easiness":"Great! I registered that.
-                            Next, on a scale of 0-5, how much does the helpfulness of the professor matter to you?
-                            (0 being 'I won't interact with the professor at all, so I don't care', and 5 being 'I need my instructor to be very helpful all the time')",
-                            "register-helpfulness": "Great! Next, how much, again on a scale of 0-5 does the quality of the class matter? 
-                            (With 0 being 'I know all about these topics already, I just want it on my resume.' and 5 being 'Quality of the class is supreme!')",
-                            "register-hotness":"Awesome, I have almost all your details and preferences now. 
-                            Now for the last and final question:
-                            Do you like people that eat frogs?
-                            (Don't ask why this is relevant right now, it'll all make sense later.)",
-                            "register-quality":"Great! Thanks for that! 
-                            Now, on a scale of 0-5, how much does the hotness/cuteness of a professor matter to you?
-                            (With 0 being 'Doesn't matter.' to 5 being 'I want them to be very hot.')",
-                            "register-specialization":"Great! I saved your specialization.
-                            Now, please rate on a scale of 0-5, how much the easiness of the class matters to you (with 0 being an 'Doesn't matter' to 5 being 'I like easy classes only')?", "frogs_affirmation_callback":"Great! All your preferences have been recorded. From now on, all answers will be tuned to your liking!", 
+PREFERENCES_SPEECH_DICT = {"register-gpa":"Thanks! I've registered your GPA successfully.\nNow, please tell me your specialization. Here are the 4 specializations the OMSCS program:\n1. Computational Perception & Robotics\n2. Computing Systems\n3. Interactive Intelligence\n4. Machine Learning",
+                            "register-easiness":"Great! I registered that.\nNext, on a scale of 0-5, how much does the helpfulness of the professor matter to you?\n(0 being 'I won't interact with the professor at all, so I don't care', and 5 being 'I need my instructor to be very helpful all the time')",
+                            "register-helpfulness": "Great! Next, how much, again on a scale of 0-5 does the quality of the class matter?\n(With 0 being 'I know all about these topics already, I just want it on my resume.' and 5 being 'Quality of the class is supreme!')",
+                            "register-hotness":"Awesome, I have almost all your details and preferences now.\nNow for the last and final question:\nDo you like people that eat frogs?\n(Don't ask why this is relevant right now, it'll all make sense later.)",
+                            "register-quality":"Great! Thanks for that!\nNow, on a scale of 0-5, how much does the hotness/cuteness of a professor matter to you?\n(With 0 being 'Doesn't matter.' to 5 being 'I want them to be very hot.')",
+                            "register-specialization":"Great! I saved your specialization.\nNow, please rate on a scale of 0-5, how much the easiness of the class matters to you (with 0 being an 'Doesn't matter' to 5 being 'I like easy classes only')?", "frogs_affirmation_callback":"Great! All your preferences have been recorded. From now on, all answers will be tuned to your liking!", 
                             "frogs_negation_callback":"Great! All your preferences have been recorded. From now on, all answers will be tuned to your liking! But beware of KBAI, the professor likes eating frogs!"}
 
 def processRequest(req):
