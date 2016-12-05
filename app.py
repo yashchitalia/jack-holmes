@@ -104,7 +104,6 @@ def answerProductionRules(course_number_list, query_name):
         for course_number in course_number_list:
             percentage = []
             grade_dict = {'A':3, 'B':4, 'C':5, 'D':6}
-            print course_number
             try:
                 course_matrix = course_critique_dat[course_number]
                 print course_matrix
@@ -116,10 +115,9 @@ def answerProductionRules(course_number_list, query_name):
                     sum_row = sum_row + row[grade_dict[num]]
                 percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
             avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
-            print avg_pass_percentage
             ease_dict[course_number] = avg_pass_percentage
-        easiest_course = str(min(ease_dict, key=optionScores.get))
-        harder_course = str(max(ease_dict, key=optionScores.get))
+        easiest_course = str(min(ease_dict, key=ease_dict.get))
+        harder_course = str(max(ease_dict, key=ease_dict.get))
         speech = "So, it looks like "+easiest_course+" is easier than "+harder_course+"."
     return speech
                         
