@@ -103,9 +103,11 @@ def answerProductionRules(course_number_list, query_name):
         ease_dict = {}
         for course_number in course_number_list:
             percentage = []
+            grade_dict = {'A':3, 'B':4, 'C':5, 'D':6}
             print course_number
             try:
                 course_matrix = course_critique_dat[course_number]
+                print course_matrix
             except:
                 return "I don't have that data for " + course_number +". So sorry, I can't say much!"
             for row in course_matrix:
