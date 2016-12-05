@@ -94,11 +94,14 @@ def processRequest(req):
 
 def answerProductionRules(course_number_list, query_name):
     #Answer comparison type questions
+    print "Guessed that its a comparison type query"
     course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
     course_number_list = course_number_list[:2]
     if query_name == "comparison_better_query":
         episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
     elif query_name == "comparison_ease_query":
+        print "Guessed comparison query correctly"
+        print course_number_list
         ease_dict = {}
         for course_number in course_number_list:
             try:
