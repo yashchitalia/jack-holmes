@@ -104,14 +104,14 @@ def answerProductionRules(course_number_list, query_name):
             try:
                 course_matrix = course_critique_dat[course_number]
             except:
-                return "I don't have that data for " + course_number +"."
-                    for row in course_matrix:
-                        sum_row = 0.0
-                        for num in grade_dict.keys():
-                            sum_row = sum_row + row[grade_dict[num]]
-                        percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
-                    avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
-                    ease_dict[course_number] = avg_pass_percentage
+                return "I don't have that data for " + course_number +". So sorry, I can't say much!"
+            for row in course_matrix:
+                sum_row = 0.0
+                for num in grade_dict.keys():
+                    sum_row = sum_row + row[grade_dict[num]]
+                percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
+            avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
+            ease_dict[course_number] = avg_pass_percentage
         easiest_course = str(min(ease_dict, key=optionScores.get))
         harder_course = str(max(ease_dict, key=optionScores.get))
         speech = "So, it looks like "+easiest_course+" is easier than "+harder_course"."
