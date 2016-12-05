@@ -29,6 +29,7 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
+LIST_OF_COMPARISON_QUERIES = ["comparison_better_query", "comparison_ease_query"]
 DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
                              "instructor_query":"Instructor",
                              "overview_query":"Overview",
@@ -72,6 +73,8 @@ def processRequest(req):
             speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
             print speech
         else:
+            if req.get("result").get("action") in LIST_OF_COMPARISON_QUERIES:
+                speech = answerProductionRules(course_number_list, req.get("result").get("action"))
             if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
                 speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
                 print speech
@@ -89,8 +92,38 @@ def processRequest(req):
     return res
 
 
+def answerProductionRules(course_number_list, query_name):
+    #Answer comparison type questions
+    course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
+    course_number_list = course_number_list[:2]
+    if query_name == "comparison_better_query":
+        episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
+    elif query_name == "comparison_ease_query":
+        ease_dict = {}
+        for course_number in course_number_list:
+            try:
+                course_matrix = course_critique_dat[course_number]
+            except:
+                return "I don't have that data for " + course_number +"."
+                    for row in course_matrix:
+                        sum_row = 0.0
+                        for num in grade_dict.keys():
+                            sum_row = sum_row + row[grade_dict[num]]
+                        percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
+                    avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
+                    ease_dict[course_number] = avg_pass_percentage
+        easiest_course = str(min(ease_dict, key=optionScores.get))
+        harder_course = str(max(ease_dict, key=optionScores.get))
+        speech = "So, it looks like "+easiest_course+" is easier than "+harder_course"."
+    return speech
+                        
+
+def sortKey(self, item):                                                    
+    return item[1]                                                          
+
+
 def registerEpisodicMemory(req):
-    #Answer all the objective queries
+    #Register Users Preferences
     episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
     speech = PREFERENCES_SPEECH_DICT[req.get("result").get("action")]
     if req.get("result").get("action") == "register-specialization":
@@ -108,7 +141,6 @@ def registerEpisodicMemory(req):
     pkl.dump(episodic_dict, open('./data_collection/episodic_memory.p', 'wb'))
     return speech
                         
-
 
 def answerObjectiveQueries(course_number_list, query_name):
     #Answer all the objective queries
@@ -174,6 +206,7 @@ def answerInstructorQueries(query_name):
         else:
             speech = "I don't have that data for " + str(curr_instructor) + "."
     return speech
+
 
 def answerNumericQueries(course_number_list, req):
     #Answer all quantitative queries
