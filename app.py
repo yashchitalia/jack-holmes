@@ -76,7 +76,8 @@ def processRequest(req):
             if req.get("result").get("action") in LIST_OF_COMPARISON_QUERIES:
                 course_number_list = extractMultipleCourseNumbers(req)
                 speech = answerProductionRules(course_number_list, req.get("result").get("action"))
-            if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
+                print speech
+            elif req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
                 speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
                 print speech
             elif req.get("result").get("action") in LIST_OF_NUMERIC_QUERIES:
