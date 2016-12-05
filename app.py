@@ -95,16 +95,15 @@ def processRequest(req):
 
 def answerProductionRules(course_number_list, query_name):
     #Answer comparison type questions
-    print "Guessed that its a comparison type query"
     course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
     course_number_list = course_number_list[:2]
     if query_name == "comparison_better_query":
         episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
     elif query_name == "comparison_ease_query":
-        print "Guessed comparison query correctly"
-        print course_number_list
         ease_dict = {}
         for course_number in course_number_list:
+            percentage = []
+            print course_number
             try:
                 course_matrix = course_critique_dat[course_number]
             except:
@@ -115,6 +114,7 @@ def answerProductionRules(course_number_list, query_name):
                     sum_row = sum_row + row[grade_dict[num]]
                 percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
             avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
+            print avg_pass_percentage
             ease_dict[course_number] = avg_pass_percentage
         easiest_course = str(min(ease_dict, key=optionScores.get))
         harder_course = str(max(ease_dict, key=optionScores.get))
