@@ -74,6 +74,7 @@ def processRequest(req):
             print speech
         else:
             if req.get("result").get("action") in LIST_OF_COMPARISON_QUERIES:
+                course_number_list = extractMultipleCourseNumbers(req)
                 speech = answerProductionRules(course_number_list, req.get("result").get("action"))
             if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
                 speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
@@ -279,6 +280,47 @@ def mapCourseNameToCourseNumber(course_name):
         if omscs_dat[course_number]['Name'] == course_name:
             return course_number
     return None
+
+def extractMultipleCourseNumbers(req):
+    #Get course number from the users query
+    result = req.get("result")
+    course_number_list = []
+    course_name_list = []
+    parameters = result.get("parameters")
+    course_number_list.append(parameters.get('course_number'))
+    course_number_list.append(parameters.get('course_number1'))
+    course_name_list.append(parameters.get('course_name'))
+    course_name_list.append(parameters.get('course_name1'))
+    final_list = []
+    for course_number in course_number_list:
+        try:
+            if len(course_number) == 0:
+                course_number = None
+        except:
+            course_number = None
+
+        if (course_number is None):
+            continue
+        else:
+            final_list.append(course_number)
+
+    for course_name in course_name_list:
+        try:
+            if len(course_name) == 0:
+                course_name = None
+        except:
+            course_name = None
+        if course_name is not None:
+            candidate_course_number = mapCourseNameToCourseNumber(course_name)
+            if candidate_course_number is None:
+                continue
+            else:
+                final_list.append(candidate_course_number)
+        else:
+            continue
+    return final_list 
+
+
 
 def extractCourseNumber(req):
     #Get course number from the users query
