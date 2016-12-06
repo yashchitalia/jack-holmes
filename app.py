@@ -175,7 +175,8 @@ def answerProductionRules(course_number_list, query_name):
                           helpfulness_rating*helpfulness_preference +
                           quality_rating*quality_preference)
             if course_number in specializations_dict[specialization_preference]:
-                curr_score += 10.0
+                curr_score += 20.0
+            print course_number, curr_score
             score_dict[course_number] = curr_score
         better_course = str(min(score_dict, key=score_dict.get))
         worse_course = str(max(score_dict, key=score_dict.get))
