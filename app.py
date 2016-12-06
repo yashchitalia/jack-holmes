@@ -354,8 +354,15 @@ def extractMultipleCourseNumbers(req):
     course_number_list = []
     course_name_list = []
     parameters = result.get("parameters")
-    course_number_list.append(parameters.get('course_number'))
-    course_number_list.append(parameters.get('course_number1'))
+    if type(parameters.get('course_number')) is list:
+        course_number_list.append(parameters.get('course_number')[0])
+    else: 
+        course_number_list.append(parameters.get('course_number'))
+
+    if type(parameters.get('course_number1')) is list:
+        course_number_list.append(parameters.get('course_number1')[0])
+    else:
+        course_number_list.append(parameters.get('course_number1'))
     print course_number_list
     course_name_list.append(parameters.get('course_name'))
     course_name_list.append(parameters.get('course_name1'))
