@@ -99,9 +99,41 @@ def answerProductionRules(course_number_list, query_name):
     course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
     course_number_list = course_number_list[:2]
     if query_name == "comparison_better_query":
+        score_dict = {}
         episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
         rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
-
+        omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
+        instructor_names = [item[0] for item in rmp_data]
+        for course_number in course_number_list:
+            #Extract Instructor Data for this course
+            curr_instructor = omscs_dat[course_number]["Instructor"]
+            easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
+            helpfulness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["helpfulness_query"]]) 
+            quality_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["quality_query"]]) 
+            #Extract User data for this course
+            easiness_preference = episodic_dict["register-easiness"]
+            helpfulness_preference = episodic_dict["register-helpfulness"]
+            quality_preference = episodic_dict["register-quality"]
+            #Threshold values
+            if easiness_preference > 5.0:
+                easiness_preference = 5.0 
+            if easiness_preference < 0.0:
+                easiness_preference = 0.0 
+            if helpfulness_preference> 5.0:
+                helpfulness_preference= 5.0 
+            if helpfulness_preference< 0.0:
+                helpfulness_preference= 0.0 
+            if quality_preference> 5.0:
+                quality_preference= 5.0 
+            if quality_preference< 0.0:
+                quality_preference= 0.0 
+            curr_score = (easiness_rating*easiness_preference +
+                          helpfulness_rating*helpfulness_preference +
+                          quality_rating*quality_preference)
+            score_dict[course_number] = curr_score
+        better_course = str(min(score_dict, key=score_dict.get))
+        worse_course = str(max(score_dict, key=score_dict.get))
+        speech = "So, it looks like "+better_course+" is better for you than "+worse_course+"."
     elif query_name == "comparison_ease_query":
         ease_dict = {}
         for course_number in course_number_list:
