@@ -100,6 +100,8 @@ def answerProductionRules(course_number_list, query_name):
     course_number_list = course_number_list[:2]
     if query_name == "comparison_better_query":
         episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
+        rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
+
     elif query_name == "comparison_ease_query":
         ease_dict = {}
         for course_number in course_number_list:
@@ -290,6 +292,7 @@ def extractMultipleCourseNumbers(req):
     parameters = result.get("parameters")
     course_number_list.append(parameters.get('course_number'))
     course_number_list.append(parameters.get('course_number1'))
+    print course_number_list
     course_name_list.append(parameters.get('course_name'))
     course_name_list.append(parameters.get('course_name1'))
     final_list = []
