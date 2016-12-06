@@ -188,9 +188,9 @@ def answerInstructorQueries(query_name):
             elif query_name == "comment_query":
                 speech = "Here's what one student has to say:\n" + "'"+ str(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]]) + "'"
             elif query_name in ["quality_query", "easiness_query", "helpfulness_query"]:
-                if rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]] > 4.0:
+                if float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]]) > 4.0:
                     speech = "Very much!"
-                elif rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]] < 4.0:
+                elif float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES[query_name]]) < 4.0:
                     speech = str(curr_instructor) + "'s rating is medium on this one."
                 else:
                     speech = "Not good at all. :("
