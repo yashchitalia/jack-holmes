@@ -359,6 +359,7 @@ def extractMultipleCourseNumbers(req):
     print course_number_list
     course_name_list.append(parameters.get('course_name'))
     course_name_list.append(parameters.get('course_name1'))
+    print course_name_list
     final_list = []
     for course_number in course_number_list:
         try:
