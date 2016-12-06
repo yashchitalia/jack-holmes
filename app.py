@@ -57,7 +57,6 @@ PREFERENCES_SPEECH_DICT = {"register-gpa":"Thanks! I've registered your GPA succ
                             "frogs_negation_callback":"Great! All your preferences have been recorded. From now on, all answers will be tuned to your liking! But beware of KBAI, the professor likes eating frogs!"}
 
 def processRequest(req):
-    course_number_list = extractCourseNumber(req)
     try:
         if req.get("result").get("contexts")[0].get("name") in LIST_OF_CONTEXTS:
             context_name = req.get("result").get("contexts")[0].get("name")
@@ -68,15 +67,16 @@ def processRequest(req):
     if req.get("result").get("action") in LIST_OF_PREFERENCES:
         speech = registerEpisodicMemory(req)
         print speech
+    elif req.get("result").get("action") in LIST_OF_COMPARISON_QUERIES:
+        course_number_list = extractMultipleCourseNumbers(req)
+        speech = answerProductionRules(course_number_list, req.get("result").get("action"))
+        print speech
     else:
+        course_number_list = extractCourseNumber(req)
         if (course_number_list is None) and (context_name is None):
             speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
             print speech
         else:
-            if req.get("result").get("action") in LIST_OF_COMPARISON_QUERIES:
-                course_number_list = extractMultipleCourseNumbers(req)
-                speech = answerProductionRules(course_number_list, req.get("result").get("action"))
-                print speech
             elif req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
                 speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
                 print speech
