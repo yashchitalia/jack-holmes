@@ -30,6 +30,7 @@ def webhook():
     return r
 
 LIST_OF_COMPARISON_QUERIES = ["comparison_better_query", "comparison_ease_query"]
+LIST_OF_EXPLANATION_QUERIES = ["inference_request", "analysis_request"]
 DICT_OF_OBJECTIVE_QUERIES = {"prereq_query":"Prerequisites",
                              "instructor_query":"Instructor",
                              "overview_query":"Overview",
@@ -71,6 +72,9 @@ def processRequest(req):
         course_number_list = extractMultipleCourseNumbers(req)
         speech = answerProductionRules(course_number_list, req.get("result").get("action"))
         print speech
+    elif req.get("result").get("action") in LIST_OF_EXPLANATION_QUERIES:
+        speech = answerExplanationTypeQueries(req.get("result").get("action"))
+        print speech
     else:
         course_number_list = extractCourseNumber(req)
         if (course_number_list is None) and (context_name is None):
@@ -93,6 +97,44 @@ def processRequest(req):
     res = makeWebhookResult(speech)
     return res
 
+
+def answerExplanationTypeQueries(query_name):
+    #Pull last answer from the pickle file and return, lol
+    if query_name == 'inference_request':
+        explanation = pkl.load(open('./data_collection/explanation.p', 'rb'))
+        return explanation
+    else:
+        analysis = "I dont have this functionality yet"
+        return analysis
+
+def generateProductionRuleExplanation(course_number_list):
+    #Generate a textual explanation for answering the reasoning behind
+    # Production Rule type questions
+    explanation = ""
+    episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
+    specializations_dict = pkl.load(open('./data_collection/specializations/specializations_course_list.p', 'rb'))
+    specialization_preference = episodic_dict["register-specialization"]
+    easiness_preference = episodic_dict["register-easiness"]
+    helpfulness_preference = episodic_dict["register-helpfulness"]
+    quality_preference = episodic_dict["register-quality"]
+    if easiness_preference >= 4.0 or helpfulness_preference >= 4.0 or quality_preference >= 4.0:
+        explanation += "So you gave a high preference to "
+        if easiness_preference >= 4.0:
+            explanation += "Easiness of the class,"
+        if helpfulness_preference>= 4.0:
+            explanation += " Helpfulness of the professor,"
+        if quality_preference>= 4.0:
+            explanation += " Quality of teaching,"
+    explanation += " So I scored the courses, by weighting them according to your preferences, and the ratings given by other students."
+    if ((course_number_list[0] in specializations_dict[specialization_preference] and
+        course_number_list[1] not in specializations_dict[specialization_preference])):
+        explanation += "Also, "+course_number_list[0]+" is in your selected major, but "+course_number_list[1]+" is not."
+        explanation += " So I weighed that in too."
+    elif ((course_number_list[1] in specializations_dict[specialization_preference] and
+        course_number_list[0] not in specializations_dict[specialization_preference])):
+        explanation += "Also, "+course_number_list[1]+" is in your selected major, but "+course_number_list[0]+" is not."
+        explanation += " So I weighed that in too."
+    return explanation
 
 def answerProductionRules(course_number_list, query_name):
     #Answer comparison type questions
@@ -138,6 +180,11 @@ def answerProductionRules(course_number_list, query_name):
         better_course = str(min(score_dict, key=score_dict.get))
         worse_course = str(max(score_dict, key=score_dict.get))
         speech = "So, it looks like "+better_course+" is better for you than "+worse_course+"."
+        explanation = generateProductionRuleExplanation(course_number_list)
+        explanation += "\n So that's why I picked "+better_course+" over "+worse_course+"."
+        explanation += "\n But if you think my choices are wrong, you can tweak your preferences by saying 'change preferences'."
+        pkl.dump(explanation, open('./data_collection/explanation.p', 'wb'))
+        print explanation
     elif query_name == "comparison_ease_query":
         explanation = ""
         ease_dict = {}
@@ -184,6 +231,7 @@ def answerProductionRules(course_number_list, query_name):
         harder_course = str(max(ease_dict, key=ease_dict.get))
         speech = "So, it looks like "+easiest_course+" is easier than "+harder_course+"."
         explanation += " and it looked like "+easiest_course+" scores are better than "+harder_course+"."
+        explanation += "\n But if you want to change your GPA, you can do so by changing your preferences by saying 'change preferences'."
         pkl.dump(explanation, open('./data_collection/explanation.p', 'wb'))
         print explanation
     return speech
