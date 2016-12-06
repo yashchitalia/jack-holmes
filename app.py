@@ -77,7 +77,7 @@ def processRequest(req):
             speech = "No Course Number Specified. Could you repeat the question with the correct course number?"
             print speech
         else:
-            elif req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
+            if req.get("result").get("action") in DICT_OF_OBJECTIVE_QUERIES.keys():
                 speech = answerObjectiveQueries(course_number_list, req.get("result").get("action"))
                 print speech
             elif req.get("result").get("action") in LIST_OF_NUMERIC_QUERIES:
