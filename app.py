@@ -103,57 +103,89 @@ def answerProductionRules(course_number_list, query_name):
         episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
         rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
         omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
+        specializations_dict = pkl.load(open('./data_collection/specializations/specializations_course_list.p', 'rb'))
         instructor_names = [item[0] for item in rmp_data]
+        #Extract User Preferences
+        specialization_preference = episodic_dict["register-specialization"]
+        easiness_preference = episodic_dict["register-easiness"]
+        helpfulness_preference = episodic_dict["register-helpfulness"]
+        quality_preference = episodic_dict["register-quality"]
+        #Threshold values
+        if easiness_preference > 5.0:
+            easiness_preference = 5.0 
+        if easiness_preference < 0.0:
+            easiness_preference = 0.0 
+        if helpfulness_preference> 5.0:
+            helpfulness_preference= 5.0 
+        if helpfulness_preference< 0.0:
+            helpfulness_preference= 0.0 
+        if quality_preference> 5.0:
+            quality_preference= 5.0 
+        if quality_preference< 0.0:
+            quality_preference= 0.0 
         for course_number in course_number_list:
             #Extract Instructor Data for this course
             curr_instructor = omscs_dat[course_number]["Instructor"]
             easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
             helpfulness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["helpfulness_query"]]) 
             quality_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["quality_query"]]) 
-            #Extract User data for this course
-            easiness_preference = episodic_dict["register-easiness"]
-            helpfulness_preference = episodic_dict["register-helpfulness"]
-            quality_preference = episodic_dict["register-quality"]
-            #Threshold values
-            if easiness_preference > 5.0:
-                easiness_preference = 5.0 
-            if easiness_preference < 0.0:
-                easiness_preference = 0.0 
-            if helpfulness_preference> 5.0:
-                helpfulness_preference= 5.0 
-            if helpfulness_preference< 0.0:
-                helpfulness_preference= 0.0 
-            if quality_preference> 5.0:
-                quality_preference= 5.0 
-            if quality_preference< 0.0:
-                quality_preference= 0.0 
             curr_score = (easiness_rating*easiness_preference +
                           helpfulness_rating*helpfulness_preference +
                           quality_rating*quality_preference)
+            if course_number in specializations_dict[specialization_preference]:
+                curr_score += 10.0
             score_dict[course_number] = curr_score
         better_course = str(min(score_dict, key=score_dict.get))
         worse_course = str(max(score_dict, key=score_dict.get))
         speech = "So, it looks like "+better_course+" is better for you than "+worse_course+"."
     elif query_name == "comparison_ease_query":
+        explanation = ""
         ease_dict = {}
+        episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
+        curr_gpa = float(episodic_dict["register-gpa"])
+        if curr_gpa >=3.75:
+            explanation+="So I thought your GPA was high enough, to assume, that when you say 'easy' you mean 'easy to get an A in'. So I just summed up all percentages of A grades for each of these classes, "
+        elif curr_gpa < 3.75 and curr_gpa >= 3.00:
+            explanation+="So I thought your GPA was high enough, to assume, that when you say 'easy' you mean 'easy to get an A  or B in'. So I just summed up all percentages of A and B grades in each year this class was taught, "
+        else:
+            explanation+="Since your GPA is quite low, I just computed the percentage of students that pass these classes and compared the two,"
         for course_number in course_number_list:
             percentage = []
             grade_dict = {'A':3, 'B':4, 'C':5, 'D':6}
+
             try:
                 course_matrix = course_critique_dat[course_number]
                 print course_matrix
             except:
                 return "I don't have that data for " + course_number +". So sorry, I can't say much!"
-            for row in course_matrix:
-                sum_row = 0.0
-                for num in grade_dict.keys():
-                    sum_row = sum_row + row[grade_dict[num]]
-                percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
-            avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
+            if curr_gpa >= 3.75:
+                for row in course_matrix:
+                    sum_row = 0.0
+                    for num in grade_dict.keys():
+                        sum_row = sum_row + row[grade_dict[num]]
+                    percentage.append(row[grade_dict['A']]*100.0/sum_row)
+                avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
+            elif curr_gpa >= 3.00 and curr_gpa < 3.75:
+                for row in course_matrix:
+                    sum_row = 0.0
+                    for num in grade_dict.keys():
+                        sum_row = sum_row + row[grade_dict[num]]
+                    percentage.append(row[grade_dict['A']]+row[grade_dict['B']]*100.0/sum_row)
+                avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
+            else:
+                for row in course_matrix:
+                    sum_row = 0.0
+                    for num in grade_dict.keys():
+                        sum_row = sum_row + row[grade_dict[num]]
+                    percentage.append((sum_row-row[grade_dict['D']])*100.0/sum_row)
+                avg_pass_percentage = (1.0*sum(percentage))/len(percentage)
             ease_dict[course_number] = avg_pass_percentage
         easiest_course = str(min(ease_dict, key=ease_dict.get))
         harder_course = str(max(ease_dict, key=ease_dict.get))
         speech = "So, it looks like "+easiest_course+" is easier than "+harder_course+"."
+        explanation += " and it looked like "+easiest_course+" scores are better than "+harder_course+"."
+        pkl.dump(explanation, open('./data_collection/explanation.p', 'wb'))
+        print explanation
     return speech
                         
 
