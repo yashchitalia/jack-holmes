@@ -178,8 +178,8 @@ def answerProductionRules(course_number_list, query_name):
                 curr_score += 20.0
             print course_number, curr_score
             score_dict[course_number] = curr_score
-        better_course = str(min(score_dict, key=score_dict.get))
-        worse_course = str(max(score_dict, key=score_dict.get))
+        better_course = str(max(score_dict, key=score_dict.get))
+        worse_course = str(min(score_dict, key=score_dict.get))
         speech = "So, it looks like "+better_course+" is better for you than "+worse_course+"."
         explanation = generateProductionRuleExplanation(course_number_list)
         explanation += "\n So that's why I picked "+better_course+" over "+worse_course+"."
