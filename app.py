@@ -146,17 +146,14 @@ def generateCoursePlan():
     rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
     omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
     specializations_dict = pkl.load(open('./data_collection/specializations/specializations_course_combos.p', 'rb'))
-    print "Init Data Gathering"
     #This is a dict, where the key is each specialization and the value is a list
     #The list has a number of sub-lists. Each sub-list has tuples of combos in it.
     instructor_names = [item[0] for item in rmp_data]
-    print instructor_names
     #Extract User Preferences
     specialization_preference = episodic_dict["register-specialization"]
     easiness_preference = episodic_dict["register-easiness"]
     helpfulness_preference = episodic_dict["register-helpfulness"]
     quality_preference = episodic_dict["register-quality"]
-    print "Fetched preferences"
     #Threshold values
     if easiness_preference > 5.0:
         easiness_preference = 5.0 
@@ -171,12 +168,7 @@ def generateCoursePlan():
     if quality_preference< 0.0:
         quality_preference= 0.0 
     final_course_plan = []
-    print "Finished Init"
-    print specialization_preference
-    print specializations_dict
-    print specializations_dict[specialization_preference]
     for course_list_of_combos in specializations_dict[specialization_preference]:
-        print course_list_of_combos
         max_score = 0
         best_tuple = (None, None)
         for course_number_tuple in course_list_of_combos:
@@ -184,8 +176,11 @@ def generateCoursePlan():
                 #Singleton cases
                 best_tuple = course_number_tuple
             else:
+                print "Not a singleton"
+                print course_number_tuple
                 curr_score = 0
                 for course_number in course_number_tuple:
+                    print course_number
                     #Extract Instructor Data for this course
                     curr_instructor = omscs_dat[course_number]["Instructor"]
                     easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
