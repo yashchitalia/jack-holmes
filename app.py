@@ -104,7 +104,7 @@ def answerExplanationTypeQueries(query_name):
         explanation = pkl.load(open('./data_collection/explanation.p', 'rb'))
         return explanation
     else:
-        analysis = "I dont have this functionality yet"
+        analysis = pkl.load(open('./data_collection/analysis.p', 'rb'))
         return analysis
 
 def generateProductionRuleExplanation(course_number_list):
@@ -184,8 +184,10 @@ def answerProductionRules(course_number_list, query_name):
         explanation = generateProductionRuleExplanation(course_number_list)
         explanation += "\n So that's why I picked "+better_course+" over "+worse_course+"."
         explanation += "\n But if you think my choices are wrong, you can tweak your preferences by saying 'change preferences'."
+        analysis = "curr_score = (easiness_rating*easiness_preference + helpfulness_rating*helpfulness_preference + quality_rating*quality_preference) \n"
+        analysis += "if course_number in specializations_dict[specialization_preference]:\n curr_score += 20.0"
+        pkl.dump(analysis, open('./data_collection/analysis.p', 'wb'))
         pkl.dump(explanation, open('./data_collection/explanation.p', 'wb'))
-        print explanation
     elif query_name == "comparison_ease_query":
         explanation = ""
         ease_dict = {}
@@ -233,6 +235,9 @@ def answerProductionRules(course_number_list, query_name):
         speech = "So, it looks like "+easiest_course+" is easier than "+harder_course+"."
         explanation += " and it looked like "+easiest_course+" scores are better than "+harder_course+"."
         explanation += "\n But if you want to change your GPA, you can do so by changing your preferences by saying 'change preferences'."
+        analysis = "if(gpa > 3.75) {average all A grade percentages}\nif(gpa is between 3.00, 3.75) {average all A, B grade percentages}"
+        analysis += "\n if(gpa < 3.00) {average all passing percentages}"
+        pkl.dump(analysis, open('./data_collection/analysis.p', 'wb'))
         pkl.dump(explanation, open('./data_collection/explanation.p', 'wb'))
         print explanation
     return speech
