@@ -172,6 +172,8 @@ def generateCoursePlan():
         quality_preference= 0.0 
     final_course_plan = []
     print "Finished Init"
+    print specialization_preference
+    print specializations_dict
     print specializations_dict[specialization_preference]
     for course_list_of_combos in specializations_dict[specialization_preference]:
         print course_list_of_combos
