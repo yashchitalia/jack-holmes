@@ -195,13 +195,16 @@ def generateCoursePlan():
                 curr_score = 0
                 for course_number in course_number_tuple:
                     #Extract Instructor Data for this course
+                    print course_number
                     curr_instructor = omscs_dat[course_number]["Instructor"]
+                    print curr_instructor
                     easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
                     helpfulness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["helpfulness_query"]]) 
                     quality_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["quality_query"]]) 
                     curr_score += (easiness_rating*easiness_preference +
                                   helpfulness_rating*helpfulness_preference +
                                   quality_rating*quality_preference)
+                    print curr_score
                 if curr_score > max_score:
                     max_score = curr_score
                     best_tuple = course_number_tuple
