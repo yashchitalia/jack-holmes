@@ -76,6 +76,7 @@ def processRequest(req):
         speech = answerExplanationTypeQueries(req.get("result").get("action"))
         print speech
     elif req.get("result").get("action") == "plan_query":
+        print "Query Recognized correctly"
         speech = generateCoursePlan()
         print speech
     else:
@@ -146,6 +147,7 @@ def generateCoursePlan():
     rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
     omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
     specializations_dict = pkl.load(open('./data_collection/specializations/specializations_course_combos.p', 'rb'))
+    print "got all data"
     #This is a dict, where the key is each specialization and the value is a list
     #The list has a number of sub-lists. Each sub-list has tuples of combos in it.
     instructor_names = [item[0] for item in rmp_data]
@@ -169,6 +171,7 @@ def generateCoursePlan():
         quality_preference= 0.0 
     final_course_plan = []
     for course_list_of_combos in specializations_dict[specialization_preference]:
+        print course_list_of_combos
         max_score = 0
         best_tuple = (None, None)
         for course_number_tuple in course_list_of_combos:
@@ -189,6 +192,7 @@ def generateCoursePlan():
                 if curr_score > max_score:
                     max_score = curr_score
                     best_tuple = course_number_tuple
+                print max_score, best_tuple
         final_course_plan.append(list(best_tuple))
         speech = "First Semester: " + final_course_plan[0] + ", " + final_course_plan[1] + ".\n"
         speech += "Second Semester: " + final_course_plan[2] + ", " + final_course_plan[3] + ".\n"
