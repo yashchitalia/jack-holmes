@@ -174,8 +174,7 @@ def generateCoursePlan():
         for course_number_tuple in course_list_of_combos:
             if type(course_number_tuple) is not tuple:
                 #Singleton cases
-                print "Got here"
-                best_tuple = course_number_tuple
+                best_tuple = tuple(course_number_tuple, ' ')
             else:
                 curr_score = 0
                 for course_number in course_number_tuple:
