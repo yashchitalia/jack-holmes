@@ -176,8 +176,6 @@ def generateCoursePlan():
                 #Singleton cases
                 best_tuple = course_number_tuple
             else:
-                print "Not a singleton"
-                print course_number_tuple
                 curr_score = 0
                 for course_number in course_number_tuple:
                     print course_number
@@ -189,6 +187,7 @@ def generateCoursePlan():
                     curr_score += (easiness_rating*easiness_preference +
                                   helpfulness_rating*helpfulness_preference +
                                   quality_rating*quality_preference)
+                    print curr_score
                 if curr_score > max_score:
                     max_score = curr_score
                     best_tuple = course_number_tuple
