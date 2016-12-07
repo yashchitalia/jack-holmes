@@ -172,15 +172,13 @@ def generateCoursePlan():
         max_score = 0
         best_tuple = (None, None)
         for course_number_tuple in course_list_of_combos:
-            print course_number_tuple
             if type(course_number_tuple) is not tuple:
                 #Singleton cases
+                print "Got here"
                 best_tuple = course_number_tuple
             else:
                 curr_score = 0
-                print course_number_tuple
                 for course_number in course_number_tuple:
-                    print course_number
                     #Extract Instructor Data for this course
                     curr_instructor = omscs_dat[course_number]["Instructor"]
                     easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
