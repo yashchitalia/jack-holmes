@@ -192,18 +192,17 @@ def generateCoursePlan():
                 if curr_score > max_score:
                     max_score = curr_score
                     best_tuple = course_number_tuple
-                print best_tuple
         final_course_plan += list(best_tuple)
-        speech = "First Semester: " + final_course_plan[0] + ", " + final_course_plan[1] + ".\n"
-        speech += "Second Semester: " + final_course_plan[2] + ", " + final_course_plan[3] + ".\n"
-        if len(final_course_plan) > 4:
-            speech += "Finally, you can take "
-            for item in final_course_plan[4:]:
-                speech += item + ", "
-            speech += ", at your own pace."
-        else:
-            speech += "And that's it! You're ready to graduate in two semesters!"
-        return speech
+    speech = "First Semester: " + final_course_plan[0] + ", " + final_course_plan[1] + ".\n"
+    speech += "Second Semester: " + final_course_plan[2] + ", " + final_course_plan[3] + ".\n"
+    if len(final_course_plan) > 4:
+        speech += "Finally, you can take "
+        for item in final_course_plan[4:]:
+            speech += item + ", "
+        speech += ", at your own pace."
+    else:
+        speech += "And that's it! You're ready to graduate in two semesters!"
+    return speech
 
 def answerProductionRules(course_number_list, query_name):
     #Answer comparison type questions
