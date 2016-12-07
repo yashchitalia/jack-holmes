@@ -75,6 +75,9 @@ def processRequest(req):
     elif req.get("result").get("action") in LIST_OF_EXPLANATION_QUERIES:
         speech = answerExplanationTypeQueries(req.get("result").get("action"))
         print speech
+    elif req.get("result").get("action") == "plan_query":
+        speech = generateCoursePlan()
+        print speech
     else:
         course_number_list = extractCourseNumber(req)
         if (course_number_list is None) and (context_name is None):
@@ -135,6 +138,66 @@ def generateProductionRuleExplanation(course_number_list):
         explanation += "Also, "+course_number_list[1]+" is in your selected major, but "+course_number_list[0]+" is not."
         explanation += " So I weighed that in too."
     return explanation
+
+def generateCoursePlan():
+    #Retrieves data of the user's preferences and generates a course-plan for the user
+    course_critique_dat = pkl.load(open('./data_collection/course_critique/cleaned_course_critique_data.p', 'rb'))
+    episodic_dict = pkl.load(open('./data_collection/episodic_memory.p', 'rb'))
+    rmp_data = pkl.load(open('./data_collection/rate_my_professor/cleaned_rmp_data.p', 'rb'))
+    omscs_dat = pkl.load(open('./data_collection/omscs_website/omscs_cleaned_data.p', 'rb'))
+    specializations_dict = pkl.load(open('./data_collection/specializations/specializations_course_combos.p', 'rb'))
+    #This is a dict, where the key is each specialization and the value is a list
+    #The list has a number of sub-lists. Each sub-list has tuples of combos in it.
+    instructor_names = [item[0] for item in rmp_data]
+    #Extract User Preferences
+    specialization_preference = episodic_dict["register-specialization"]
+    easiness_preference = episodic_dict["register-easiness"]
+    helpfulness_preference = episodic_dict["register-helpfulness"]
+    quality_preference = episodic_dict["register-quality"]
+    #Threshold values
+    if easiness_preference > 5.0:
+        easiness_preference = 5.0 
+    if easiness_preference < 0.0:
+        easiness_preference = 0.0 
+    if helpfulness_preference> 5.0:
+        helpfulness_preference= 5.0 
+    if helpfulness_preference< 0.0:
+        helpfulness_preference= 0.0 
+    if quality_preference> 5.0:
+        quality_preference= 5.0 
+    if quality_preference< 0.0:
+        quality_preference= 0.0 
+    final_course_plan = []
+    for course_list_of_combos in specializations_dict[specialization_preference]:
+        max_score = 0
+        best_tuple = (None, None)
+        for course_number_tuple in course_list_of_combos:
+            if type(course_number_tuple) is not tuple:
+                #Singleton cases
+                best_tuple = course_number_tuple
+            else:
+                curr_score = 0
+                for course_number in course_number_tuple:
+                    #Extract Instructor Data for this course
+                    curr_instructor = omscs_dat[course_number]["Instructor"]
+                    easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
+                    helpfulness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["helpfulness_query"]]) 
+                    quality_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["quality_query"]]) 
+                    curr_score += (easiness_rating*easiness_preference +
+                                  helpfulness_rating*helpfulness_preference +
+                                  quality_rating*quality_preference)
+                if curr_score > max_score:
+                    max_score = curr_score
+                    best_tuple = course_number_tuple
+        final_course_plan.append(list(best_tuple))
+        speech = "First Semester: " + final_course_plan[0] + ", " + final_course_plan[1] + ".\n"
+        speech += "Second Semester: " + final_course_plan[2] + ", " + final_course_plan[3] + ".\n"
+        speech += "Finally, you can take "
+        for item in final_course_plan[4:]:
+            speech += item + ", "
+        speech += ", at your own pace."
+        print speech
+        return speech
 
 def answerProductionRules(course_number_list, query_name):
     #Answer comparison type questions
