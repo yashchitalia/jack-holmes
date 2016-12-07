@@ -171,7 +171,9 @@ def generateCoursePlan():
     for course_list_of_combos in specializations_dict[specialization_preference]:
         max_score = 0
         best_tuple = (None, None)
+        print course_list_of_combos
         for course_number_tuple in course_list_of_combos:
+            print course_number_tuple
             if type(course_number_tuple) is not tuple:
                 #Singleton cases
                 course_number = str(course_number_tuple)
