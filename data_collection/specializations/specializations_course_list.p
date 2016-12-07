@@ -63,6 +63,6 @@ aS'CS 7641'
 p33
 aS'CS 7646'
 p34
-aS'CS 6242'
+aS'CSE 6242'
 p35
 as.
