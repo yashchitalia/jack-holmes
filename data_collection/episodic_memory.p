@@ -10,7 +10,7 @@ p3
 I01
 sS'register-specialization'
 p4
-S'Computing Systems'
+S'Computational Perception & Robotics'
 p5
 sS'register-helpfulness'
 p6
