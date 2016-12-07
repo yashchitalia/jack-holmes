@@ -107,4 +107,17 @@ a(g50
 g51
 g53
 tp56
+aasS'Machine Learning'
+p57
+(lp58
+(lp59
+(S'CS 6505'
+p60
+S'CS 7641'
+p61
+S'CS 7646'
+p62
+S'CS 6242'
+p63
+tp64
 aas.
