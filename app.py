@@ -204,6 +204,7 @@ def generateCoursePlan():
                     max_score = curr_score
                     best_tuple = course_number_tuple
         final_course_plan += list(best_tuple)
+        print final_course_plan
     speech = "First Semester: " + final_course_plan[0] + ", " + final_course_plan[1] + ".\n"
     speech += "Second Semester: " + final_course_plan[2] + ", " + final_course_plan[3] + ".\n"
     if len(final_course_plan) > 4:
