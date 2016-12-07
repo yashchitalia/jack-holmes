@@ -178,32 +178,27 @@ def generateCoursePlan():
             else:
                 curr_score = 0
                 for course_number in course_number_tuple:
-                    print course_number
                     #Extract Instructor Data for this course
                     curr_instructor = omscs_dat[course_number]["Instructor"]
-                    print curr_instructor
                     easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
-                    print easiness_rating
                     helpfulness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["helpfulness_query"]]) 
-                    print helpfulness_rating
                     quality_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["quality_query"]]) 
-                    print quality_rating
                     curr_score += (easiness_rating*easiness_preference +
                                   helpfulness_rating*helpfulness_preference +
                                   quality_rating*quality_preference)
-                    print curr_score
                 if curr_score > max_score:
                     max_score = curr_score
                     best_tuple = course_number_tuple
         final_course_plan += list(best_tuple)
-        print final_course_plan
         speech = "First Semester: " + final_course_plan[0] + ", " + final_course_plan[1] + ".\n"
         speech += "Second Semester: " + final_course_plan[2] + ", " + final_course_plan[3] + ".\n"
-        speech += "Finally, you can take "
-        for item in final_course_plan[4:]:
-            speech += item + ", "
-        speech += ", at your own pace."
-        print speech
+        if len(final_course_plan) > 4:
+            speech += "Finally, you can take "
+            for item in final_course_plan[4:]:
+                speech += item + ", "
+            speech += ", at your own pace."
+        else:
+            speech += "And that's it! You're ready to graduate in two semesters!"
         return speech
 
 def answerProductionRules(course_number_list, query_name):
