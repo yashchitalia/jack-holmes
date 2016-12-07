@@ -181,9 +181,13 @@ def generateCoursePlan():
                     print course_number
                     #Extract Instructor Data for this course
                     curr_instructor = omscs_dat[course_number]["Instructor"]
+                    print curr_instructor
                     easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
+                    print easiness_rating
                     helpfulness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["helpfulness_query"]]) 
+                    print helpfulness_rating
                     quality_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["quality_query"]]) 
+                    print quality_rating
                     curr_score += (easiness_rating*easiness_preference +
                                   helpfulness_rating*helpfulness_preference +
                                   quality_rating*quality_preference)
