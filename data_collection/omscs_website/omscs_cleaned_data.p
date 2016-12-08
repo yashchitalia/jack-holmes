@@ -37,7 +37,7 @@ g3
 S' All course material will be covered in lecture. Homework will not reference specific problems from textbooks. It is recommended, however, that students obtain their own copies of: Michael Sipser,  Introduction to the Theory of Computation , T. H. Cormen, C.E. Leiserson, R. L. Rivest, and C. Stein,  Introduction to Algorithms'
 p19
 sg5
-S'Computability, Complexity & Algorithms'
+S'Computability, Complexity and Algorithms'
 p20
 sg7
 S' Grades will be based on written assignments and two proctored exams.'
@@ -514,7 +514,7 @@ g3
 S' There are no required readings. When appropriate, additional class materials will be available as instructor notes that are associated with the video lectures.'
 p198
 sg5
-S'Software Development Process '
+S'Software Development Process'
 p199
 sg7
 S' There are three types of grades: Projects   You will be given several projects, to be completed in groups.\n\nCollaboration - You will receive a grade based on how much you contributed to group projects, according to the assessment of your teammates.\n\n Collaboration - You will receive a grade based on how much you contributed to group projects, according to the assessment of your teammates. Assignments   You will be given a set of assignments. Udacity quizzes - In addition to the projects and assignments, you are required to complete all Udacity quizzes. Please note that you are not required to get the correct answer on these quizzes on the first try. We will look only at your last submission. Participation - Students are expected to participate in the online forum and in the office hours; that is, they are expected to read postings, watch the office hours videos, and (possibly) contribute to the discussion. You will receive all assignments and projects through T-Square, and each entry will show a due date. Please be sure to complete all assignments and projects by their due date. You will also receive grades and information on how much each graded item counts toward the overall grade for the course through T-Square. We will be using Piazza as a forum for this site and Hangout on Air for the weekly online office hours. Please submit all of your course-related questions through Piazza. Let us also stress that you should make sure to read all Piazza postings and watch the office hours videos, or you may miss important information about the course.'
