@@ -527,7 +527,6 @@ def extractMultipleCourseNumbers(req):
             pass
     else:
         course_name_list.append(parameters.get('course_name1'))
-    print course_name_list
     final_list = []
     for course_number in course_number_list:
         try:
@@ -555,6 +554,7 @@ def extractMultipleCourseNumbers(req):
                 final_list.append(candidate_course_number)
         else:
             continue
+    print final_list
     return final_list 
 
 
