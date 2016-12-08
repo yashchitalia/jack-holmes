@@ -259,6 +259,7 @@ def answerProductionRules(course_number_list, query_name):
             easiness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["easiness_query"]]) 
             helpfulness_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["helpfulness_query"]]) 
             quality_rating=float(rmp_data[instructor_names.index(curr_instructor)][DICT_OF_INSTRUCTOR_QUERIES["quality_query"]]) 
+            print course_number, easiness_rating, helpfulness_rating, quality_rating
             curr_score = (easiness_rating*easiness_preference +
                           helpfulness_rating*helpfulness_preference +
                           quality_rating*quality_preference)
@@ -497,21 +498,33 @@ def extractMultipleCourseNumbers(req):
     course_name_list = []
     parameters = result.get("parameters")
     if type(parameters.get('course_number')) is list:
-        course_number_list.append(parameters.get('course_number')[0])
+        try:
+            course_number_list.append(parameters.get('course_number')[0])
+        except:
+            pass
     else: 
         course_number_list.append(parameters.get('course_number'))
     if type(parameters.get('course_number1')) is list:
-        course_number_list.append(parameters.get('course_number1')[0])
+        try:
+            course_number_list.append(parameters.get('course_number1')[0])
+        except:
+            pass
     else:
         course_number_list.append(parameters.get('course_number1'))
 
     if type(parameters.get('course_name')) is list:
-        course_name_list.append(parameters.get('course_name')[0])
+        try:
+            course_name_list.append(parameters.get('course_name')[0])
+        except:
+            pass
     else:
         course_name_list.append(parameters.get('course_name'))
 
     if type(parameters.get('course_name1')) is list:
-        course_name_list.append(parameters.get('course_name1')[0])
+        try:
+            course_name_list.append(parameters.get('course_name1')[0])
+        except:
+            pass
     else:
         course_name_list.append(parameters.get('course_name1'))
     print course_name_list
