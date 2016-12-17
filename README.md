@@ -22,6 +22,7 @@ The list of Objective questions that can be asked is as follows:.<br />
   9. What's the chance of passing Machine Learning? (same question can be asked about failing)
   10. What's the average GPA of a student taking Machine Learning for Trading?
   11. Who is the instructor for CS 6300?<br />
+  <br />
   You can follow up the instructor question with the following questions:  
     1. Is he/she helpful? (helpfulness)
     2. Is he/she easygoing? (easiness)
@@ -38,7 +39,7 @@ Then Jack will proceed to ask you a number of questions that help him understand
 Using this data, Jack can answer questions like:<br />
   1. Is KBAI *better for me* than AI?
   2. Is CS 6400 *easier* than CS 6440?
-  3. *Plan* my Online Masters.
+  3. *Plan* my Online Masters.<br />
 <br />
 If you want an explanation of why the agent made a certain choice for you, you can simply ask,
   1. Why did you say that?
