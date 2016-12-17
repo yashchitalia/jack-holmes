@@ -21,15 +21,15 @@ The list of Objective questions that can be asked is as follows:.<br />
   8. What is the likelihood of getting an A grade in KBAI? (same questions can be asked for B, C and D grades)
   9. What's the chance of passing Machine Learning? (same question can be asked about failing)
   10. What's the average GPA of a student taking Machine Learning for Trading?
-  11. Who is the instructor for CS 6300?
+  11. Who is the instructor for CS 6300?<br />
   You can follow up the instructor question with the following questions:  
-  1. Is he/she helpful? (helpfulness)
-  2. Is he/she easygoing? (easiness)
-  3. Is he/she a good professor? (teacher quality)
-  4. What do others have to say about him/her? (top comments from other students) 
-  5. Is he/she hot/cute? (hotness)
-  6. Is he/she rich? (wealth)
-  7. Does he/she like to eat frogs? (culinary-preferences)
+    1. Is he/she helpful? (helpfulness)
+    2. Is he/she easygoing? (easiness)
+    3. Is he/she a good professor? (teacher quality)
+    4. What do others have to say about him/her? (top comments from other students) 
+    5. Is he/she hot/cute? (hotness)
+    6. Is he/she rich? (wealth)
+    7. Does he/she like to eat frogs? (culinary-preferences)
 
 # Subjective Questions:
 In order for Jack to answer subjective questions, he should have some knowledge of your preferences.<br />
